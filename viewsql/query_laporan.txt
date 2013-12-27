@@ -1,0 +1,26 @@
+---------------------------------
+TOTAL PERMOHONAN HIBAH UANG (OPD)
+---------------------------------
+SELECT count(*) as total_pem_hibah_uang FROM tbl_hibah WHERE (opd_kode=4 and jh_kode=1)
+
+---------------------------------
+TOTAL EVALUASI HIBAH UANG (OPD)
+---------------------------------
+SELECT count(*) as total_opd_hibah_uang FROM tbl_hibah WHERE (opd_kode=4 and jh_kode=1 and hib_eval_opd='1')
+
+---------------------------------
+TOTAL PERMOHONAN HIBAH BARANG (OPD)
+---------------------------------
+SELECT count(*) as total_pem_hibah_barang FROM tbl_hibah WHERE (opd_kode=4 and jh_kode=2)
+
+---------------------------------
+TOTAL EVALUASI HIBAH BARANG (OPD)
+---------------------------------
+SELECT count(*) as total_opd_hibah_barang FROM tbl_hibah WHERE (opd_kode=4 and jh_kode=2 and hib_eval_opd='1')
+
+
+SELECT sum(hib_besaran_opd) as besaran_opd_hibah FROM tbl_berita_acara_detail WHERE kode = '1-HIBAH-DKQ29QURaT'
+
+SELECT sum(besaran_opd) as besaran_opd_hibah FROM tbl_berita_acara_detail WHERE kode = '1-HIBAH-DKQ29QURaT'
+
+atau 

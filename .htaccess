@@ -1,0 +1,10 @@
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+php_value date.timezone "Asia/Jakarta"
+php_flag register_globals On
+php_flag allow_call_time_pass_reference Off
+php_flag max_execution_time 3000
+php_flag register_argc_argv Off
+php_flag register_long_arrays Off

@@ -1,0 +1,408 @@
+a:link {color:#0066CC; text-decoration:none;}
+a:hover {color:#0015B6; text-decoration:none;}
+a:active {color:#CC0000; text-decoration:none;}
+a:visited {color:#0066CC; text-decoration:none;}
+
+body {
+scrollbar-3dlight-color:##C7DCF9;
+scrollbar-arrow-color:#999999;
+scrollbar-track-color:#ededed;
+scrollbar-darkshadow-color:##C7DCF9;
+scrollbar-face-color:#ffffff;
+scrollbar-highlight-color:#ffffff;
+scrollbar-shadow-color:#ffffff;
+		background: white url(i/backgroundinside.jpg) bottom left fixed repeat-x;		color: #white;		margin: 0;		padding: 0;		border: 0;		font-family: Verdana;		font-size: 11px;		xtext-align: center;
+}
+
+font {
+	font-family: Verdana, Arial, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+select {font-family:verdana,Arial,tahoma,san-serif;font-size:11px;color:#000000;background-color:#F4F4F4;border-color:#003399;border-style:solid;border-width:1px;}
+
+BODY,TABLE	{font-family:verdana,Arial,tahoma,sans-serif; font-size:11px;border:0px}
+
+.inptype
+ {font-family:verdana,Arial,tahoma,san-serif;font-size:11px;color:#000000;background-color:#FFFFFF;border-bottom: 1px solid #C1C1C1;border-right: 1px solid #C1C1C1;border-left: 1px solid #C1C1C1;border-top: 1px solid #C1C1C1;}
+
+.pbttn
+ {font-family:verdana,Arial,tahoma,sans-serif;font-size:10px;background-color:#FFFFFF;border-bottom: 1px solid #C1C1C1;border-right: 1px solid #C1C1C1;border-left: 1px solid #C1C1C1;border-top: 1px solid #C1C1C1;color:#000000;height: 22px;text-decoration:none;padding-left: 3px;padding-right: 3px;padding-top:1px;cursor: hand;}
+
+.tablegrid
+{
+	border:0px;
+	background-color: #E7E88;
+}
+
+.tdsubjudultosca
+{
+	background-color: #E7E7F7;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudultosca
+{
+	background-color: #CECEEF;
+	font-weight: bold;
+	
+}
+
+.tdtopitoscakiri
+{
+	background-image: url('/images/topiCoklatKiri.gif');
+}
+
+.tdtopitoscakanan
+{
+	background-image: url('/images/topiCoklatKanan.gif');
+}
+
+.tdsubjudulungu
+{
+	background-color: #AAAACC;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulungu
+{
+	background-color: #AAAACC;
+	font-weight: bold;
+}
+
+.tdtopiungukiri
+{
+	background-image: url('/images/topiKuningKiri.gif');
+}
+
+.tdtopiungukanan
+{
+	background-image: url('/images/topiKuningKanan.gif');
+}
+
+
+.tdsubjudulorange
+{
+	background-color: #FEE8E0;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulorange
+{
+	background-color: #FDD8CA;
+	font-weight: bold;
+}
+
+.tdtopiorangekiri
+{
+	background-image: url('/images/topiOrangeKiri.gif');
+}
+
+.tdtopiorangekanan
+{
+	background-image: url('/images/topiOrangeKanan.gif');
+}
+
+.tdsubjudulhijau
+{
+	background-color: #F4F4DF;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulhijau
+{
+	background-color: #E0E0A3;
+	font-weight: bold;
+}
+
+.tdtopihijaukiri
+{
+	background-image: url('/images/topiHijauKiri.gif');
+}
+
+.tdtopihijaukanan
+{
+	background-image: url('/images/HijauKanan.gif');
+}
+
+
+.tdsubjudulmerah
+{
+	background-color: #FFF2F2;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulmerah
+{
+	background-color: #FFDDDD;
+	font-weight: bold;
+}
+
+.tdtopimerahkiri
+{
+	background-image: url('/images/MerahKiri.gif');
+}
+
+.tdtopimerahkanan
+{
+	background-image: url('/images/MerahKanan.gif');
+}
+
+
+.tdsubjudulbiru
+{
+	background-color: #E6F1FF;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulbiru
+{
+	background-color: #42597B;
+	font-weight: bold;
+	font-size: 14px;
+	align: right;
+	color:#FFFFFF;
+}
+
+.tdtopibirukiri
+{
+	background-image: url('/images/topiBiruKiri.gif');
+}
+
+.tdtopibirukanan
+{
+	background-image: url('/images/topiBiruKanan.gif');
+}
+
+.tdsubjudulabu
+{
+	background-color: #E7E7F7;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulabu
+{
+	background-color: #FE0000;
+	font-weight: bold;
+	font-size: 16px;
+	align: right;
+	color:#FFFFFF;
+}
+.tdjudulabukiri
+{
+	background-image: url('/images/topiBiruKiri.gif');
+
+}
+
+.tdjudulabukanan
+{
+	background-image: url('/images/topiBiruKanan.gif');
+}
+
+.tdsubjudulcoklat{
+	background-color: #320000;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulcoklat
+{
+	background-color: #320000;
+	font-weight: bold;
+	font-size: 13px;
+	align: right;
+	color:#FFFFFF;
+}
+
+.tdjudulcoklatkiri
+{
+	background-image: url('/images/topiCoklatKiri.gif');
+
+}
+
+.tdjudulcoklatkanan
+{
+	background-image: url('/images/topiCoklatKanan.gif');
+}
+
+.tdsubjudulhijau2
+{
+	background-color: #EAF9DF;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulhijau2
+{
+	background-color: #CECEEF;
+	font-weight: bold;
+}
+
+.tdtopihijau2kiri
+{
+	background-image: url('/images/topiCoklatKiri.gif');
+}
+
+.tdtopihijau2kanan
+{
+	background-image: url('/images/topiCoklatKanan.gif');
+}
+
+.tdsubjudulkuning
+{
+	background-color: #FFF2CA;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulkuning
+{
+	background-color: #AAAACC;
+	font-weight: bold;
+}
+
+.tdtopikuningkiri
+{
+	background-image: url('/images/topiKuningKiri.gif');
+}
+
+.tdtopikuningkanan
+{
+	background-image: url('/images/topiKuningkanan.gif');
+}
+
+.tdsubjudulcoklat
+{
+	background-color: #CECEEF;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+
+.tdsubjudulungu2
+{
+	background-color: #F8E4F2;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.tdjudulungu2
+{
+	background-color: #EFC2E1;
+	font-weight: bold;
+}
+
+.tdtopiungu2kiri
+{
+	background-image: url('/images/Ungu2Kiri.gif');
+}
+
+.tdtopiungu2kanan
+{
+	background-image: url('/images/Ungu2Kanan.gif');
+}
+
+.tdganjil
+{background-color: #FFFFFF;}
+
+.tdgenap{	background-color: #EEEEF7;}
+.form {
+	font-family: Verdana;
+	font-size: 9px;
+	font-style: normal;
+	color: #999999;
+}.trred{	background-color:#FFDDDD;}.bgTitleTr{	background-color:#320000;	color:#FFFFFF;}.navoff{	color:white;	font-weight:bold;	width:150px;	background:  url(//images/htab-off.gif) no-repeat left top;	border-bottom: 1px solid #CCCCCC;	text-align:center;}.navoff a {	color: white;	margin: 0px;	width: 150px;}.navoff a:hover{	padding: 3px 5px 3px 25px;	width: 150px;	color: #FFDD00;	text-decoration: none;}.navoff a:visited{	padding: 3px 5px 3px 25px;	width: 150px;	color: #FFFFFF;	text-decoration: none;}.navon{	color:black;	font-weight:bold;	width:150px;	background:  url(..//images/htab-on.gif) no-repeat left top;	border-bottom: 1px solid white;	text-align:center;}.navon a {	color: black;	padding: 3px 5px 3px 25px;	margin: 0px;	width: 150px;}.navon a:hover {	color: #CC0000;	text-decoration: none;}.navoff a:visited{	padding: 3px 5px 3px 25px;	width: 150px;	color: #FFFFFF;	text-decoration: none;}.navon a:visited{	padding: 3px 5px 3px 25px;	width: 150px;	color: #CC0000;	text-decoration: none;}.bar_level1 {	width:95%;	align:center;}.bar_level2 {}.bgBorderSearch{	width:95%;	border-width:1px;}
+table.search {	border-width: 0px;	border-spacing: ;	border-style: solid;	border-color: EBEBEB;	border-collapse: collapse;	background-color: white;	width:95%;}
+table.index {	border-width: 0px;	border-spacing: ;	border-style: solid;	border-color: EBEBEB;	border-collapse: collapse;	background-color: white;	width:95%;}
+table.index tr {	background-color:#320000;}table.index th {	background-color:#320000;	color:#FFFFFF;	border-width: 1px;	padding: 5px;	border-style: inset;	border-color: white;}table.index td {	border-width: 2px;	padding: 3px;	border-style: inset;	border-color: white;	background-color: #F0FAFF;	-moz-border-radius: ;}table.report {	border-width: 1px;	border-spacing: ;	border-style: solid;	border-color: 000000;	border-collapse: collapse;	background-color: white;	width:95%;}
+
+table.index2 {
+
+	border-width: 0px;
+	border-spacing: ;
+	border-style: solid;
+	border-color: EBEBEB;
+	border-collapse: collapse;
+	background-color: white;
+	width:95%;
+}
+
+table.index2 tr {
+
+	background-color:#320000;
+
+}
+table.index2 th {
+
+	background-color:#320000;
+	color:#FFFFFF;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: white;
+}
+table.index2 td {
+	border-width: 0px;
+	padding: 3px;
+	border-style: inset;
+	border-color: white;
+	background-color: #F0FAFF;
+	-moz-border-radius: ;
+}
+
+table.index3 {
+
+	border-width: 0px;
+	border-spacing: ;
+	border-style: solid;
+	border-color: EBEBEB;
+	border-collapse: collapse;
+	background-color: white;
+	width:100%;
+}
+
+table.index3 tr {
+
+	background-color:#320000;
+
+}
+table.index3 th {
+
+	background-color:#320000;
+	color:#FFFFFF;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: white;
+}
+table.index3 td {
+	border-width: 0px;
+	padding: 3px;
+	border-style: inset;
+	border-color: white;
+	background-color: #F0FAFF;
+	-moz-border-radius: ;
+}
+
+table.report tr {	background-color:#320000;}table.report th {	background-color:#800000;	color:#FFFFFF;	border-width: 1px;	padding: 5px;	border-style: inset;	border-color: solid;}table.report td {	border-width: 1px;	padding: 3px;	border-style: SOLID;	border-color: #000000;	background-color: #FFFFFF;	-moz-border-radius: ;}table.greybox {	border-width: 1px;	border-spacing: ;	border-style: solid;	border-color: bdbdbd;	border-collapse: collapse;	background-color: ebebeb;	padding : 2px;	width:95%;}
+table.greybox tr {	background-color:#320000;}table.greybox th {	background-color:#320000;	color:#FFFFFF;	border-width: 1px;	padding: 5px;	border-style: inset;	border-color: white;}table.greybox td{	padding : 10px;	background-color:ebebeb;}table.default {	width:95%;}table.default td {	border-style:none;	border-width:0px;}table.modifyrecord {	border-width: 2px;	border-spacing: ;	border-style: inset;	border-color: white;	border-collapse: collapse;	background-color: white;	width:95%;}table.modifyrecord th {	border-width: 1px;	padding: 4px;	border-style: none;	border-color: white;	background-color: #F0FAFF;	-moz-border-radius: ;}table.modifyrecord td {	border-width: 1px;	padding: 4px;	border-style: none;	border-color: white;	background-color: #F0FAFF;	-moz-border-radius: ;}table.submodifyrecord {	border-width: 2px;	border-spacing: ;	border-style: inset;	border-color: white;	border-collapse: collapse;	background-color: white;	width:95%;}table.submodifyrecord th {	border-width: 1px;	padding: 4px;	border-style: none;	border-color: white;	color:white;	background-color: #320000;	-moz-border-radius: ;}table.submodifyrecord td {	border-width: 1px;	padding: 4px;	border-style: none;	border-color: white;	background-color: #F0FAFF;	-moz-border-radius: ;}select { 	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; 	border: #000000; 	border-style: solid; 	border-top-width: 1px; 	border-right-width: 1px; 	border-bottom-width: 1px; 	border-left-width: 1px}
+.judul{
+
+	font-family:tahoma;
+	font-size:20px;
+	color:#C00000;
+	
+}.highlight{
+
+	font-family:tahoma;
+	font-size:18px;
+	
+}.rowbottom{	background-color:#F3DBC3;}
+.solid{	border-style:solid;}

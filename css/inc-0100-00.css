@@ -1,0 +1,147 @@
+.title
+{
+    COLOR: #3366CC;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 18;
+    FONT-WEIGHT: bold
+}
+.subtitle
+{
+    COLOR: #FFFFFF;
+    BACKGROUND-COLOR: #009999;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11;
+    FONT-STYLE: normal;    
+    FONT-WEIGHT: bold
+}
+.field
+{    
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: xx-small;        
+}
+.tbltitle
+{
+    BACKGROUND-COLOR: #6699CC;
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11; 
+    FONT-WEIGHT: bold
+}
+.tblcontent
+{
+    BACKGROUND-COLOR: #99cccc;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: xx-small;    
+}
+.frmtitle
+{
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11;    
+}
+.page
+{
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: xx-small;    
+}
+.isi
+{
+    BACKGROUND-COLOR: silver;
+    COLOR: blue;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: 11
+}
+.fieldtext
+{
+    BACKGROUND-COLOR: silver;
+    COLOR: brown;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: 11;    
+}
+.menu
+{
+	COLOR: #003366;
+	FONT-FAMILY: Tahoma,Verdana;
+	FONT-SIZE: 10;
+}
+.submenu
+{
+	COLOR: #003366;
+	FONT-FAMILY: Tahoma,Verdana;
+	FONT-SIZE: 10;
+}
+.bgmenu
+{
+    BACKGROUND-COLOR: #99cccc
+}
+.message
+{
+    COLOR: red;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: 11;
+    FONT-WEIGHT: bold
+}
+.success
+{
+    COLOR: darkgreen;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: 11;
+    FONT-WEIGHT: bold
+}
+.bgform
+{
+    COLOR: silver;
+    FONT-SIZE: x-small;    
+}
+.input
+{
+    BACKGROUND-COLOR: #fff0f5
+}
+.formid
+{
+    COLOR: silver;
+    FONT-FAMILY: Arial, 'Courier New', Verdana,Tahoma;
+    FONT-SIZE: 9;
+    FONT-STYLE: normal;
+    FONT-VARIANT: small-caps;
+    TEXT-DECORATION: underline
+}
+.menuattribute
+{
+    BACKGROUND-COLOR: #99cccc;
+    COLOR: brown;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: x-small;    
+}
+.menuheader
+{
+    COLOR: yellow;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: x-small;    
+}
+.greeting
+{
+    COLOR: darkblue;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: xx-small;
+    FONT-WEIGHT: bold
+}
+hr  {
+   color: #009999;
+}
+input
+{    
+    COLOR: darkblue;
+    CURSOR: hand;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: 10;    
+}
+select
+{    
+    COLOR: darkblue;
+    CURSOR: hand;
+    FONT-FAMILY: Arial,Verdana,'MS Sans Serif';
+    FONT-SIZE: 11;    
+}
+.tampung 
+{	BACKGROUND-COLOR:#3366cc;
+}

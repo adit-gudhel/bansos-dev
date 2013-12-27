@@ -1,0 +1,154 @@
+#container {
+  padding: 20px;
+}
+
+.centered { margin: 0 auto; }
+
+.box {
+    margin: 5px;
+    border:1px solid #C0c0c0;
+    font-family: Verdana;
+    font-size: 12px;
+    background-color:#FFFFFF;
+    float: left;
+    behavior: url(/PIE.htc);
+    padding:1em;
+    moz-border-radius:8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border:thin solid #dedede;
+    -moz-box-shadow: 3px 3px 5px 6px #000;
+    -webkit-box-shadow: 0px 0px 0px 6px #000;
+    box-shadow: 6px 8px 9px 1px #999;
+}
+
+.box .button {
+    background-color:#CCC;
+    width: 90%;
+    border:1px solid #C0c0c0;
+    padding:1em;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    moz-border-radius:8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border:thin solid #dedede;
+    -moz-box-shadow: 3px 3px 5px 6px #000;
+    -webkit-box-shadow: 0px 0px 0px 6px #000;
+    box-shadow: 6px 8px 9px 1px #999;
+    margin-bottom: 10px;
+}
+
+.box .boxtitle {
+    font-family: Verdana;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.box .button:hover {
+    background-color:#CCF;
+}
+
+.box h2 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.box img,
+#tumblelog img {
+  display: block;
+  width: 100%;
+}
+
+.rtl .box {
+  float: right;
+  text-align: right; 
+  direction: rtl;
+}
+
+
+
+.col1 { width: 25%; }
+.col2 { width: 60%; }
+.col3 { width: 88%; }
+.col4 { width: 42%; }
+
+.col1 img { max-width: 32px; }
+.col2 img { max-width: 32px; }
+.col3 img { max-width: 32px; }
+.col4 img { max-width: 32px; }
+.col5 img { max-width: 32px; }
+
+/**** Gutters ****/
+
+.has-gutters .box {
+  margin: 5px 0;
+}
+
+.has-gutters .col1 { width: 90px; }
+.has-gutters .col2 { width: 230px; }
+.has-gutters .col3 { width: 370px; }
+.has-gutters .col4 { width: 550px; }
+
+/**** Transitions ****/
+
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.transitions-enabled.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.transitions-enabled.masonry  .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+
+/* disable transitions on container */
+.transitions-enabled.infinite-scroll.masonry {
+  -webkit-transition-property: none;
+     -moz-transition-property: none;
+      -ms-transition-property: none;
+       -o-transition-property: none;
+          transition-property: none;
+}
+
+/**** Primer comparison ****/
+
+#comparison {
+  overflow: auto;
+}
+
+#comparison .example {
+  width: 420px;
+  float: left;
+  margin-right: 20px;
+}
+
+#comparison .box h5 {
+  float: left;
+  margin-bottom: 0;
+  font-size: 30px;
+  margin-right: 4px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #FFF;
+}

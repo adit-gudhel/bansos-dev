@@ -1,0 +1,318 @@
+TYPE_EDC,Category,sub_category,dep_methods,useful_life,ori_currency,acq_cost,exchange,equal_idr,purchase_date,depre_exp,acc_exp,nbv,invoice,po,Adaptor_S_N,Adaptor_S_N,node,user,bussines_unit,City,MID,note,parent_id,Area,OS,application,Merch_Program,T_I_D,owner
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470306117,3470306117,,aodofficer,Acquiring Operation Department,MAKASSAR,80447900,,,MAKASSAR,,,,81094501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470305906,3470305906,,aodofficer,Acquiring Operation Department,Banjarmasin,62147900,,4324480,BALIKPAPAN,,,,66000201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470305728,3470305728,,aodofficer,Acquiring Operation Department,MEDAN,50661700,,,MEDAN,,,-,56106603,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470305531,3470305531,,aodofficer,Acquiring Operation Department,MEDAN,50484300,,,MEDAN,,,-,54008201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470302640,3470302640,,aodofficer,Acquiring Operation Department,Pekanbaru,53139100,,,Batam,,,,53202301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301965,3470301965,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3160677,Bandung,,,,59107921,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301867,3470301867,,aodofficer,Acquiring Operation Department,MEDAN,50689106,,,MEDAN,,,-,56109507,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301494,3470301494,,aodofficer,Acquiring Operation Department,BINJAI,50495502,,,MEDAN,,,-,54009302,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301391,3470301391,,aodofficer,Acquiring Operation Department,Semarang,30771100,,,Semarang,,,,59904701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301262,3470301262,,aodofficer,Acquiring Operation Department,Semarang,30606100,,,Semarang,,,,52007803,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301205,3470301205,,aodofficer,Acquiring Operation Department,Sampit,74318300,,1775730,BALIKPAPAN,,,,51000902,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301183,3470301183,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36678300,,659404,YOGYAKARTA,,,-,3800 41 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470301128,3470301128,,aodofficer,Acquiring Operation Department,Padang,26357300,,,Batam,,,,88106501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470300992,3470300992,,aodofficer,Acquiring Operation Department,Semarang,30778700,,,Semarang,,,,59905401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3470300949,3470300949,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36679100,,3083973,YOGYAKARTA,,,-,3800 42 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2002204148,2002204148,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36666700,,2927989,YOGYAKARTA,,,-,3800 27 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,993805037,993805037,,aodofficer,Acquiring Operation Department,Batam,29157546,,,Batam,,,,20005552,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,991203024,991203024,,aodofficer,Acquiring Operation Department,Batam,29157568,,,Batam,,,,20005574,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,991203020,991203020,,aodofficer,Acquiring Operation Department,MEDAN,50607500,,,MEDAN,,,-,56100901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990603310,990603310,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3084840,Bandung,,,,59107929,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990603286,990603286,,aodofficer,Acquiring Operation Department,Bengkulu,93304300,,,Batam,,,,82000501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990603272,990603272,,aodofficer,Acquiring Operation Department,Bukittinggi,26336500,,,Batam,,,,88104401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990603014,990603014,,aodofficer,Acquiring Operation Department,Tegal,30757900,,1775785,Semarang,,,,59903305,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990603007,990603007,,aodofficer,Acquiring Operation Department,Padang,26327300,,,Batam,,,,88103501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990603006,990603006,,aodofficer,Acquiring Operation Department,Semarang,30676100,,,Semarang,,,,59005101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503432,990503432,,aodofficer,Acquiring Operation Department,MEDAN,50493900,,,MEDAN,,,-,54009101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503406,990503406,,aodofficer,Acquiring Operation Department,BINJAI,50410301,,,MEDAN,,,-,54000103,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503260,990503260,,aodofficer,Acquiring Operation Department,Semarang,30676100,,,Semarang,,,,59005103,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503255,990503255,,aodofficer,Acquiring Operation Department,PALU,78009800,,,MAKASSAR,,,,78000101-78000102,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503172,990503172,,aodofficer,Acquiring Operation Department,Banjarmasin,62146100,,3180849,BALIKPAPAN,,,,66000101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503122,990503122,,aodofficer,Acquiring Operation Department,Samarinda,33149900,,1775622,BALIKPAPAN,,,,64101701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503118,990503118,,aodofficer,Acquiring Operation Department,Samarinda,33122700,,1775989,BALIKPAPAN,,,,33108901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990503053,990503053,,aodofficer,Acquiring Operation Department,Sampit,74322500,,,BALIKPAPAN,,,,51001801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403879,990403879,,aodofficer,Acquiring Operation Department,Sampit,74327500,,,BALIKPAPAN,,,,51001501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403863,990403863,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60200900,,2928012,BALIKPAPAN,,,,60008801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403846,990403846,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60072600,,3085163,BALIKPAPAN,,,,60001401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403829,990403829,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60142701,,3180663,BALIKPAPAN,,,,65001502,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403824,990403824,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60155500,,2961782,BALIKPAPAN,,,,60003401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403558,990403558,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180674,Bandung,,,,59107927,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403458,990403458,,aodofficer,Acquiring Operation Department,Batam,29157566,,,Batam,,,,20005572,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403271,990403271,,aodofficer,Acquiring Operation Department,MEDAN,50942300,,,MEDAN,,,-,58113201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990403006,990403006,,aodofficer,Acquiring Operation Department,Bukittinggi,26331500,,,Batam,,,,88103901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990344009,990344009,,aodofficer,Acquiring Operation Department,PALU,78001500,,,MAKASSAR,,,,80004101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990304008,990304008,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60185300,,1775818,BALIKPAPAN,,,,60007301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990303889,990303889,,aodofficer,Acquiring Operation Department,Batam,29701506,,,Batam,,,,24107207,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990303737,990303737,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085129,Bandung,,,,59107609,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990303662,990303662,,aodofficer,Acquiring Operation Department,Bandung,41139300,,2961754,Bandung,,,,59101501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990303146,990303146,,aodofficer,Acquiring Operation Department,MEDAN,50591500,,,MEDAN,,,-,56009101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,980703003,980703003,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085156,Bandung,,,,59107610,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,980334789,980334789,,aodofficer,Acquiring Operation Department,Padang,26360700,,,Batam,,,,88106801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,980210601,980210601,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60142706,,2961783,BALIKPAPAN,,,,60001506,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,980166167,980166167,,aodofficer,Acquiring Operation Department,Padang,26270300,,,Batam,,,,87007701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,975006170,975006170,,aodofficer,Acquiring Operation Department,Batam,29709902,,,Batam,,,,24108003,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,975004954,975004954,,aodofficer,Acquiring Operation Department,MEDAN,50650800,,,MEDAN,,,-,56105103,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,973687414,973687414,,aodofficer,Acquiring Operation Department,Padang,26352300,,,Batam,,,,88106001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,970030612,970030612,,aodofficer,Acquiring Operation Department,MEDAN,50310204,,,MEDAN,,,-,53000106,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,961700014,961700014,,aodofficer,Acquiring Operation Department,Batam,29621702,,,Batam,,,,23108603,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,953651234,953651234,,aodofficer,Acquiring Operation Department,Batam,29157560,,,Batam,,,,20005566,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,951833049,951833049,,aodofficer,Acquiring Operation Department,MEDAN,50712500,,,MEDAN,,,-,57102001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,951109771,951109771,,aodofficer,Acquiring Operation Department,Banjarmasin,62115300,,3180686,BALIKPAPAN,,,,65007101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,945020840,945020840,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085064,Bandung,,,,59107928,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,944818976,944818976,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60336500,,659433,BALIKPAPAN,,,,61100601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,935025426,935025426,,aodofficer,Acquiring Operation Department,Batam,29701502,,,Batam,,,,24107203,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,930311967,930311967,,aodofficer,Acquiring Operation Department,Bandung,41019200,,2927983,Bandung,,,,58100501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,930311967,930311967,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3084905,Bandung,,,,59107601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,924615491,924615491,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60318100,,1775868,BALIKPAPAN,,,,60108701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,923576258,923576258,,aodofficer,Acquiring Operation Department,PALEMBANG,10014700,,101774243,BATAM,,,,79002201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,870003001,870003001,,aodofficer,Acquiring Operation Department,Sampit,74302900,,,BALIKPAPAN,,,,74300101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,480103153,480103153,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085150,Bandung,,,,59107603,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,300203787,300203787,,aodofficer,Acquiring Operation Department,Jambi,94358700,,,Batam,,,,84005801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200245698,200245698,,aodofficer,Acquiring Operation Department,SOLO,43901900,,2961831,YOGYAKARTA,,,-,4600 11 14,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200236987,200236987,,aodofficer,Acquiring Operation Department,MAGELANG,36543901,,3180720,YOGYAKARTA,,,-,3600 85 02,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200209888,200209888,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36819301,,3084841,YOGYAKARTA,,,-,3801 74 02,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208087,200208087,,aodofficer,Acquiring Operation Department,Jepara,30589500,,3085078,Semarang,,,,52006201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208075,200208075,,aodofficer,Acquiring Operation Department,YOGYAKARTA,43714312,,3084929,YOGYAKARTA,,,-,4500 85 13,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208064,200208064,,aodofficer,Acquiring Operation Department,Semarang,30590300,,3084836,Semarang,,,,52006301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208055,200208055,,aodofficer,Acquiring Operation Department,Semarang,30606100,,3085074,Semarang,,,,52007801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208046,200208046,,aodofficer,Acquiring Operation Department,Jepara,30589500,,3085077,Semarang,,,,52006203,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208016,200208016,,aodofficer,Acquiring Operation Department,Semarang,30607900,,3085052,Semarang,,,,52007901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200208006,200208006,,aodofficer,Acquiring Operation Department,Semarang,30585300,,3084835,Semarang,,,,52005807,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207963,200207963,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60275702,,3180839,BALIKPAPAN,,,,60104403,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207961,200207961,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60224909,,3180690,BALIKPAPAN,,,,61001510,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207950,200207950,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60248100,,3084899,BALIKPAPAN,,,,60101701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207939,200207939,,aodofficer,Acquiring Operation Department,Sampit,74323300,,3180666,BALIKPAPAN,,,,51001401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207937,200207937,,aodofficer,Acquiring Operation Department,BINJAI,50410306,,,MEDAN,,,-,54000115,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207931,200207931,,aodofficer,Acquiring Operation Department,MEDAN,50495503,,,MEDAN,,,-,54009304,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207923,200207923,,aodofficer,Acquiring Operation Department,Pekanbaru,53123300,,,Batam,,,,53200701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207922,200207922,,aodofficer,Acquiring Operation Department,MEDAN,50665900,,,MEDAN,,,-,56107001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207905,200207905,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60224905,,3180817,BALIKPAPAN,,,,61001506,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207901,200207901,,aodofficer,Acquiring Operation Department,MEDAN,50689100,,,MEDAN,,,-,56109501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207885,200207885,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961675,Bandung,,,,58004534,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207842,200207842,,aodofficer,Acquiring Operation Department,Pontianak,27221500,,3180768,BALIKPAPAN,,,,88004901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207838,200207838,,aodofficer,Acquiring Operation Department,Pontianak,27223100,,3085118,BALIKPAPAN,,,,88005001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207778,200207778,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961624,Bandung,,,,59107613,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207769,200207769,,aodofficer,Acquiring Operation Department,PALU,78041500,,,MAKASSAR,,,,80009401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207714,200207714,,aodofficer,Acquiring Operation Department,MANADO,79056304,,1.00E+11,MAKASSAR,,,,86004005,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207709,200207709,,aodofficer,Acquiring Operation Department,MANADO,79039104,,1.00E+11,MAKASSAR,,,,86002305,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207692,200207692,,aodofficer,Acquiring Operation Department,Bandung,40995000,,3085063,Bandung,,,,58008401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207670,200207670,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2927985,Bandung,,,,59107915,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207659,200207659,,aodofficer,Acquiring Operation Department,Pontianak,27257301,,3180766,BALIKPAPAN,,,,88008702,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207617,200207617,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180741,Bandung,,,,59107606,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207611,200207611,,aodofficer,Acquiring Operation Department,Bandung,40985000,,3035065,Bandung,,,,58008001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207610,200207610,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180700,Bandung,,,,59107923,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207579,200207579,,aodofficer,Acquiring Operation Department,Bengkulu,99933100,,,Batam,,,,82003301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200207560,200207560,,aodofficer,Acquiring Operation Department,Pontianak,27261500,,3180582,BALIKPAPAN,,,,88009101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200206738,200206738,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60246500,,3180685,BALIKPAPAN,,,,60101501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200206732,200206732,,aodofficer,Acquiring Operation Department,Samarinda,33154900,,2961906,BALIKPAPAN,,,,34102201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200206688,200206688,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60259900,,3180835,BALIKPAPAN,,,,60102801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204799,200204799,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085066,Bandung,,,,59107602,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204796,200204796,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961757,Bandung,,,,58004541,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204788,200204788,,aodofficer,Acquiring Operation Department,Pontianak,27258100,,3180716,BALIKPAPAN,,,,88008801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204786,200204786,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961804,Bandung,,,,58004530,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204767,200204767,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961706,Bandung,,,,58004517,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204761,200204761,,aodofficer,Acquiring Operation Department,Pontianak,27260700,,2961670,BALIKPAPAN,,,,88009001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204756,200204756,,aodofficer,Acquiring Operation Department,PURWOKERTO,35944100,,2961855,YOGYAKARTA,,,-,5500 61 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204749,200204749,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961712,Bandung,,,,58004516,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204747,200204747,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961710,Bandung,,,,58004518,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204744,200204744,,aodofficer,Acquiring Operation Department,Pontianak,27259900,,3084845,BALIKPAPAN,,,,88008901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204730,200204730,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961676,Bandung,,,,58004531,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204720,200204720,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180815,Bandung,,,,59107605,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204718,200204718,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961805,Bandung,,,,58004528,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204716,200204716,,aodofficer,Acquiring Operation Department,Pontianak,27227300,,3180661,BALIKPAPAN,,,,88005501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204712,200204712,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961678,Bandung,,,,58004535,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204710,200204710,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961713,Bandung,,,,58004514,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204706,200204706,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961755,Bandung,,,,58004537,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204704,200204704,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961708,Bandung,,,,58004515,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204694,200204694,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961807,Bandung,,,,58004542,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204693,200204693,,aodofficer,Acquiring Operation Department,Bandung,40966802,,3180674,Bandung,,,,58005503,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204691,200204691,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36667500,,17755897,YOGYAKARTA,,,-,3800 30 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204678,200204678,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961760,Bandung,,,,58004540,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204677,200204677,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961636,Bandung,,,,58004536,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204669,200204669,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961664,Bandung,,,,58004523,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204664,200204664,,aodofficer,Acquiring Operation Department,Bandung,40885800,,2961620,Bandung,,,,57007601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204664,200204664,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961754,Bandung,,,,58004543,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204660,200204660,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961761,Bandung,,,,58004545,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204655,200204655,,aodofficer,Acquiring Operation Department,Bandung,40881600,,2961630,Bandung,,,,57007201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204650,200204650,,aodofficer,Acquiring Operation Department,Bandung,40956801,,2961754,Bandung,,,,58004551,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204646,200204646,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961802,Bandung,,,,58004527,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204645,200204645,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961677,Bandung,,,,58004532,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204644,200204644,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961635,Bandung,,,,58004509,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204637,200204637,,aodofficer,Acquiring Operation Department,Bandung,40893300,,29616119,Bandung,,,,57008501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204633,200204633,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961756,Bandung,,,,58004544,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204632,200204632,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961659,Bandung,,,,58004522,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204630,200204630,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961803,Bandung,,,,58004529,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204629,200204629,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961661,Bandung,,,,58004510,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204625,200204625,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961680,Bandung,,,,58004533,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204621,200204621,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961679,Bandung,,,,58004538,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204617,200204617,,aodofficer,Acquiring Operation Department,MANADO,79086500,,1.00E+11,MAKASSAR,,,,86006901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204599,200204599,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961658,Bandung,,,,58004520,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204599,200204599,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085062,Bandung,,,,59107922,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204595,200204595,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961665,Bandung,,,,58004526,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204591,200204591,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961758,Bandung,,,,58004539,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204583,200204583,,aodofficer,Acquiring Operation Department,Bandung,40873200,,2961629,Bandung,,,,57006401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204575,200204575,,aodofficer,Acquiring Operation Department,Kudus,30605309,,2961819,Semarang,,,,52007710,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204566,200204566,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961639,Bandung,,,,58004519,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204561,200204561,,aodofficer,Acquiring Operation Department,Bandung,40891700,,2961625,Bandung,,,,57008301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204554,200204554,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961660,Bandung,,,,58004521,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204547,200204547,,aodofficer,Acquiring Operation Department,Semarang,30605300,,2961681,Semarang,,,,52007701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204544,200204544,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961645,Bandung,,,,58004501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204544,200204544,,aodofficer,Acquiring Operation Department,Semarang,30605305,,2961825,Semarang,,,,52007706,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204543,200204543,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961646,Bandung,,,,58004507,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204533,200204533,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961647,Bandung,,,,58004508,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204522,200204522,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961648,Bandung,,,,58004505,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204521,200204521,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961649,Bandung,,,,58004506,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204515,200204515,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961644,Bandung,,,,58004502,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204514,200204514,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961642,Bandung,,,,58004503,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204505,200204505,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961643,Bandung,,,,58004504,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204504,200204504,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961663,Bandung,,,,58004524,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204501,200204501,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961662,Bandung,,,,58004525,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204495,200204495,,aodofficer,Acquiring Operation Department,Bandung,41139301,,1775823,Bandung,,,,59101502,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204432,200204432,,aodofficer,Acquiring Operation Department,Jambi,94360300,,,Batam,,,,84006001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204405,200204405,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961633,Bandung,,,,59107932,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204207,200204207,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180650,Bandung,,,,59107608,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204197,200204197,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961613,Bandung,,,,59107614,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204130,200204130,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36480503,,3180787,YOGYAKARTA,,,-,3600 20 03,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204121,200204121,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36599100,,3569813,YOGYAKARTA,,,-,3700 61 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204100,200204100,,aodofficer,Acquiring Operation Department,MEDAN,50624000,,,MEDAN,,,-,56102501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204097,200204097,,aodofficer,Acquiring Operation Department,MEDAN,50769900,,,MEDAN,,,-,57106701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204095,200204095,,aodofficer,Acquiring Operation Department,MEDAN,50636600,,,MEDAN,,,-,56103701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204091,200204091,,aodofficer,Acquiring Operation Department,MEDAN,50626600,,,MEDAN,,,-,56102701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200204061,200204061,,aodofficer,Acquiring Operation Department,MEDAN,50372513,,,MEDAN,,,-,53006114,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203891,200203891,,aodofficer,Acquiring Operation Department,Pekalongan,30028505,,,Semarang,,,,30003119,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203890,200203890,,aodofficer,Acquiring Operation Department,MANADO,79083100,,1.00E+11,MAKASSAR,,,,86006601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203887,200203887,,aodofficer,Acquiring Operation Department,MEDAN,50100705,,,MEDAN,,,-,54002306,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203873,200203873,,aodofficer,Acquiring Operation Department,Bandung,40895900,,2927985,Bandung,,,,57008701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203858,200203858,,aodofficer,Acquiring Operation Department,Samarinda,33096300,,3180837,BALIKPAPAN,,,,33005403,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203819,200203819,,aodofficer,Acquiring Operation Department,MANADO,79099900,,1.00E+11,MAKASSAR,,,,86008201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203817,200203817,,aodofficer,Acquiring Operation Department,PALU,78040700,,,MAKASSAR,,,,80009301-80009303,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203816,200203816,,aodofficer,Acquiring Operation Department,Jayapura,99117100,,1.00E+11,MAKASSAR,,,,9400 1301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203815,200203815,,aodofficer,Acquiring Operation Department,Samarinda,33068304,,2927884,BALIKPAPAN,,,,33001405,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203792,200203792,,aodofficer,Acquiring Operation Department,Jayapura,99128300,,1.00E+11,MAKASSAR,,,,9400 1701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203783,200203783,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60224900,,2927871,BALIKPAPAN,,,,61001501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203771,200203771,,aodofficer,Acquiring Operation Department,Pekalongan,30028505,,2927976,Semarang,,,,30003115,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203762,200203762,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60253100,,3180664,BALIKPAPAN,,,,60102201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203748,200203748,,aodofficer,Acquiring Operation Department,PAKU,78035500,,,MAKASSAR,,,,,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203736,200203736,,aodofficer,Acquiring Operation Department,Jayapura,99129102,,1.00E+11,MAKASSAR,,,,9400 1805,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203735,200203735,,aodofficer,Acquiring Operation Department,PALU,78043100,,,MAKASSAR,,,,80107401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203729,200203729,,aodofficer,Acquiring Operation Department,MANADO,79076500,,1.00E+11,MAKASSAR,,,,86005901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203729,200203729,,aodofficer,Acquiring Operation Department,Pekalongan,30028505,,3180734,Semarang,,,,30003118,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203728,200203728,,aodofficer,Acquiring Operation Department,Bandung,40868500,,2928001,Bandung,,,,57005801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203722,200203722,,aodofficer,Acquiring Operation Department,Pekalongan,30028505,,,Semarang,,,,30003117,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203717,200203717,,aodofficer,Acquiring Operation Department,MAKASSAR,80322500,,1.00E+11,MAKASSAR,,,,80101601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200203702,200203702,,aodofficer,Acquiring Operation Department,Jambi,94334500,,,Batam,,,,84003405,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200202241,200202241,,aodofficer,Acquiring Operation Department,Samarinda,33135900,,2495827,BALIKPAPAN,,,,34100301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200202237,200202237,,aodofficer,Acquiring Operation Department,Banjarmasin,62117900,,100002771,BALIKPAPAN,,,,65007101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200201866,200201866,,aodofficer,Acquiring Operation Department,Pontianak,27263100,,3180767,BALIKPAPAN,,,,88009301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200201857,200201857,,aodofficer,Acquiring Operation Department,Bandung,40969200,,2943477,Bandung,,,,47005607,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200201848,200201848,,aodofficer,Acquiring Operation Department,MEDAN,50698300,,,MEDAN,,,-,57100501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200027767,200027767,,aodofficer,Acquiring Operation Department,MANADO,79122300,,1.00E+11,MAKASSAR,,,,87010701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,98148896,98148896,,aodofficer,Acquiring Operation Department,Padang,26346500,,,Batam,,,,88105401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,97110182,97110182,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180673,Bandung,,,,59107931,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,97031241,97031241,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180674,Bandung,,,,59107926,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,97031032,97031032,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961617,Bandung,,,,59107612,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,97030503,97030503,,aodofficer,Acquiring Operation Department,MEDAN,50072800,,,MEDAN,,,-,53000701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,97030023,97030023,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36545503,,3084926,YOGYAKARTA,,,-,3600 88 04,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,66003308,66003308,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180684,Bandung,,,,59107925,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,21015277,21015277,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961619,Bandung,,,,59107916,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20063254,20063254,,aodofficer,Acquiring Operation Department,SOLO,43951900,,2495908,YOGYAKARTA,,,-,4600 60 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20032564,20032564,,aodofficer,Acquiring Operation Department,SOLO,43901900,,2961853,YOGYAKARTA,,,-,4600 11 15,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20030783,20030783,,aodofficer,Acquiring Operation Department,MAKASSAR,80394500,,,MAKASSAR,,,,80109101,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20028965,20028965,,aodofficer,Acquiring Operation Department,SOLO,43901900,,2961856,YOGYAKARTA,,,-,4600 11 06,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20027946,20027946,,aodofficer,Acquiring Operation Department,Sampit,74325900,,3180819,BALIKPAPAN,,,,51001601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024844,20024844,,aodofficer,Acquiring Operation Department,SOLO,43956900,,3084934,YOGYAKARTA,,,-,4600 65 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024782,20024782,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961711,Bandung,,,,58004513,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024762,20024762,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36545501,,3180852,YOGYAKARTA,,,-,3600 88 02,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024755,20024755,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961707,Bandung,,,,58004512,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024751,20024751,,aodofficer,Acquiring Operation Department,Bandung,40956800,,2961709,Bandung,,,,58004511,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024732,20024732,,aodofficer,Acquiring Operation Department,SOLO,43901900,,2961827,YOGYAKARTA,,,-,4600 11 26,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20024587,20024587,,aodofficer,Acquiring Operation Department,SOLO,43901900,,2961851,YOGYAKARTA,,,-,4600 11 13,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20022365,20022365,,aodofficer,Acquiring Operation Department,SOLO,43901900,,2961830,YOGYAKARTA,,,-,4600 11 03,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20020850,20020850,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36820100,,3084933,YOGYAKARTA,,,-,3801 75 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20020849,20020849,,aodofficer,Acquiring Operation Department,Semarang,30611100,,3180737,Semarang,,,,52008401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20020414,20020414,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961620,Bandung,,,,59107611,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20020221,20020221,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36557502,,1775620,YOGYAKARTA,,,-,8062 22 03,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016922,20016922,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36674100,,1775923,YOGYAKARTA,,,-,3800 37 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016623,20016623,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60326500,,3180665,BALIKPAPAN,,,,60109501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016494,20016494,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60339900,,1775830,BALIKPAPAN,,,,61100901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016441,20016441,,aodofficer,Acquiring Operation Department,MEDAN,50708300,,,MEDAN,,,-,57101601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016342,20016342,,aodofficer,Acquiring Operation Department,Semarang,30028501,,,Semarang,,,,30008632,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016338,20016338,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36411000,,74264260,YOGYAKARTA,,,-,3500 61 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016334,20016334,,aodofficer,Acquiring Operation Department,Pontianak,27210700,,1775956,BALIKPAPAN,,,,88003701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016324,20016324,,aodofficer,Acquiring Operation Department,MANADO,79082300,,1.00E+11,MAKASSAR,,,,86006501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016313,20016313,,aodofficer,Acquiring Operation Department,Batam,29547302,,,Batam,,,,23101308,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016276,20016276,,aodofficer,Acquiring Operation Department,MEDAN,50567500,,,MEDAN,,,-,56100701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016267,20016267,,aodofficer,Acquiring Operation Department,Batam,29547300,,,Batam,,,,23101302,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016265,20016265,,aodofficer,Acquiring Operation Department,Batam,29547300,,,Batam,,,,23101301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016238,20016238,,aodofficer,Acquiring Operation Department,MAKASSAR,80343300,,,MAKASSAR,,,,80103701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016234,20016234,,aodofficer,Acquiring Operation Department,Banjarmasin,62120300,,3180820,BALIKPAPAN,,,,65007401,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016203,20016203,,aodofficer,Acquiring Operation Department,MANADO,79003000,,1.00E+11,MAKASSAR,,,,86008701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016026,20016026,,aodofficer,Acquiring Operation Department,Bandung,40937700,,1775736,Bandung,,,,58002903,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20016008,20016008,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36708300,,3180792,YOGYAKARTA,,,-,3800 71 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015997,20015997,,aodofficer,Acquiring Operation Department,Bandung,40937700,,1775707,Bandung,,,,58002901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015987,20015987,,aodofficer,Acquiring Operation Department,Pontianak,27227302,,3180760,BALIKPAPAN,,,,88005503,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015979,20015979,,aodofficer,Acquiring Operation Department,Banjarmasin,62133700,,1775626,BALIKPAPAN,,,,65008701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015978,20015978,,aodofficer,Acquiring Operation Department,Banjarmasin,62118700,,1775958,BALIKPAPAN,,,,65007201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015972,20015972,,aodofficer,Acquiring Operation Department,Bandung,40881602,,2927979,Bandung,,,,57007203,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015962,20015962,,aodofficer,Acquiring Operation Department,Pontianak,27257300,,1775873,BALIKPAPAN,,,,88008701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015951,20015951,,aodofficer,Acquiring Operation Department,Bontang,33529000,,1776000,BALIKPAPAN,,,,33009001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015941,20015941,,aodofficer,Acquiring Operation Department,Batam,29751500,,,Batam,,,,25102301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015887,20015887,,aodofficer,Acquiring Operation Department,Bandung,40760904,,1775899,Bandung,,,,50004104,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015865,20015865,,aodofficer,Acquiring Operation Department,SIANTAR,50410302,,,MEDAN,,,-,54000106,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015864,20015864,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36595900,,42103424,YOGYAKARTA,,,-,3700 55 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015835,20015835,,aodofficer,Acquiring Operation Department,Semarang,30028501,,,Semarang,,,,30008630,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015830,20015830,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180683,Bandung,,,,59107930,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015828,20015828,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36640900,,1775628,YOGYAKARTA,,,-,3800 02 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015818,20015818,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36489001,,3180801,YOGYAKARTA,,,-,3600 33 04,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015795,20015795,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36667502,,2961702,YOGYAKARTA,,,-,3800 30 03,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015785,20015785,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36709100,,2263495,YOGYAKARTA,,,-,3800 72 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015768,20015768,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36516503,,2961836,YOGYAKARTA,,,-,3600 62 06,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015760,20015760,,aodofficer,Acquiring Operation Department,Batam,29547302,,,Batam,,,,23101307,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015742,20015742,,aodofficer,Acquiring Operation Department,MEDAN,50518700,,,MEDAN,,,-,56001803,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015736,20015736,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961754,Bandung,,,,59107917,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015698,20015698,,aodofficer,Acquiring Operation Department,Bandung,41000000,,2927981,Bandung,,,,58008901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015685,20015685,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2961630,Bandung,,,,59107920,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20015656,20015656,,aodofficer,Acquiring Operation Department,MEDAN,50100701,,,MEDAN,,,-,54002302,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20013495,20013495,,aodofficer,Acquiring Operation Department,Bandung,40927700,,1775997,Bandung,,,,58001801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20012447,20012447,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36545514,,744206,YOGYAKARTA,,,-,3600 88 15,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20012432,20012432,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36678302,,3180750,YOGYAKARTA,,,-,3800 41 03,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20012424,20012424,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36281404,,3198524,YOGYAKARTA,,,-,3500 31 05,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20012414,20012414,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36643300,,314423,YOGYAKARTA,,,-,3800 06 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20005690,20005690,,aodofficer,Acquiring Operation Department,Bandung,40956801,,2961619,Bandung,,,,58004552,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20005665,20005665,,aodofficer,Acquiring Operation Department,Pontianak,27100500,,3084954,BALIKPAPAN,,,,85002202,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20005534,20005534,,aodofficer,Acquiring Operation Department,Semarang,30751100,,,Semarang,,,,59902701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20004725,20004725,,aodofficer,Acquiring Operation Department,Batam,29157548,,,Batam,,,,20005554,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20004704,20004704,,aodofficer,Acquiring Operation Department,Padang,26339900,,,Batam,,,,88104701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20004392,20004392,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36813501,,2961897,YOGYAKARTA,,,-,3801 68 02,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20004277,20004277,,aodofficer,Acquiring Operation Department,Tegal,30757900,,1775936,Semarang,,,,59903303,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20003615,20003615,,aodofficer,Acquiring Operation Department,PALU,78035500,,,MAKASSAR,,,,80001201,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20002854,20002854,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36670900,,1775693,YOGYAKARTA,,,-,3800 33 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20000341,20000341,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3085146,Bandung,,,,59107604,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20000324,20000324,,aodofficer,Acquiring Operation Department,Bandung,40937700,,1775825,Bandung,,,,58002902,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,20000248,20000248,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60237300,,1775804,BALIKPAPAN,,,,60100601,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,10921938,10921938,,aodofficer,Acquiring Operation Department,Bengkulu,99923900,,,Batam,,,,82002301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,9903212,9903212,,aodofficer,Acquiring Operation Department,Banjarmasin,62095900,,1775871,BALIKPAPAN,,,,65006002,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,9903150,9903150,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3084810,Bandung,,,,59107607,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,9040332,9040332,,aodofficer,Acquiring Operation Department,PURWOKERTO,35960900,,3180851,YOGYAKARTA,,,-,5500 7701,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,4510213,4510213,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36816900,,1775643,YOGYAKARTA,,,-,3801 71 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3528963,3528963,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60142702,,2927910,BALIKPAPAN,,,,60001502,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3403402,3403402,,aodofficer,Acquiring Operation Department,Kudus,30777900,,,Semarang,,,,59905301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,3008275,3008275,,aodofficer,Acquiring Operation Department,Bandung,40956802,,3180809,Bandung,,,,59107924,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2925094,2925094,,aodofficer,Acquiring Operation Department,SOLO,43911900,,1775795,YOGYAKARTA,,,-,4600 20 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2871558,2871558,,aodofficer,Acquiring Operation Department,YOGYAKARTA,36392107,,3084891,YOGYAKARTA,,,-,3500 48 08,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2866664,2866664,,aodofficer,Acquiring Operation Department,MANADO,79145700,,1.00E+11,MAKASSAR,,,,87013001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2030155,2030155,,aodofficer,Acquiring Operation Department,MANADO,79085700,,1.00E+11,MAKASSAR,,,,86006801,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2030153,2030153,,aodofficer,Acquiring Operation Department,MEDAN,50495500,,,MEDAN,,,-,54009301,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2030096,2030096,,aodofficer,Acquiring Operation Department,Semarang,30471701,,3084965,Semarang,,,,34003104,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2030090,2030090,,aodofficer,Acquiring Operation Department,BALIKPAPAN,60260700,,1775688,BALIKPAPAN,,,,60102901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,2030036,2030036,,aodofficer,Acquiring Operation Department,MANADO,79120700,,1.00E+11,MAKASSAR,,,,87010501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,1833210,1833210,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2927995,Bandung,,,,59107919,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,1830942,1830942,,aodofficer,Acquiring Operation Department,Bandung,40956802,,2927996,Bandung,,,,59107918,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,990389,990389,,aodofficer,Acquiring Operation Department,Banjarmasin,62121100,,2411034,BALIKPAPAN,,,,65007501,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,728062,728062,,aodofficer,Acquiring Operation Department,MANADO,79135700,,1.00E+11,MAKASSAR,,,,87012001,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,210281,210281,,aodofficer,Acquiring Operation Department,SOLO,43962700,,2961704,YOGYAKARTA,,,-,4600 71 01,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,200160,200160,,aodofficer,Acquiring Operation Department,Bandung,40486313,,2961809,Bandung,,,,40007415,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,151219,151219,,aodofficer,Acquiring Operation Department,Tegal,30757900,,1775723,Semarang,,,,59903306,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,97090,97090,,aodofficer,Acquiring Operation Department,MANADO,79144900,,1.00E+11,MAKASSAR,,,,87012901,purchase
+ADAPTOR,EDC,ADAPTOR,Straight line,1,IDR,0,,0,1/1/2000,,,,,,81119,81119,,aodofficer,Acquiring Operation Department,Jambi,94334500,,,Batam,,,,84003401,purchase

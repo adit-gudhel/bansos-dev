@@ -1,0 +1,23 @@
+11/12/2013
+
+Judul 
+
+Hibah
+- input data kemasy.
+- tgl surat permohonan
+- nama penerima -> pemohon
+- OPD tujuan -> evaluator
+- referensi pimpinan
+	nama lembaga
+	alamat
+	pimpinan
+	No. Akta Pendirian
+	No. SK Pengangkatan Pengurus
+- klasifikasi jenis pemohon
+	- Lembaga
+	- 
+
+Evaluasi OPD
+ - jumlah opd !> permohonan
+ - no., tgl, tahun, tentang sk tim evaluasi
+

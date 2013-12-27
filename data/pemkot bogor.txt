@@ -1,0 +1,10 @@
+29/11/2013 Pemkot Bogor
+
+- Dana Bansos
+
+- Business Process
+Proposal -> umum -> disposisi ke bag. kemasyaraktan -> SKPD masing2 unit -> verifikasi -> Approval
+
+-Trouble
+ -Banyak pendaftar
+ -redudansi pendaftar (Nama, Alamat)
