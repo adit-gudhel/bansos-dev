@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS `v_dncpbh_tapd`;
+
+DROP VIEW IF EXISTS `v_dncpbh_tapd`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bansos`.`v_dncpbh_tapd` AS select `a`.`opd_nama` AS `opd`,`b`.`jh_jenis` AS `jenis`,`c`.`hib_nama` AS `nama`,`c`.`hib_kode`,concat(`c`.`hib_jalan`,_utf8' RT.',`c`.`hib_rt`,_utf8' / RW.',`c`.`hib_rw`) AS `alamat`,`d`.`nm_kelurahan` AS `kelurahan`,`e`.`nm_kecamatan` AS `kecamatan`,`f`.`nm_dati2` AS `kota`,`g`.`nm_propinsi` AS `propinsi`,`c`.`hib_kodepos` AS `kodepos`,`h`.`rencana_penggunaan` AS `rencana_penggunaan`,`c`.`hib_besaran_hibah` AS `permohonan`,`h`.`besaran_opd` AS `hasil_evaluasi_opd`,`k`.`besaran_tapd` AS `hasil_evaluasi_tapd`,`k`.`keterangan` AS `keterangan`,`h`.`status` AS `status_opd`,`k`.`status` AS `status_tapd`,`k`.`kode` AS `kode`,`j`.`tipe` AS `tipe`,`j`.`ba_no` AS `no_ba`,`j`.`ba_tgl` AS `tgl_ba` from ((((((((((`bansos`.`tbl_opd` `a` join `bansos`.`tbl_jenis_hibah` `b`) join `bansos`.`tbl_hibah` `c`) join `bansos`.`tbl_kelurahan` `d`) join `bansos`.`tbl_kecamatan` `e`) join `bansos`.`tbl_dati2` `f`) join `bansos`.`tbl_propinsi` `g`) join `bansos`.`tbl_berita_acara_detail` `h`) join `bansos`.`tbl_berita_acara` `i`) join `bansos`.`tbl_eval_tapd` `j`) join `bansos`.`tbl_eval_tapd_detail` `k`) where ((`c`.`opd_kode` = `a`.`opd_kode`) and (`c`.`jh_kode` = `b`.`jh_kode`) and (`c`.`kd_kelurahan` = convert(`d`.`kd_kelurahan` using utf8)) and (`c`.`kd_kecamatan` = convert(`e`.`kd_kecamatan` using utf8)) and (`c`.`kd_dati2` = convert(`f`.`kd_dati2` using utf8)) and (`c`.`kd_propinsi` = convert(`g`.`kd_propinsi` using utf8)) and (`c`.`hib_kode` = `k`.`hib_kode`) and (`k`.`kode` = `j`.`kode`) and (`h`.`kode` = `i`.`kode`) and (`c`.`hib_kode` = `h`.`hib_kode`));
+
 a = tbl_opd
 b = tbl_jenis_hibah
 c = tbl_hibah
@@ -13,7 +18,8 @@ k = tbl_eval_tapd_detail
 CREATE VIEW v_dncpbh_tapd AS
 SELECT a.opd_nama as opd,
 	b.jh_jenis as jenis, 
-	c.hib_nama as nama, 
+	c.hib_nama as nama,
+	c.hib_kode, 
 	CONCAT(`hib_jalan`,' RT.',`hib_rt`,' / RW.',`hib_rw`) as alamat, d.nm_kelurahan as kelurahan,e.nm_kecamatan as kecamatan,
 	f.nm_dati2 as kota,
 	g.nm_propinsi as propinsi,

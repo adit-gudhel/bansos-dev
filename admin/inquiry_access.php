@@ -108,7 +108,8 @@ if($act=='delete'){
 		$access_array=array(
 			"BK"		=>array("Yes"), 
 			"OPD"		=>array("Yes"), 
-			"TAPD"		=>array("Yes")
+			"TAPD"		=>array("Yes"),
+			"BPKAD"		=>array("Yes")
 		);
 
 

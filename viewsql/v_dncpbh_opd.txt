@@ -11,7 +11,8 @@ i = tbl_berita_acara
 CREATE VIEW v_dncpbh_opd AS
 SELECT a.opd_nama as opd,
 	b.jh_jenis as jenis, 
-	c.hib_nama as nama, 
+	c.hib_nama as nama,
+	c.hib_kode, 
 	CONCAT(`hib_jalan`,' RT.',`hib_rt`,' / RW.',`hib_rw`) as alamat, d.nm_kelurahan as kelurahan,e.nm_kecamatan as kecamatan,
 	f.nm_dati2 as kota,
 	g.nm_propinsi as propinsi,
