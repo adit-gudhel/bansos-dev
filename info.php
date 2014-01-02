@@ -50,7 +50,10 @@ function checkQuickForm($judul) {
     if (checkQuickForm('Pendaftaran Hibah')) echo "<a href=# onclick=\"window.parent.addTab('Pendaftaran Hibah','hibah.php?act=add')\"><div class=\"button\">Pendaftaran Hibah</div></a>";
 	if (checkQuickForm('Evaluasi Hibah OPD')) echo "<a href=# onclick=\"window.parent.addTab('Evaluasi Hibah OPD','evaluasi_hibah_opd.php?act=add')\"><div class=\"button\">Evaluasi Hibah OPD</div></a>";
 	if (checkQuickForm('Pertimbangan Hibah TAPD')) echo "<a href=# onclick=\"window.parent.addTab('Pertimbangan Hibah TAPD','evaluasi_hibah_tapd.php?act=add')\"><div class=\"button\">Pertimbangan Hibah TAPD</div></a>";
+	if (checkQuickForm('Daftar Nama Penerima Hibah')) echo "<a href=# onclick=\"window.parent.addTab('Daftar Nama Penerima Hibah','penerima_hibah.php')\"><div class=\"button\">Daftar Penerima Hibah</div></a>";
+	if (checkQuickForm('Pencairan Hibah')) echo "<a href=# onclick=\"window.parent.addTab('Pencairan Hibah','pencairan_hibah.php?act=add')\"><div class=\"button\">Pencairan Hibah</div></a>";
     ?>
+    
 </div>
 <?
 	$last_login = explode(' ',$login_last_login); 

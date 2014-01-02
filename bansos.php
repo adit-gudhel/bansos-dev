@@ -26,13 +26,19 @@ if ($act == "add" || $act == "edit") {
     
 
 ?>
-<script type="text/javascript" src="/hibah.js"></script>
+<script type="text/javascript" src="/bansos.js"></script>
 <form id="ff" enctype="multipart/form-data" method="POST" action="<?=$PHP_SELF?>">
 <table class="index">
 <input type="hidden" name="act" value="<?=($act=='edit')?"do_update":"do_add"?>">
 <input type="hidden" name="id" value="<?=$ban_kode?>">
   <tr>
     <td>Jenis Bantuan Sosial</td>
+    <td>
+     <?=$f->selectListArray("ban_jenis",array("Terencana"=>"Terencana", "Tidak Terencana"=>"Tidak Terencana"),$ban_jenis)?>
+    </td>
+  </tr>
+  <tr>
+    <td>Bantuan Sosial Berupa</td>
     <td>
       <?=$f->selectList("jh_kode","tbl_jenis_hibah","jh_kode","jh_jenis",$jh_kode,"","")?>
     </td>
@@ -53,6 +59,12 @@ if ($act == "add" || $act == "edit") {
     <td>Nama Pemohon</td>
     <td>
       <input type="text" name="ban_nama" id="ban_nama" value="<?=$ban_nama?>" style="width:250px;" class="easyui-validatebox" required="true" />
+    </td>
+  </tr>
+  <tr>
+    <td>Nama Pimpinan</td>
+    <td>
+      <input type="text" name="pimpinan" id="pimpinan" value="<?=$pimpinan?>" style="width:250px;" class="easyui-validatebox" required="true" />
     </td>
   </tr>
   <tr>
@@ -146,16 +158,23 @@ if ($act == "add" || $act == "edit") {
     </td>
   </tr>
   <tr>
-    <td>Besaran Permohonan Hibah (Rp)</td>
+    <td>Besaran Permohonan Bantuan Sosial (Rp)</td>
     <td>
-      <input type="text" name="ban_besaran_hibah" id="ban_besaran_hibah" value="<?=$ban_besaran_hibah?>" style="width:250px;" class="easyui-validatebox" required="true" />
+      <input type="text" name="ban_besaran_bansos" id="ban_besaran_bansos" value="<?=$ban_besaran_bansos?>" style="width:250px;" class="easyui-validatebox" required="true" />
+    </td>
+  </tr>
+  <tr>
+    <td>Tujuan Penggunaan Bantuan Sosial</td>
+    <td>
+      <?=$f->selectList("id_tb","tbl_tujuan_bansos","id_tb","tb",$id_tb,"","")?>
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
     <input type=button onClick=history.back(-1) value='&laquo; Back'> 
     <input class="submit" type=submit value="<?=($act=='add')?"Add":"Update";?>"></td>
-  </tr>  
+  </tr>
+    
 </table>
 </form>
 
@@ -167,14 +186,14 @@ else if ($act == "do_add" || $act == "do_update") {
     }
      
     if ($act=='do_update') {	    
-        $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."',ban_nama='$ban_nama', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_hibah='$ban_besaran_hibah', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
+        $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', ban_jenis='$ban_jenis', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."', id_tb='$id_tb', ban_nama='$ban_nama', pimpinan='$pimpinan', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_bansos='$ban_besaran_bansos', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
                 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
     }
     else {
-      $sql = "INSERT INTO tbl_bansos (ban_kode,ban_tanggal,jh_kode,ban_judul_kegiatan,ban_lokasi_kegiatan,ban_nama, ban_jalan, ban_rt, ban_rw, kd_propinsi, kd_dati2, kd_kecamatan, kd_kelurahan, ban_kodepos, ban_tlp, ban_hp, bank_kode, ban_norek, ban_besaran_hibah, opd_kode, ctime, mtime, user) VALUES
-('','".$f->preparedate($ban_tanggal)."','$jh_kode','$ban_judul_kegiatan','".trim($ban_lokasi_kegiatan)."','$ban_nama','$ban_jalan','$ban_rt','$ban_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$ban_kodepos','$ban_tlp','$ban_hp','$bank_kode','$ban_norek','$ban_besaran_hibah','$opd_kode', NOW(), NOW(), '$login_full_name')";
+      $sql = "INSERT INTO tbl_bansos (ban_kode,ban_tanggal,ban_jenis,jh_kode,ban_judul_kegiatan,ban_lokasi_kegiatan,id_tb,ban_nama,pimpinan,ban_jalan,ban_rt,ban_rw,kd_propinsi,kd_dati2,kd_kecamatan,kd_kelurahan,ban_kodepos,ban_tlp,ban_hp,bank_kode,ban_norek,ban_besaran_bansos,opd_kode,ctime,mtime,user) VALUES
+('','".$f->preparedate($ban_tanggal)."','$ban_jenis','$jh_kode','$ban_judul_kegiatan','".trim($ban_lokasi_kegiatan)."','$id_tb','$ban_nama','$pimpinan','$ban_jalan','$ban_rt','$ban_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$ban_kodepos','$ban_tlp','$ban_hp','$bank_kode','$ban_norek','$ban_besaran_bansos','$opd_kode', NOW(), NOW(), '$login_full_name')";
 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
@@ -198,7 +217,7 @@ else if ($act == "delete") {
 else {
 
     if(!$start) $start='1';
-    if(!$order)	$order='h.ban_nama';
+    if(!$order)	$order='b.ban_nama';
     if(!$sort) 	$sort='asc';
     if(!$page) 	$page='0';
     if(!$num)	$num='10';
@@ -209,20 +228,20 @@ else {
     $f->standard_buttons();
     $f->search_box($query);
 
-$cond1 = " left join tbl_jenis_hibah jh on h.jh_kode=jh.jh_kode ";
+$cond1 = " left join tbl_jenis_hibah jh on b.jh_kode=jh.jh_kode ";
 
 if(!empty($query)){
 $query = urldecode($query);
 $query = strtolower(trim($query));
 
 $rel = !empty($cond)?"and":"where";
-$cond  .=" $rel (h.ban_kode = '$query' or h.ban_nama like '%$query%' or h.ban_jalan like '%$query%' or h.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
+$cond  .=" $rel (b.ban_kode = '$query' or b.ban_nama like '%$query%' or b.ban_jalan like '%$query%' or b.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
 }
 
-$total = $f->count_total("tbl_bansos h","$cond1 $cond"); 
+$total = $f->count_total("tbl_bansos b","$cond1 $cond"); 
 
 $f->paging(array("link"=>$PHP_SELF."?query=$query&order=$order&sort=$sort&type=$type&act=","page"=>$page,"total"=>$total,"num"=>"$num","show_total"=>1));
-$sql="select h.*, jh.jh_jenis from tbl_bansos h $cond1 $cond order by $order $sort";
+$sql="select b.*, jh.jh_jenis from tbl_bansos b $cond1 $cond order by $order $sort";
 $result=$db->SelectLimit("$sql","$num","$start");
 #echo $sql;
 if(!$result) print $db->ErrorMsg();
@@ -258,7 +277,7 @@ $_sort=($sort=='desc')?"asc":"desc";
 			<td valign=top>$ban_nama</td>
 			<td valign=top>$ban_jalan RT.".$ban_rt."/RW.".$ban_rw."</td>
 			<td valign=top>$jh_jenis</td>
-			<td valign=top>".number_format($ban_besaran_hibah,2,',','.')."</td>
+			<td valign=top>".number_format($ban_besaran_bansos,2,',','.')."</td>
 			";
             
         echo "
