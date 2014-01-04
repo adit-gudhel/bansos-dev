@@ -1,8 +1,3 @@
-DROP TABLE IF EXISTS `v_dncpbh_tapd`;
-
-DROP VIEW IF EXISTS `v_dncpbh_tapd`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bansos`.`v_dncpbh_tapd` AS select `a`.`opd_nama` AS `opd`,`b`.`jh_jenis` AS `jenis`,`c`.`hib_nama` AS `nama`,`c`.`hib_kode`,concat(`c`.`hib_jalan`,_utf8' RT.',`c`.`hib_rt`,_utf8' / RW.',`c`.`hib_rw`) AS `alamat`,`d`.`nm_kelurahan` AS `kelurahan`,`e`.`nm_kecamatan` AS `kecamatan`,`f`.`nm_dati2` AS `kota`,`g`.`nm_propinsi` AS `propinsi`,`c`.`hib_kodepos` AS `kodepos`,`h`.`rencana_penggunaan` AS `rencana_penggunaan`,`c`.`hib_besaran_hibah` AS `permohonan`,`h`.`besaran_opd` AS `hasil_evaluasi_opd`,`k`.`besaran_tapd` AS `hasil_evaluasi_tapd`,`k`.`keterangan` AS `keterangan`,`h`.`status` AS `status_opd`,`k`.`status` AS `status_tapd`,`k`.`kode` AS `kode`,`j`.`tipe` AS `tipe`,`j`.`ba_no` AS `no_ba`,`j`.`ba_tgl` AS `tgl_ba` from ((((((((((`bansos`.`tbl_opd` `a` join `bansos`.`tbl_jenis_hibah` `b`) join `bansos`.`tbl_hibah` `c`) join `bansos`.`tbl_kelurahan` `d`) join `bansos`.`tbl_kecamatan` `e`) join `bansos`.`tbl_dati2` `f`) join `bansos`.`tbl_propinsi` `g`) join `bansos`.`tbl_berita_acara_detail` `h`) join `bansos`.`tbl_berita_acara` `i`) join `bansos`.`tbl_eval_tapd` `j`) join `bansos`.`tbl_eval_tapd_detail` `k`) where ((`c`.`opd_kode` = `a`.`opd_kode`) and (`c`.`jh_kode` = `b`.`jh_kode`) and (`c`.`kd_kelurahan` = convert(`d`.`kd_kelurahan` using utf8)) and (`c`.`kd_kecamatan` = convert(`e`.`kd_kecamatan` using utf8)) and (`c`.`kd_dati2` = convert(`f`.`kd_dati2` using utf8)) and (`c`.`kd_propinsi` = convert(`g`.`kd_propinsi` using utf8)) and (`c`.`hib_kode` = `k`.`hib_kode`) and (`k`.`kode` = `j`.`kode`) and (`h`.`kode` = `i`.`kode`) and (`c`.`hib_kode` = `h`.`hib_kode`));
-
 a = tbl_opd
 b = tbl_jenis_hibah
 c = tbl_hibah
@@ -12,8 +7,8 @@ f = tbl_dati2
 g = tbl_propinsi
 h = tbl_berita_acara_detail
 i = tbl_berita_acara
-j = tbl_eval_tapd
-k = tbl_eval_tapd_detail
+j = tbl_eval_tapd_detail
+k = tbl_eval_tapd
 
 CREATE VIEW v_dncpbh_tapd AS
 SELECT a.opd_nama as opd,
@@ -27,14 +22,30 @@ SELECT a.opd_nama as opd,
 	h.rencana_penggunaan,
 	c.hib_besaran_hibah as permohonan,
 	h.besaran_opd as hasil_evaluasi_opd,
-	
-	k.keterangan,
+	j.besaran_tapd as hasil_evaluasi_tapd,
+	j.keterangan,
 	h.status as status_opd,
-	k.status as status_tapd,
-	k.kode,
-	j.tipe,
-	j.ba_no as no_ba,
-	j.ba_tgl as tgl_ba
-	
-FROM tbl_opd a, tbl_jenis_hibah b, tbl_hibah c, tbl_kelurahan d, tbl_kecamatan e, tbl_dati2 f, tbl_propinsi g, tbl_berita_acara_detail h, tbl_berita_acara i, tbl_eval_tapd j, tbl_eval_tapd_detail k
-WHERE c.opd_kode=a.opd_kode AND c.jh_kode=b.jh_kode AND c.kd_kelurahan=d.kd_kelurahan AND c.kd_kecamatan=e.kd_kecamatan AND c.kd_dati2=f.kd_dati2 AND c.kd_propinsi=g.kd_propinsi AND c.hib_kode=k.hib_kode AND k.kode=j.kode AND h.kode=i.kode and c.hib_kode=h.hib_kode
+	j.status as status_tapd,
+	j.kode,
+	k.tipe,
+	k.ba_no as no_ba,
+	k.ba_tgl as tgl_ba
+FROM tbl_opd a, tbl_jenis_hibah b, tbl_hibah c, tbl_kelurahan d, tbl_kecamatan e, tbl_dati2 f, tbl_propinsi g, tbl_berita_acara_detail h, tbl_berita_acara i, tbl_eval_tapd_detail j, tbl_eval_tapd k
+WHERE c.opd_kode=a.opd_kode AND c.jh_kode=b.jh_kode AND c.kd_kelurahan=d.kd_kelurahan AND c.kd_kecamatan=e.kd_kecamatan AND c.kd_dati2=f.kd_dati2 AND c.kd_propinsi=g.kd_propinsi AND c.hib_kode=h.hib_kode AND h.kode=i.kode AND i.tipe='HIBAH' AND c.hib_kode=j.hib_kode AND k.kode=k.kode AND k.tipe ='HIBAH'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

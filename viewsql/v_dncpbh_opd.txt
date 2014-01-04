@@ -28,7 +28,7 @@ SELECT a.opd_nama as opd,
 	i.ba_tgl as tgl_ba
 	
 FROM tbl_opd a, tbl_jenis_hibah b, tbl_hibah c, tbl_kelurahan d, tbl_kecamatan e, tbl_dati2 f, tbl_propinsi g, tbl_berita_acara_detail h, tbl_berita_acara i
-WHERE c.opd_kode=a.opd_kode AND c.jh_kode=b.jh_kode AND c.kd_kelurahan=d.kd_kelurahan AND c.kd_kecamatan=e.kd_kecamatan AND c.kd_dati2=f.kd_dati2 AND c.kd_propinsi=g.kd_propinsi AND c.hib_kode=h.hib_kode AND h.kode=i.kode
+WHERE c.opd_kode=a.opd_kode AND c.jh_kode=b.jh_kode AND c.kd_kelurahan=d.kd_kelurahan AND c.kd_kecamatan=e.kd_kecamatan AND c.kd_dati2=f.kd_dati2 AND c.kd_propinsi=g.kd_propinsi AND c.hib_kode=h.hib_kode AND h.kode=i.kode AND i.tipe='HIBAH'
 
 
 

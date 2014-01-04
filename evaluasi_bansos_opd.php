@@ -19,8 +19,8 @@ if ($act == "add" || $act == "edit") {
         }
 		
 		//$counter = $f->count_total("tbl_berita_acara_detail"," where kode='$kode'") + 1;
-		$counter1 = $f->count_total("v_dncpbh_opd"," where kode='$kode' and jenis='Uang'") + 1;
-		$counter2 = $f->count_total("v_dncpbh_opd"," where kode='$kode' and (jenis='Barang' or jenis='Jasa')") + 1;
+		$counter1 = $f->count_total("v_dncpbs_opd"," where kode='$kode' and jenis='Uang'") + 1;
+		$counter2 = $f->count_total("v_dncpbs_opd"," where kode='$kode' and (jenis='Barang' or jenis='Jasa')") + 1;
 		$counter3 = $f->count_total("tbl_tim_evaluasi"," where kode='$kode'") + 1;
     }
     
@@ -635,10 +635,10 @@ $_sort=($sort=='desc')?"asc":"desc";
 				<a href=$PHP_SELF?act=edit&id=$id><img src=../images/button_edit.gif border=0></a> 
 				<a href=$PHP_SELF?act=delete&id=$id onClick=\"javascript:return confirm('Anda Yakin Menghapus Data ini?');return false;\"><img src=../images/button_delete.gif border=0></a>
 				<p>
-                <a href=docs/print_ba_evaluasi_hibah.php?id=$id><img src=../i/iconprint.gif border=0> Cetak Berita Acara</a>
+                <a href=docs/print_ba_evaluasi_bansos.php?id=$id><img src=../i/iconprint.gif border=0> Cetak Berita Acara</a>
 				</p>
 				<p>
-                <a href=dncpbh_opd.php?id=$id><img src=../i/iconprint.gif border=0> Download DNC-PBH OPD</a>
+                <a href=dncpbs_opd.php?id=$id><img src=../i/iconprint.gif border=0> Download DNC-PBS OPD</a>
 				</p>  
 				";
 

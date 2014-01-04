@@ -26,7 +26,7 @@ $menu             = array(
 if($act=="do_add" || $act=="do_update"){
 	
 
-	foreach($HTTP_POST_VARS as $key=>$val){	
+	foreach($_POST as $key=>$val){	
 		if($act=='do_update' && $key=='nomorurut_old'){
 			$update_condition ="nomorurut='$val'";
 		}elseif(!preg_match("/^(act|id|tempact)$/",$key) && $key!="nomorurut_old"){

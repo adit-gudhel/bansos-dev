@@ -74,6 +74,8 @@ function checkQuickForm($judul) {
     if (checkQuickForm('Pendaftaran Bantuan Sosial')) echo "<a href=# onclick=\"window.parent.addTab('Pendaftaran Bantuan Sosial','bansos.php?act=add')\"><div class=\"button\">Pendaftaran Bantuan Sosial</div></a>";
 	if (checkQuickForm('Evaluasi Bantuan Sosial OPD')) echo "<a href=# onclick=\"window.parent.addTab('Evaluasi Bantuan Sosial OPD','evaluasi_bansos_opd.php?act=add')\"><div class=\"button\">Evaluasi Bantuan Sosial OPD</div></a>";
 	if (checkQuickForm('Pertimbangan Bantuan Sosial TAPD')) echo "<a href=# onclick=\"window.parent.addTab('Pertimbangan Bantuan Sosial TAPD','evaluasi_bansos_tapd.php?act=add')\"><div class=\"button\">Pertimbangan Bantuan Sosial TAPD</div></a>";
+	if (checkQuickForm('Daftar Nama Penerima Bantuan Sosial')) echo "<a href=# onclick=\"window.parent.addTab('Daftar Nama Penerima Bantuan Sosial','penerima_bansos.php')\"><div class=\"button\">Daftar Penerima Bantuan Sosial</div></a>";
+	if (checkQuickForm('Pencairan Bantuan Sosial')) echo "<a href=# onclick=\"window.parent.addTab('Pencairan Bantuan Sosial','pencairan_bansos.php?act=add')\"><div class=\"button\">Pencairan Bantuan Sosial</div></a>";
     ?>
 </div>
 

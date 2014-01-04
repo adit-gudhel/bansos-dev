@@ -1,0 +1,34 @@
+a = tbl_opd
+b = tbl_jenis_hibah
+c = tbl_bansos
+d = tbl_kelurahan
+e = tbl_kecamatan
+f = tbl_dati2
+g = tbl_propinsi
+h = tbl_berita_acara_detail
+i = tbl_berita_acara
+j = tbl_eval_tapd_detail
+k = tbl_eval_tapd
+
+CREATE VIEW v_dncpbs_tapd AS
+SELECT a.opd_nama as opd,
+	b.jh_jenis as jenis, 
+	c.ban_nama as nama,
+	c.ban_kode, 
+	CONCAT(`ban_jalan`,' RT.',`ban_rt`,' / RW.',`ban_rw`) as alamat, d.nm_kelurahan as kelurahan,e.nm_kecamatan as kecamatan,
+	f.nm_dati2 as kota,
+	g.nm_propinsi as propinsi,
+	c.ban_kodepos as kodepos, 
+	h.rencana_penggunaan,
+	c.ban_besaran_bansos as permohonan,
+	h.besaran_opd as hasil_evaluasi_opd,
+	j.besaran_tapd as hasil_evaluasi_tapd,
+	j.keterangan,
+	h.status as status_opd,
+	j.status as status_tapd,
+	j.kode,
+	k.tipe,
+	k.ba_no as no_ba,
+	k.ba_tgl as tgl_ba
+FROM tbl_opd a, tbl_jenis_hibah b, tbl_bansos c, tbl_kelurahan d, tbl_kecamatan e, tbl_dati2 f, tbl_propinsi g, tbl_berita_acara_detail h, tbl_berita_acara i, tbl_eval_tapd_detail j, tbl_eval_tapd k
+WHERE c.opd_kode=a.opd_kode AND c.jh_kode=b.jh_kode AND c.kd_kelurahan=d.kd_kelurahan AND c.kd_kecamatan=e.kd_kecamatan AND c.kd_dati2=f.kd_dati2 AND c.kd_propinsi=g.kd_propinsi AND c.ban_kode=h.hib_kode AND h.kode=i.kode AND i.tipe='BANSOS' AND c.ban_kode=j.hib_kode AND k.kode=k.kode AND k.tipe ='BANSOS'
