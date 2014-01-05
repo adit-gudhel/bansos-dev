@@ -4,22 +4,23 @@ $(function() {
     $('#ff').form({  
         success:function(data){  
             $.messager.alert('Info', data, 'info', function(r){
-                location.href='pencairan_hibah.php';
+                location.href='pencairan_bansos.php';
             });
         }  
     });
     
-	$( "#hib_nama" ).autocomplete({
+	$( "#ban_nama" ).autocomplete({
         minLength: 2,
-        source:'autocomplete_cair_hibah.php',
+        source:'autocomplete_cair_bansos.php',
         focus: function( event, ui ) {
-            $( "#hib_nama" ).val( ui.item.value );
+            $( "#ban_nama" ).val( ui.item.value );
             return false;
         },
         select: function( event, ui ) {
-			$( "#hib_nama" ).val( ui.item.value );
-            $( "#hib_kode" ).val( ui.item.hib_kode );
+			$( "#ban_nama" ).val( ui.item.value );
+            $( "#ban_kode" ).val( ui.item.ban_kode );
             $( "#besaran_tapd" ).val( ui.item.besaran_tapd);
+			//$( "#jml_cair" ).val( ui.item.besaran_tapd);
             return false;
         }
     });
@@ -28,11 +29,7 @@ $(function() {
         dateFormat: 'dd/mm/yy'
     });
     
-	$( "#spph_tgl" ).datepicker({
-        dateFormat: 'dd/mm/yy'
-    });
-	
-	$( "#nphd_tgl" ).datepicker({
+	$( "#sppbs_tgl" ).datepicker({
         dateFormat: 'dd/mm/yy'
     });
 	

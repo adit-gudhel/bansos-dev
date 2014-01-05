@@ -36,10 +36,10 @@ $objPHPExcel = new PHPExcel();
 //echo date('H:i:s') , " Set document properties" , EOL;
 $objPHPExcel->getProperties()->setCreator("Aditya Nursyahbani")
 							 ->setLastModifiedBy("Aditya Nursyahbani")
-							 ->setTitle("DNCPBH - TAPD")
-							 ->setSubject("DNCPBH TAPD")
-							 ->setDescription("Daftar Nominatif Calon Penerima Hibah - TAPD")
-							 ->setKeywords("dncpbh")
+							 ->setTitle("DNCPBS - TAPD")
+							 ->setSubject("DNCPBS TAPD")
+							 ->setDescription("Daftar Nominatif Calon Penerima Bantuan Sosial - TAPD")
+							 ->setKeywords("dncpbs")
 							 ->setCategory("report");
 
 
@@ -50,14 +50,14 @@ $AS = $objPHPExcel->getActiveSheet();
 
 // Header
 $AS->mergeCells('A1:H1');
-$AS->setCellValue('A1', 'DAFTAR NOMINATIF CALON PENERIMA BELANJA HIBAH (DNC-PBH)');
+$AS->setCellValue('A1', 'DAFTAR NOMINATIF CALON PENERIMA BANTUAN SOSIAL (DNC-PBS)');
 $AS->mergeCells('A2:H2');
 $AS->setCellValue('A2', 'TAHUN ANGGARAN '.$tahun.'');
 $AS->mergeCells('A4:B4');
 $AS->setCellValue('A4', 'Nama OPD');
 $AS->setCellValue('C4', ': '.$opd_nama.'');
 $AS->mergeCells('A5:B5');
-$AS->setCellValue('A5', 'Jenis Hibah');
+$AS->setCellValue('A5', 'Jenis Bantuan Sosial');
 $AS->setCellValue('C5', ': Uang');
 
 // Main Table
@@ -73,7 +73,7 @@ $AS->mergeCells('D7:D8');
 $AS->setCellValue('D7', 'Rencana Penggunaan');
 $AS->getStyle('D7')->getAlignment()->setWrapText(true);
 $AS->mergeCells('E7:G7');
-$AS->setCellValue('E7', 'Besaran Hibah (Rp)');
+$AS->setCellValue('E7', 'Besaran Bantuan Sosial (Rp)');
 $AS->setCellValue('E8', 'Permohonan');
 $AS->setCellValue('F8', 'Hasil Evaluasi OPD');
 $AS->setCellValue('G8', 'Pertimbangan TAPD');
@@ -91,7 +91,7 @@ $AS->setCellValue('F9', '6');
 $AS->setCellValue('G9', '7');
 $AS->setCellValue('H9', '8');
 
-$sql = "SELECT nama,alamat,kelurahan,kecamatan,kota,propinsi,rencana_penggunaan,permohonan,hasil_evaluasi_opd,hasil_evaluasi_tapd,keterangan FROM v_dncpbh_tapd WHERE kode='$kode' and jenis='Uang'";
+$sql = "SELECT nama,alamat,kelurahan,kecamatan,kota,propinsi,rencana_penggunaan,permohonan,hasil_evaluasi_opd,hasil_evaluasi_tapd,keterangan FROM v_dncpbs_tapd WHERE kode='$kode' and jenis='Uang'";
 $result=$db->Execute($sql);
 
 $total_rows = $result->NumRows();
@@ -120,7 +120,7 @@ $AS->setCellValue('E'.$start_row.'', '=SUM(E10:E'.($start_row - 1).')');
 $AS->setCellValue('F'.$start_row.'', '=SUM(F10:F'.($start_row - 1).')');
 $AS->setCellValue('G'.$start_row.'', '=SUM(G10:G'.($start_row - 1).')');
 
-$sql = "SELECT tgl_ba, opd FROM v_dncpbh_tapd WHERE kode='$kode'";
+$sql = "SELECT tgl_ba, opd FROM v_dncpbs_tapd WHERE kode='$kode'";
 $result=$db->Execute($sql);
 $row = $result->FetchRow();
 
@@ -388,15 +388,15 @@ $AS2 = $objPHPExcel->getActiveSheet();
 
 // Header
 $AS2->mergeCells('A1:H1');
-$AS2->setCellValue('A1', 'DAFTAR NOMINATIF CALON PENERIMA BELANJA HIBAH (DNC-PBH)');
+$AS2->setCellValue('A1', 'DAFTAR NOMINATIF CALON PENERIMA BANTUAN SOSIAL (DNC-PBS)');
 $AS2->mergeCells('A2:H2');
 $AS2->setCellValue('A2', 'TAHUN ANGGARAN '.$tahun.'');
 $AS2->mergeCells('A4:B4');
 $AS2->setCellValue('A4', 'Nama OPD');
 $AS2->setCellValue('C4', ': '.$opd_nama.'');
 $AS2->mergeCells('A5:B5');
-$AS2->setCellValue('A5', 'Jenis Hibah');
-$AS2->setCellValue('C5', ': Barang / Jasa');
+$AS2->setCellValue('A5', 'Jenis Bantuan Sosial');
+$AS2->setCellValue('C5', ': Barang');
 
 // Main Table
 $AS2->mergeCells('A7:A8');
@@ -411,7 +411,7 @@ $AS2->mergeCells('D7:D8');
 $AS2->setCellValue('D7', 'Rencana Penggunaan');
 $AS2->getStyle('D7')->getAlignment()->setWrapText(true);
 $AS2->mergeCells('E7:G7');
-$AS2->setCellValue('E7', 'Besaran Hibah (Rp)');
+$AS2->setCellValue('E7', 'Besaran Bantuan Sosial (Rp)');
 $AS2->setCellValue('E8', 'Permohonan');
 $AS2->setCellValue('F8', 'Hasil Evaluasi OPD');
 $AS2->setCellValue('G8', 'Pertimbangan TAPD');
@@ -429,7 +429,7 @@ $AS2->setCellValue('F9', '6');
 $AS2->setCellValue('G9', '7');
 $AS2->setCellValue('H9', '8');
 
-$sql = "SELECT nama,alamat,kelurahan,kecamatan,kota,propinsi,rencana_penggunaan,permohonan,hasil_evaluasi_opd,hasil_evaluasi_tapd,keterangan FROM v_dncpbh_tapd WHERE kode='$kode' and (jenis='Barang' or jenis='Jasa')";
+$sql = "SELECT nama,alamat,kelurahan,kecamatan,kota,propinsi,rencana_penggunaan,permohonan,hasil_evaluasi_opd,hasil_evaluasi_tapd,keterangan FROM v_dncpbs_tapd WHERE kode='$kode' and jenis='Barang'";
 $result=$db->Execute($sql);
 
 $total_rows = $result->NumRows();
@@ -463,7 +463,7 @@ $AS2->setCellValue('G'.$start_row.'', '=SUM(G10:G'.($start_row - 1).')');
 
 }
 
-$sql = "SELECT tgl_ba, opd FROM v_dncpbh_tapd WHERE kode='$kode'";
+$sql = "SELECT tgl_ba, opd FROM v_dncpbs_tapd WHERE kode='$kode'";
 $result=$db->Execute($sql);
 $row = $result->FetchRow();
 
