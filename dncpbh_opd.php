@@ -37,7 +37,8 @@ if(empty($row['kode'])){
 	$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
 	$objWriter->save('docs/'.$filename);
 	
-	echo "<a href=docs/$filename>Download</a>";	
+	echo "<a href=docs/$filename>Download</a>";
+	
 		
 }
 		

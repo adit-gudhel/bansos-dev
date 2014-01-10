@@ -30,6 +30,8 @@ if ($act == "add" || $act == "edit") {
 	if (!$ba_tgl) $ba_tgl = date('Y-m-d');
 	 
 ?>
+<script type="text/javascript" src="/jquery.formatCurrency.min.js"></script>
+<script type="text/javascript" src="/jquery.formatCurrency.id-ID.js"></script>
 <script type="text/javascript" src="/evaluasi_hibah_opd.js"></script>
 <script type="text/javascript">
 	$(function() {
@@ -40,7 +42,8 @@ if ($act == "add" || $act == "edit") {
 			focus: function( event, ui ) {
                     $( '#nama_' + counter1 ).val( ui.item.value );
 					$(this).closest('tr').find('input.hibUangId').val(ui.item.id);                        
-               		$(this).closest('tr').find('input.hibUangAlamat').val(ui.item.alamat);   
+               		$(this).closest('tr').find('input.hibUangAlamat').val(ui.item.alamat);
+					$(this).closest('tr').find('input.hibUangRenGuna').val(ui.item.ren_guna);   
 					$(this).closest('tr').find('input.hibUangNilHibah').val(ui.item.besaran_hibah); 
 					//console.log(ui.item.alamat);
            },
@@ -49,6 +52,7 @@ if ($act == "add" || $act == "edit") {
                     $( '#nama_' + counter1 ).val( ui.item.value );
 					$(this).closest('tr').find('input.hibUangId').val(ui.item.id);                        
                		$(this).closest('tr').find('input.hibUangAlamat').val(ui.item.alamat);
+					$(this).closest('tr').find('input.hibUangRenGuna').val(ui.item.ren_guna); 
 					$(this).closest('tr').find('input.hibUangNilHibah').val(ui.item.besaran_hibah);   
 					console.log(ui.item.alamat);
                    //return false;
@@ -63,7 +67,7 @@ if ($act == "add" || $act == "edit") {
 			if (counter1 > 1){
 				$('input#removeButton').removeAttr('disabled');
 			}
-			var inputHTML = ' <tr><td><div id="' + counter1 + '">'+ counter1 +'</div></td><td><input type="text" id="nama_' +counter1 + '" class="hibUangNama easyui-validatebox" name="nama_' + counter1 +'" value="" required="true" /> <input type="hidden" name="hib_kode_' + counter1 + '" id="hib_kode_' + counter1 + '" class="hibUangId" value="" /></td><td><input type="text" id="alamat_' + counter1 + '" class="hibUangAlamat" name="alamat_' + counter1 +'" value="" disabled /></td><td><input type="text" id="ren_guna_' + counter1 + '" class="hibUangRenGuna" name="ren_guna_' + counter1 +'" value="" /></td><td><input type="text" id="nil_hibah_' + counter1 + '" class="hibUangNilHibah" name="nil_hibah_' + counter1 +'" value="" disabled /></td><td><input type="text" id="nil_opd_' + counter1 + '" class="hibUangNilHibahOpd easyui-validatebox" name="nil_opd_' + counter1 +'" value="" required="true" /></td><td><input type="text" id="ket_' + counter1 + '" class="hibUangKet" name="ket_' + counter1 +'" value="" /></td></tr>';
+			var inputHTML = ' <tr><td><div id="' + counter1 + '">'+ counter1 +'</div></td><td><input type="text" id="nama_' +counter1 + '" class="hibUangNama easyui-validatebox" name="nama_' + counter1 +'" value="" required="true" /> <input type="hidden" name="hib_kode_' + counter1 + '" id="hib_kode_' + counter1 + '" class="hibUangId" value="" /></td><td><input type="text" id="alamat_' + counter1 + '" class="hibUangAlamat" name="alamat_' + counter1 +'" value="" disabled /></td><td><input type="text" id="ren_guna_' + counter1 + '" class="hibUangRenGuna" name="ren_guna_' + counter1 +'" value="" disabled /></td><td><input type="text" id="nil_hibah_' + counter1 + '" class="hibUangNilHibah" name="nil_hibah_' + counter1 +'" value="" disabled /></td><td><input type="text" id="nil_opd_' + counter1 + '" class="hibUangNilHibahOpd easyui-validatebox" name="nil_opd_' + counter1 +'" value="" required="true" /></td><td><input type="text" id="ket_' + counter1 + '" class="hibUangKet" name="ket_' + counter1 +'" value="" /></td></tr>';
 			$(inputHTML).appendTo("table#tbl-hibah-uang tbody");
 			//$("input.hibUangNama:last").focus();
 			counter1++;
@@ -103,7 +107,8 @@ if ($act == "add" || $act == "edit") {
 			focus: function( event, ui ) {
                     $( '#nama2_' + counter2 ).val( ui.item.value );
 					$(this).closest('tr').find('input.hibBarangId').val(ui.item.id);                        
-               		$(this).closest('tr').find('input.hibBarangAlamat').val(ui.item.alamat);   
+               		$(this).closest('tr').find('input.hibBarangAlamat').val(ui.item.alamat);  
+					$(this).closest('tr').find('input.hibBarangRenGuna').val(ui.item.ren_guna);  
 					$(this).closest('tr').find('input.hibBarangNilHibah').val(ui.item.besaran_hibah); 
 					//console.log(ui.item.alamat);
            },
@@ -112,6 +117,7 @@ if ($act == "add" || $act == "edit") {
                     $( '#nama2_' + counter2 ).val( ui.item.value );
 					$(this).closest('tr').find('input.hibBarangId').val(ui.item.id);                        
                		$(this).closest('tr').find('input.hibBarangAlamat').val(ui.item.alamat);
+					$(this).closest('tr').find('input.hibBarangRenGuna').val(ui.item.ren_guna);
 					$(this).closest('tr').find('input.hibBarangNilHibah').val(ui.item.besaran_hibah);   
 					console.log(ui.item.alamat);
                    //return false;
@@ -126,7 +132,7 @@ if ($act == "add" || $act == "edit") {
 			if (counter2 > 1){
 				$('input#removeButton2').removeAttr('disabled');
 			}
-			var inputHTML = ' <tr><td><div id="' + counter2 + '">'+ counter2 +'</div></td><td><input type="text" id="nama2_' +counter2 + '" class="hibBarangNama easyui-validatebox" name="nama2_' + counter2 +'" value="" /> <input type="hidden" name="hib_kode2_' + counter2 + '" id="hib_kode2_' + counter2 + '" class="hibBarangId" value="" /></td><td><input type="text" id="alamat2_' + counter2 + '" class="hibBarangAlamat" name="alamat2_' + counter2 +'" value="" disabled /></td><td><input type="text" id="ren_guna2_' + counter2 + '" class="hibBarangRenGuna" name="ren_guna2_' + counter2 +'" value="" /></td><td><input type="text" id="nil_hibah2_' + counter2 + '" class="hibBarangNilHibah" name="nil_hibah2_' + counter2 +'" value="" disabled /></td><td><input type="text" id="nil_opd2_' + counter2 + '" class="hibBarangNilHibahOpd easyui-validatebox" name="nil_opd2_' + counter2 +'" value="" /></td><td><input type="text" id="ket2_' + counter2 + '" class="hibBarangKet" name="ket2_' + counter2 +'" value="" /></td></tr>';
+			var inputHTML = ' <tr><td><div id="' + counter2 + '">'+ counter2 +'</div></td><td><input type="text" id="nama2_' +counter2 + '" class="hibBarangNama easyui-validatebox" name="nama2_' + counter2 +'" value="" /> <input type="hidden" name="hib_kode2_' + counter2 + '" id="hib_kode2_' + counter2 + '" class="hibBarangId" value="" /></td><td><input type="text" id="alamat2_' + counter2 + '" class="hibBarangAlamat" name="alamat2_' + counter2 +'" value="" disabled /></td><td><input type="text" id="ren_guna2_' + counter2 + '" class="hibBarangRenGuna" name="ren_guna2_' + counter2 +'" value="" disabled /></td><td><input type="text" id="nil_hibah2_' + counter2 + '" class="hibBarangNilHibah" name="nil_hibah2_' + counter2 +'" value="" disabled /></td><td><input type="text" id="nil_opd2_' + counter2 + '" class="hibBarangNilHibahOpd easyui-validatebox" name="nil_opd2_' + counter2 +'" value="" /></td><td><input type="text" id="ket2_' + counter2 + '" class="hibBarangKet" name="ket2_' + counter2 +'" value="" /></td></tr>';
 			$(inputHTML).appendTo("table#tbl-hibah-barang tbody");
 			//$("input.hibBarangNama:last").focus();
 			counter2++;
@@ -313,7 +319,7 @@ $i++;
 <?
 $i=0;
 if ($kode) {
-    $sql = "SELECT a.hib_kode, b.hib_nama, CONCAT(hib_jalan,' RT.',hib_rt,' / RW.',hib_rw) as alamat, a.rencana_penggunaan as ren_guna, b.hib_besaran_hibah as besaran_hibah, a.besaran_opd, a.keterangan FROM tbl_berita_acara_detail a LEFT JOIN tbl_hibah b ON a.hib_kode=b.hib_kode WHERE a.kode = '$kode' and b.jh_kode=1 ORDER BY b.hib_nama ASC";
+    $sql = "SELECT a.hib_kode, b.hib_nama, CONCAT(hib_jalan,' RT.',hib_rt,' / RW.',hib_rw) as alamat, b.hib_ren_guna as ren_guna, b.hib_besaran_hibah as besaran_hibah, a.besaran_opd, a.keterangan FROM tbl_berita_acara_detail a LEFT JOIN tbl_hibah b ON a.hib_kode=b.hib_kode WHERE a.kode = '$kode' and b.jh_kode=1 ORDER BY b.hib_nama ASC";
     $result=$db->Execute($sql);
     while($row=$result->Fetchrow()){
 		foreach($row as $key => $val){
@@ -321,11 +327,18 @@ if ($kode) {
 		}    
         $i++;
 ?>
+	<!--
+    <script>
+    $('#nil_opd_1').blur(function() {
+		$(this).formatCurrency({ colorize: true, negativeFormat: '-%s%n', roundToDecimalPlace: 2, region: 'id-ID' });
+	})
+    </script>
+    !-->
         <tr>
             <td><div id="<?=$i?>"><?=$i?></div></td>
             <td><input type="text" id="nama_<?=$i?>" class="hibUangNama easyui-validatebox" name="nama_<?=$i?>" value="<?=$hib_nama?>" required="true" /> <input type="hidden" name="hib_kode_<?=$i?>" id="hib_kode_<?=$i?>" class="hibUangId" value="<?=$hib_kode?>" /></td>
             <td><input type="text" id="alamat_<?=$i?>" class="hibUangAlamat" name="alamat_<?=$i?>" value="<?=$alamat?>" disabled /></td>
-            <td><input type="text" id="ren_guna_<?=$i?>" class="hibUangRenGuna" name="ren_guna_<?=$i?>" value="<?=$ren_guna?>" /></td>
+            <td><input type="text" id="ren_guna_<?=$i?>" class="hibUangRenGuna" name="ren_guna_<?=$i?>" value="<?=$ren_guna?>" disabled /></td>
             <td><input type="text" id="nil_hibah_<?=$i?>" class="hibUangNilHibah" name="nil_hibah_<?=$i?>" value="<?=$besaran_hibah?>" disabled /></td>
             <td><input type="text" id="nil_opd_<?=$i?>" class="hibUangNilHibahOpd easyui-validatebox" name="nil_opd_<?=$i?>" value="<?=$besaran_opd?>" required="true" /></td>
             <td><input type="text" id="ket_<?=$i?>" class="hibUangKet" name="ket_<?=$i?>" value="<?=$keterangan?>" /></td>
@@ -369,7 +382,7 @@ $i++;
 <?
 $i=0;
 if ($kode) {
-    $sql = "SELECT a.hib_kode, b.hib_nama, CONCAT(hib_jalan,' RT.',hib_rt,' / RW.',hib_rw) as alamat, a.rencana_penggunaan as ren_guna, b.hib_besaran_hibah as besaran_hibah, a.besaran_opd, a.keterangan FROM tbl_berita_acara_detail a LEFT JOIN tbl_hibah b ON a.hib_kode=b.hib_kode WHERE a.kode = '$kode' and (b.jh_kode=2 or b.jh_kode=3) ORDER BY b.hib_nama ASC";
+    $sql = "SELECT a.hib_kode, b.hib_nama, CONCAT(hib_jalan,' RT.',hib_rt,' / RW.',hib_rw) as alamat, b.hib_ren_guna as ren_guna, b.hib_besaran_hibah as besaran_hibah, a.besaran_opd, a.keterangan FROM tbl_berita_acara_detail a LEFT JOIN tbl_hibah b ON a.hib_kode=b.hib_kode WHERE a.kode = '$kode' and (b.jh_kode=2 or b.jh_kode=3) ORDER BY b.hib_nama ASC";
     $result=$db->Execute($sql);
     while($row=$result->Fetchrow()){
 		foreach($row as $key => $val){
@@ -381,7 +394,7 @@ if ($kode) {
             <td><div id="<?=$i?>"><?=$i?></div></td>
             <td><input type="text" id="nama2_<?=$i?>" class="hibBarangNama easyui-validatebox" name="nama2_<?=$i?>" value="<?=$hib_nama?>" required="true" /> <input type="hidden" name="hib_kode2_<?=$i?>" id="hib_kode2_<?=$i?>" class="hibBarangId" value="<?=$hib_kode?>" /></td>
             <td><input type="text" id="alamat2_<?=$i?>" class="hibBarangAlamat" name="alamat2_<?=$i?>" value="<?=$alamat?>" disabled /></td>
-            <td><input type="text" id="ren_guna2_<?=$i?>" class="hibBarangRenGuna" name="ren_guna2_<?=$i?>" value="<?=$ren_guna?>" /></td>
+            <td><input type="text" id="ren_guna2_<?=$i?>" class="hibBarangRenGuna" name="ren_guna2_<?=$i?>" value="<?=$ren_guna?>" disabled /></td>
             <td><input type="text" id="nil_hibah2_<?=$i?>" class="hibBarangNilHibah" name="nil_hibah2_<?=$i?>" value="<?=$besaran_hibah?>" disabled /></td>
             <td><input type="text" id="nil_opd2_<?=$i?>" class="hibBarangNilHibahOpd easyui-validatebox" name="nil_opd2_<?=$i?>" value="<?=$besaran_opd?>" required="true" /></td>
             <td><input type="text" id="ket_2<?=$i?>" class="hibBarangKet" name="ket2_<?=$i?>" value="<?=$keterangan?>" /></td>
@@ -463,7 +476,7 @@ $i++;
 		if(!${"nama_".$i}){
 			// do nothing
 		} else {
-			$sql = "INSERT INTO tbl_berita_acara_detail (id,kode,rencana_penggunaan,besaran_opd,keterangan,hib_kode,status,ctime,mtime) VALUES ('','$kode','".${"ren_guna_".$i}."', '".${"nil_opd_".$i}."', '".${"ket_".$i}."', '".${"hib_kode_".$i}."', '$sta', NOW(), NOW())";
+			$sql = "INSERT INTO tbl_berita_acara_detail (id,kode,besaran_opd,keterangan,hib_kode,status,ctime,mtime) VALUES ('','$kode', '".${"nil_opd_".$i}."', '".${"ket_".$i}."', '".${"hib_kode_".$i}."', '$sta', NOW(), NOW())";
 			#echo $sql."<p>";
 			$result=$db->Execute($sql);
 					
@@ -484,7 +497,7 @@ $i++;
 		if(!${"nama2_".$i}){
 			// do nothing
 		} else {
-			$sql = "INSERT INTO tbl_berita_acara_detail (id,kode,rencana_penggunaan,besaran_opd,keterangan,hib_kode,status,ctime,mtime) VALUES ('','$kode','".${"ren_guna2_".$i}."', '".${"nil_opd2_".$i}."', '".${"ket2_".$i}."', '".${"hib_kode2_".$i}."', '$sta', NOW(), NOW())";
+			$sql = "INSERT INTO tbl_berita_acara_detail (id,kode,besaran_opd,keterangan,hib_kode,status,ctime,mtime) VALUES ('','$kode', '".${"nil_opd2_".$i}."', '".${"ket2_".$i}."', '".${"hib_kode2_".$i}."', '$sta', NOW(), NOW())";
 			#echo $sql."<p>";
 			$result=$db->Execute($sql);
 					
@@ -638,8 +651,11 @@ $_sort=($sort=='desc')?"asc":"desc";
                 <a href=docs/print_ba_evaluasi_hibah.php?id=$id><img src=../i/iconprint.gif border=0> Cetak Berita Acara</a>
 				</p>
 				<p>
+                <a href=dncpbh_opd_preview.php?id=$id><img src=../i/iconprint.gif border=0> View DNC-PBH OPD</a>
+				</p> 
+				<p>
                 <a href=dncpbh_opd.php?id=$id><img src=../i/iconprint.gif border=0> Download DNC-PBH OPD</a>
-				</p>  
+				</p> 
 				";
 
 			echo"</td>

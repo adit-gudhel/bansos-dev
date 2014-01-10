@@ -538,6 +538,9 @@ $_sort=($sort=='desc')?"asc":"desc";
 				</p>
 				!-->
 				<p>
+                <a href=dncpbh_tapd_preview.php?id=$id><img src=../i/iconprint.gif border=0> View DNC-PBH TAPD</a>
+				</p>
+				<p>
                 <a href=dncpbh_tapd.php?id=$id><img src=../i/iconprint.gif border=0> Download DNC-PBH TAPD</a>
 				</p> 
 				 

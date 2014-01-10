@@ -61,6 +61,12 @@ if ($act == "add" || $act == "edit") {
       <input type="text" name="ban_nama" id="ban_nama" value="<?=$ban_nama?>" style="width:250px;" class="easyui-validatebox" required="true" />
     </td>
   </tr>
+  tr>
+    <td>No. KTP</td>
+    <td>
+      <input type="text" name="ban_ktp" id="ban_ktp" value="<?=$ban_ktp?>" style="width:250px;" class="easyui-validatebox" required="true" />
+    </td>
+  </tr>
   <tr>
     <td>Nama Pimpinan</td>
     <td>
@@ -152,6 +158,12 @@ if ($act == "add" || $act == "edit") {
     </td>
   </tr>
   <tr>
+  	<td>Rencana Penggunaan</td>
+  	<td>
+      <textarea name="ban_ren_guna" id="ban_ren_guna" cols="45" rows="5" class="easyui-validatebox" required="true" style="width:500px;" ><?=$ban_ren_guna?></textarea>
+    </td>
+  </tr>
+  <tr>
   	<td>Lokasi Kegiatan</td>
   	<td>
       <textarea name="ban_lokasi_kegiatan" id="ban_lokasi_kegiatan" cols="45" rows="5" class="easyui-validatebox" required="true" style="width:500px;" ><?=$ban_lokasi_kegiatan?></textarea>
@@ -186,14 +198,14 @@ else if ($act == "do_add" || $act == "do_update") {
     }
      
     if ($act=='do_update') {	    
-        $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', ban_jenis='$ban_jenis', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."', id_tb='$id_tb', ban_nama='$ban_nama', pimpinan='$pimpinan', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_bansos='$ban_besaran_bansos', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
+        $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', ban_jenis='$ban_jenis', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."', id_tb='$id_tb', ban_nama='$ban_nama', ban_ktp='$ban_ktp', pimpinan='$pimpinan', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_ren_guna='".trim($ban_ren_guna)."', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_bansos='$ban_besaran_bansos', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
                 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
     }
     else {
-      $sql = "INSERT INTO tbl_bansos (ban_kode,ban_tanggal,ban_jenis,jh_kode,ban_judul_kegiatan,ban_lokasi_kegiatan,id_tb,ban_nama,pimpinan,ban_jalan,ban_rt,ban_rw,kd_propinsi,kd_dati2,kd_kecamatan,kd_kelurahan,ban_kodepos,ban_tlp,ban_hp,bank_kode,ban_norek,ban_besaran_bansos,opd_kode,ctime,mtime,user) VALUES
-('','".$f->preparedate($ban_tanggal)."','$ban_jenis','$jh_kode','$ban_judul_kegiatan','".trim($ban_lokasi_kegiatan)."','$id_tb','$ban_nama','$pimpinan','$ban_jalan','$ban_rt','$ban_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$ban_kodepos','$ban_tlp','$ban_hp','$bank_kode','$ban_norek','$ban_besaran_bansos','$opd_kode', NOW(), NOW(), '$login_full_name')";
+      $sql = "INSERT INTO tbl_bansos (ban_kode,ban_tanggal,ban_jenis,jh_kode,ban_judul_kegiatan,ban_lokasi_kegiatan,id_tb,ban_nama,ban_ktp,pimpinan,ban_jalan,ban_rt,ban_rw,kd_propinsi,kd_dati2,kd_kecamatan,kd_kelurahan,ban_kodepos,ban_tlp,ban_hp,bank_kode,ban_norek,ban_ren_guna,ban_besaran_bansos,opd_kode,ctime,mtime,user) VALUES
+('','".$f->preparedate($ban_tanggal)."','$ban_jenis','$jh_kode','$ban_judul_kegiatan','".trim($ban_lokasi_kegiatan)."','$id_tb','$ban_nama','$ban_ktp','$pimpinan','$ban_jalan','$ban_rt','$ban_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$ban_kodepos','$ban_tlp','$ban_hp','$bank_kode','$ban_norek','".trim($ban_ren_guna)."','$ban_besaran_bansos','$opd_kode', NOW(), NOW(), '$login_full_name')";
 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }

@@ -151,6 +151,12 @@ if ($act == "add" || $act == "edit") {
       <input type="text" name="hib_judul_kegiatan" id="hib_judul_kegiatan" value="<?=$hib_judul_kegiatan?>" style="width:500px;" class="easyui-validatebox" required="true" />
     </td>
   </tr>
+   <tr>
+  	<td>Rencana Penggunaan</td>
+  	<td>
+      <textarea name="hib_ren_guna" id="hib_ren_guna" cols="45" rows="5" class="easyui-validatebox" required="true" style="width:500px;" ><?=$hib_ren_guna?></textarea>
+    </td>
+  </tr>
   <tr>
   	<td>Lokasi Kegiatan</td>
   	<td>
@@ -179,14 +185,14 @@ else if ($act == "do_add" || $act == "do_update") {
     }
      
     if ($act=='do_update') {	    
-        $sql = "UPDATE tbl_hibah SET hib_tanggal='".$f->preparedate($hib_tanggal)."', jh_kode='$jh_kode', hib_judul_kegiatan='$hib_judul_kegiatan', hib_lokasi_kegiatan='".trim($hib_lokasi_kegiatan)."',id_jp='$id_jp', hib_nama='$hib_nama', pimpinan='$pimpinan', hib_jalan='$hib_jalan', hib_rt='$hib_rt', hib_rw='$hib_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', hib_kodepos='$hib_kodepos', bank_kode='$bank_kode', hib_norek='$hib_norek', hib_tlp='$hib_tlp', hib_hp='$hib_hp', hib_besaran_hibah='$hib_besaran_hibah', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE hib_kode=$id";
+        $sql = "UPDATE tbl_hibah SET hib_tanggal='".$f->preparedate($hib_tanggal)."', jh_kode='$jh_kode', hib_judul_kegiatan='$hib_judul_kegiatan', hib_lokasi_kegiatan='".trim($hib_lokasi_kegiatan)."',id_jp='$id_jp', hib_nama='$hib_nama', pimpinan='$pimpinan', hib_jalan='$hib_jalan', hib_rt='$hib_rt', hib_rw='$hib_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', hib_kodepos='$hib_kodepos', bank_kode='$bank_kode', hib_norek='$hib_norek', hib_ren_guna='".trim($hib_ren_guna)."', hib_tlp='$hib_tlp', hib_hp='$hib_hp', hib_besaran_hibah='$hib_besaran_hibah', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE hib_kode=$id";
                 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
     }
     else {
-      $sql = "INSERT INTO tbl_hibah (hib_kode, hib_tanggal, jh_kode, hib_judul_kegiatan, hib_lokasi_kegiatan, id_jp, hib_nama, pimpinan, hib_jalan, hib_rt, hib_rw, kd_propinsi, kd_dati2, kd_kecamatan, kd_kelurahan, hib_kodepos, hib_tlp, hib_hp, bank_kode, hib_norek, hib_besaran_hibah, opd_kode, ctime, mtime, user) VALUES
-('','".$f->preparedate($hib_tanggal)."','$jh_kode','$hib_judul_kegiatan','".trim($hib_lokasi_kegiatan)."','$id_jp','$hib_nama','$pimpinan','$hib_jalan','$hib_rt','$hib_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$hib_kodepos','$hib_tlp','$hib_hp','$bank_kode','$hib_norek','$hib_besaran_hibah','$opd_kode', NOW(), NOW(), '$login_full_name')";
+      $sql = "INSERT INTO tbl_hibah (hib_kode, hib_tanggal, jh_kode, hib_judul_kegiatan, hib_lokasi_kegiatan, id_jp, hib_nama, pimpinan, hib_jalan, hib_rt, hib_rw, kd_propinsi, kd_dati2, kd_kecamatan, kd_kelurahan, hib_kodepos, hib_tlp, hib_hp, bank_kode, hib_norek, hib_ren_guna, hib_besaran_hibah, opd_kode, ctime, mtime, user) VALUES
+('','".$f->preparedate($hib_tanggal)."','$jh_kode','$hib_judul_kegiatan','".trim($hib_lokasi_kegiatan)."','$id_jp','$hib_nama','$pimpinan','$hib_jalan','$hib_rt','$hib_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$hib_kodepos','$hib_tlp','$hib_hp','$bank_kode','$hib_norek','".trim($hib_lokasi_kegiatan)."','$hib_besaran_hibah','$opd_kode', NOW(), NOW(), '$login_full_name')";
 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }

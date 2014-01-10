@@ -63,7 +63,7 @@ $jum = $row['jum'];
 $contents = str_replace("__JUM__", $jum, $contents);
 
 // Jumlah hibah berupa barang/jasa
-$sql = "SELECT COUNT(*) as jbm FROM v_dncpbh_opd WHERE (jenis='Barang' OR jenis='Jasa' AND kode = '$kode')";
+$sql = "SELECT COUNT(*) as jbm FROM v_dncpbh_opd WHERE (jenis='Barang' OR jenis='Jasa') AND kode = '$kode'";
 $result=$db->Execute($sql);
 $row = $result->Fetchrow();
 $jbm = $row['jbm'];
@@ -84,7 +84,7 @@ $num = number_format($row['num'],2,',','.');
 $contents = str_replace("__NUM__", $num, $contents);
 
 // Nilai hibah berupa barang/jasa
-$sql = "SELECT SUM(permohonan) as nbm FROM v_dncpbh_opd WHERE (jenis='Barang' or jenis='Jasa' AND kode = '$kode')";
+$sql = "SELECT SUM(permohonan) as nbm FROM v_dncpbh_opd WHERE (jenis='Barang' or jenis='Jasa') AND kode = '$kode'";
 $result=$db->Execute($sql);
 $row = $result->Fetchrow();
 $nbm = number_format($row['nbm'],2,',','.');
@@ -109,7 +109,7 @@ $juhe = $row['juhe'];
 $contents = str_replace("__JUHE__", $juhe, $contents);
 
 // Jumlah hibah berupa barang/jasa
-$sql = "SELECT COUNT(*) as jbhe FROM v_dncpbh_opd WHERE (jenis='Barang' OR jenis='Jasa' AND kode = '$kode' AND status_opd = 1)";
+$sql = "SELECT COUNT(*) as jbhe FROM v_dncpbh_opd WHERE (jenis='Barang' OR jenis='Jasa') AND kode = '$kode' AND status_opd = 1";
 $result=$db->Execute($sql);
 $row = $result->Fetchrow();
 $jbhe = $row['jbhe'];
@@ -130,7 +130,7 @@ $nuhe = number_format($row['nuhe'],2,',','.');
 $contents = str_replace("__NUHE__", $nuhe, $contents);
 
 // Nilai hibah berupa barang/jasa
-$sql = "SELECT SUM(hasil_evaluasi_opd) as nbhe FROM v_dncpbh_opd WHERE (jenis='Barang' or jenis='Jasa' AND kode = '$kode' AND status_opd = 1)";
+$sql = "SELECT SUM(hasil_evaluasi_opd) as nbhe FROM v_dncpbh_opd WHERE (jenis='Barang' or jenis='Jasa') AND kode = '$kode' AND status_opd = 1";
 $result=$db->Execute($sql);
 $row = $result->Fetchrow();
 $nbhe = number_format($row['nbhe'],2,',','.');
