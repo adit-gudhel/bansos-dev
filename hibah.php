@@ -183,7 +183,11 @@ else if ($act == "do_add" || $act == "do_update") {
 	foreach ($_POST as $key=>$val) {	
     	$$key = $val;
     }
-     
+    
+	if ($act == "do_update") $f->checkaccess("edit");
+	else if ($act == "do_add") $f->checkaccess("add");
+	 
+	 
     if ($act=='do_update') {	    
         $sql = "UPDATE tbl_hibah SET hib_tanggal='".$f->preparedate($hib_tanggal)."', jh_kode='$jh_kode', hib_judul_kegiatan='$hib_judul_kegiatan', hib_lokasi_kegiatan='".trim($hib_lokasi_kegiatan)."',id_jp='$id_jp', hib_nama='$hib_nama', pimpinan='$pimpinan', hib_jalan='$hib_jalan', hib_rt='$hib_rt', hib_rw='$hib_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', hib_kodepos='$hib_kodepos', bank_kode='$bank_kode', hib_norek='$hib_norek', hib_ren_guna='".trim($hib_ren_guna)."', hib_tlp='$hib_tlp', hib_hp='$hib_hp', hib_besaran_hibah='$hib_besaran_hibah', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE hib_kode=$id";
                 
@@ -224,7 +228,7 @@ else {
     if($start < 0) $start='0';
     $advance_search = 0;
 
-    $f->standard_buttons();
+    $f->standard_buttons(array('noadd','norefresh'));
     $f->search_box($query);
 
 $cond1 = " left join tbl_jenis_hibah jh on h.jh_kode=jh.jh_kode left join tbl_opd o on h.opd_kode=o.opd_kode ";
@@ -235,6 +239,11 @@ $query = strtolower(trim($query));
 
 $rel = !empty($cond)?"and":"where";
 $cond  .=" $rel (h.hib_kode = '$query' or h.hib_nama like '%$query%' or h.hib_jalan like '%$query%' or h.hib_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
+}
+
+$rel = !empty($cond)?"and":"where";
+if($login_access=='OPD'){
+	$cond  .=" $rel h.opd_kode = $login_opd ";
 }
 
 $total = $f->count_total("tbl_hibah h","$cond1 $cond"); 

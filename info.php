@@ -65,6 +65,9 @@ function checkQuickForm($judul) {
     	<tr><td><b>Login Terakhir</b></td><td><? echo $f->convertdatetime(array("datetime"=>$last_login[0]))." ".$last_login[1]; ?></td></tr>
     	<tr><td><b>IP</b></td><td><?=$login_ip?></td></tr>
     	<tr><td><b>Username</b></td><td><?=$login_username?></td></tr>
+        <?php
+        	if($login_opd!=='0') echo "<tr><td><b>OPD</b></td><td>$login_opd_nama</td></tr>";
+		?>
     	<tr><td class="last"><b>Akses</b></td><td class="last"><?=$login_access_detail?></td></tr>
     </table>
 </div>

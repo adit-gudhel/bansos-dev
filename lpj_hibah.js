@@ -9,7 +9,7 @@ $(function() {
         }  
     });
     
-    $( "#tgl_monev" ).datepicker({
+    $( "#tgl_lpj" ).datepicker({
         dateFormat: 'dd/mm/yy'
     });
 	

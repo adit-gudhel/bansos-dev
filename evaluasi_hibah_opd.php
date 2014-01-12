@@ -220,12 +220,21 @@ if ($act == "add" || $act == "edit") {
       <input type="text" name="ba_tgl" id="ba_tgl" value="<?=$f->convertdatetime(array("datetime"=>$ba_tgl))?>" style="width:200px;" class="easyui-validatebox" required="true" />
     </td>
   </tr>
-  <tr>
-    <td>OPD</td>
-    <td>
-      <?=$f->selectList("opd_kode","tbl_opd","opd_kode","opd_nama",$opd_kode,"","")?>
-    </td>
-  </tr>
+  <?php
+  if($login_opd!=='0'){
+  	echo "<input type='hidden' name='opd_kode' id='opd_kode' value='$login_opd' />";
+  } else {
+  	?>
+    <tr>
+        <td>OPD</td>
+        <td>
+          <?=$f->selectList("opd_kode","tbl_opd","opd_kode","opd_nama",$opd_kode,"","")?>
+        </td>
+  	</tr>
+  	<?php
+  }
+  ?>
+  
   <tr>
     <td colspan="2">&nbsp;</td>
   </tr>
@@ -412,8 +421,8 @@ $i++;
   </tr>
   <tr>
     <td colspan="2" align="center">
-    <input type=button onClick=history.back(-1) value='&laquo; Back'> 
-    <input class="submit" type=submit value="<?=($act=='add')?"Add":"Update";?>"></td>
+    <input type="button" onClick="history.back(-1)" value="&laquo; Back" /> 
+    <input class="submit" type=submit value="<?=($act=='add')?"Add":"Update";?>" /></td>
   </tr>  
 </table>
 </form>
@@ -580,7 +589,11 @@ $cond  .=" $rel (b.ba_no like '%$query%' or b.ba_tgl = '".$f->preparedate($query
 }
 
 $rel = !empty($cond)?"and":"where";
-$cond  .=" $rel b.tipe = 'HIBAH' ";
+if($login_opd!=='0'){
+	$cond  .=" $rel b.tipe = 'HIBAH' and b.opd_kode = $login_opd ";
+}else{
+	$cond  .=" $rel b.tipe = 'HIBAH' ";
+}
 
 $total = $f->count_total("tbl_berita_acara b","$cond1 $cond"); 
 

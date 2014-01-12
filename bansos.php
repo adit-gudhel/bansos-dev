@@ -240,7 +240,7 @@ else {
     $f->standard_buttons();
     $f->search_box($query);
 
-$cond1 = " left join tbl_jenis_hibah jh on b.jh_kode=jh.jh_kode ";
+$cond1 = " left join tbl_jenis_hibah jh on b.jh_kode=jh.jh_kode left join tbl_opd o on b.opd_kode=o.opd_kode ";
 
 if(!empty($query)){
 $query = urldecode($query);
@@ -250,10 +250,15 @@ $rel = !empty($cond)?"and":"where";
 $cond  .=" $rel (b.ban_kode = '$query' or b.ban_nama like '%$query%' or b.ban_jalan like '%$query%' or b.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
 }
 
+$rel = !empty($cond)?"and":"where";
+if($login_access=='OPD'){
+	$cond  .=" $rel b.opd_kode = $login_opd ";
+}
+
 $total = $f->count_total("tbl_bansos b","$cond1 $cond"); 
 
 $f->paging(array("link"=>$PHP_SELF."?query=$query&order=$order&sort=$sort&type=$type&act=","page"=>$page,"total"=>$total,"num"=>"$num","show_total"=>1));
-$sql="select b.*, jh.jh_jenis from tbl_bansos b $cond1 $cond order by $order $sort";
+$sql="select b.*, jh.jh_jenis, o.opd_nama from tbl_bansos b $cond1 $cond order by $order $sort";
 $result=$db->SelectLimit("$sql","$num","$start");
 #echo $sql;
 if(!$result) print $db->ErrorMsg();
@@ -269,6 +274,7 @@ $_sort=($sort=='desc')?"asc":"desc";
 		<th class=white  valign=top>Alamat</th>
 		<th class=white  valign=top>Jenis Bantuan Sosial</th>
 		<th class=white  valign=top>Besaran Bantuan Sosial (Rp)</th>
+		<th class=white  valign=top>OPD Evaluator</th>
 		<th class=white  valign=top>Function</th>
 	</tr>
 	";
@@ -290,6 +296,7 @@ $_sort=($sort=='desc')?"asc":"desc";
 			<td valign=top>$ban_jalan RT.".$ban_rt."/RW.".$ban_rw."</td>
 			<td valign=top>$jh_jenis</td>
 			<td valign=top>".number_format($ban_besaran_bansos,2,',','.')."</td>
+			<td valign=top>$opd_nama</td>
 			";
             
         echo "

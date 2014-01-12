@@ -146,7 +146,9 @@ div.footer {
 		    <?=parseMenu(0, 0)?>		
        </ul>
     </div>
-	<div region="south" border="false" style="height:20px;background:#EEE;padding:2px;"><div style="font:11px verdana; position:absolute; right:10px;">Welcome <b><?=$login_username?></b></div></div>
+	<div region="south" border="false" style="height:20px;background:#EEE;padding:2px;">
+    	<div style="font:11px verdana; position:absolute; left:10px;">Pemerintah Kota Bogor &copy; <?=date('Y')?> - Powered by : Balai IPTEKNet</div>
+        <div style="font:11px verdana; position:absolute; right:10px;">Welcome <b><?=$login_username?></b></div></div>
 	<div region="center" border="false">
         <div id="tt" class="easyui-tabs" fit="true" border="false" plain="true">
             <div title="Home" style="overflow:hidden;">

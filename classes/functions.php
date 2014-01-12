@@ -30,7 +30,7 @@ class functions {
 
 	function checkaccess($restriction="all")  {
 
-		global $db, $db, $_COOKIE, $sessionCookie, $username, $login_id, $login_username, $login_access, $login_access_detail, $HTTP_HOST, $t, $login_inquiry_access, $login_full_name, $login_ip, $login_last_login;
+		global $db, $db, $_COOKIE, $sessionCookie, $username, $login_id, $login_username, $login_access, $login_access_detail, $HTTP_HOST, $t, $login_inquiry_access, $login_opd, $login_opd_nama, $login_full_name, $login_ip, $login_last_login;
 		global $PHP_SELF;
 		global $form_disableedit;
 		global $form_disabledelete;
@@ -63,7 +63,7 @@ class functions {
 
 		//Get User Information
 		$strSQL		="SELECT u.access_level, u.id as id_exist, 
-					u.full_name, u.inquiry_access, u.ip, u.last_login, l.access_detail  
+					u.full_name, u.inquiry_access, u.ip, u.last_login, u.opd_kode, l.access_detail  
 					from tbl_user u, tbl_level l 
 					WHERE u.username='$login_username' and u.access_level=l.access_level";
 		#echo $strSQL;
@@ -81,7 +81,16 @@ class functions {
 		$login_ip   				= $row['ip'];
 		$login_last_login			= $row['last_login'];
 	
-
+		if($row['opd_kode']!==0){
+			 $login_opd = $row['opd_kode'];
+			 
+			 $strSQL2	= "SELECT opd_nama FROM tbl_opd WHERE opd_kode='$login_opd'";
+			 $result2		= $db->Execute($strSQL2);	
+			 if (!$result2) print $strSQL."<p>".$db->ErrorMsg();
+			 $row2 = $result2->FetchRow();
+			 
+			 $login_opd_nama = $row2['opd_nama'];
+		}
 
 		/*=====================================================
 		AUTO LOG-OFF 15 MINUTES
@@ -666,12 +675,12 @@ class functions {
 	*
 	*==============================================================*/
 
-	function selectList($name,$table,$option_name,$value_name,$curr_id,$script="",$cond="",$empty_option=0) {
+	function selectList($name,$table,$option_name,$value_name,$curr_id,$script="",$cond="",$empty_option=0,$empty_value="",$empty_str="") {
 
 		global $db, $db;
 
 		$output		 = "<select name=\"$name\" id=\"$name\" $script>\n";
-		if ($empty_option) $output		.= "<option></option>\n";
+		if ($empty_option) $output		.= "<option value=\"$empty_value\">$empty_str</option>\n";
 
 		if(eregi("\|",$curr_id)){
 			$curr_id_array=split("\|",$curr_id);

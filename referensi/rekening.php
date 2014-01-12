@@ -9,7 +9,7 @@ $t->title('Referensi - Data Rekening');
 if ($act == "add" || $act == "edit") {
 	if ($act == "edit" && $id) {
 
-        $sql = "SELECT * FROM tbl_rekening WHERE no_rek=$id";
+        $sql = "SELECT * FROM tbl_rekening WHERE no_rek='".$id."'";
         $result=$db->Execute($sql);
         $row = $result->Fetchrow();
         foreach($row as $key => $val){
@@ -200,8 +200,8 @@ else {
         echo "
 			    <td  valign=top ALIGN=left>";
 				echo"
-				<a href=$PHP_SELF?act=edit&id='$no_rek'><img src=/images/button_edit.gif border=0></a> 
-				<a href=$PHP_SELF?act=delete&id='$no_rek' onClick=\"javascript:return confirm('Anda Yakin Menghapus Data ini?');return false;\"><img src=/images/button_delete.gif border=0></a>
+				<a href=$PHP_SELF?act=edit&id=$no_rek><img src=/images/button_edit.gif border=0></a> 
+				<a href=$PHP_SELF?act=delete&id=$no_rek onClick=\"javascript:return confirm('Anda Yakin Menghapus Data ini?');return false;\"><img src=/images/button_delete.gif border=0></a>
                 ";
 
 			echo"</td>

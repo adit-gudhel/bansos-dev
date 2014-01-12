@@ -122,31 +122,30 @@ ul.ui-form .ui-form-inline li{padding-left:0}
     color:#999999
 }
 </style>
-<center><div class='wrapper ui-login' style='padding-top:60px;'>
-      <div class='ui-form'>
-        <div id='loading' style='display:none;'><img src='/i/loading2.gif' alt='loading...' /></div>
-                  <div id='result' style='display:none;width:260px;'></div>
-        <form class='new_user_session' id='f1' method='post' action='proses_login.php'>
-            <input type='hidden' name='act' value='login' />
-            <ul>
-              <li class='largefield'>
-                <label for='user_session_Email'><span style='font-family:Trebuchet MS'>Username</span></label>
-                <input class='easyui-validatebox' required='true' id='user_session_username' name='username' size='30' type='text'/>
-				
-              </li>
-              <li class='largefield'>
-                <label for='user_session_Password'><span style='font-family:Trebuchet MS'>Password</span></label>
-                <input class='text easyui-validatebox' required='true' id='user_session_password' name='passwd' size='30' type='password'/>
-              </li>
-              
-              <li class=fieldleft><br>
-                <input class='uiButton' id='user_session_submit' name='commit' value='' type='submit' />
-               </li>
-              
-            </ul>
-        </form>
-      </div>
+<center>
+	<div class='wrapper ui-login' style='padding-top:60px;'>
+		<div class='ui-form'>
+        	<div id='loading' style='display:none;'><img src='/i/loading2.gif' alt='loading...' /></div>
+            <div id='result' style='display:none;width:260px;'></div>
+        	<form class='new_user_session' id='f1' method='post' action='proses_login.php'>
+            	<input type='hidden' name='act' value='login' />
+            	<ul>
+              		<li class='largefield'>
+                		<label for='user_session_Email'><span style='font-family:Trebuchet MS'>Username</span></label>
+                		<input class='easyui-validatebox' required='true' id='user_session_username' name='username' size='30' type='text'/>
+              		</li>
+              		<li class='largefield'>
+                		<label for='user_session_Password'><span style='font-family:Trebuchet MS'>Password</span></label>
+                		<input class='text easyui-validatebox' required='true' id='user_session_password' name='passwd' size='30' type='password'/>
+              		</li>
+              		<li class=fieldleft><br>
+                		<input class='uiButton' id='user_session_submit' name='commit' value='' type='submit' />
+               		</li>
+              	</ul>
+        	</form>
+      	</div>
     </div>
+</center>
 </body>
 </html>";
 

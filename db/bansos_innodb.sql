@@ -1,19 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 2.11.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 10, 2014 at 06:31 AM
--- Server version: 5.1.44
--- PHP Version: 5.3.1
+-- Generation Time: Jan 12, 2014 at 08:41 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `bansos`
@@ -27,9 +21,9 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `tbl_bank`;
 CREATE TABLE IF NOT EXISTS `tbl_bank` (
-  `bank_kode` int(3) NOT NULL AUTO_INCREMENT,
+  `bank_kode` int(3) NOT NULL auto_increment,
   `bank_nama` varchar(20) NOT NULL,
-  PRIMARY KEY (`bank_kode`)
+  PRIMARY KEY  (`bank_kode`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
@@ -53,7 +47,7 @@ INSERT INTO `tbl_bank` (`bank_kode`, `bank_nama`) VALUES
 
 DROP TABLE IF EXISTS `tbl_bansos`;
 CREATE TABLE IF NOT EXISTS `tbl_bansos` (
-  `ban_kode` int(10) NOT NULL AUTO_INCREMENT,
+  `ban_kode` int(10) NOT NULL auto_increment,
   `ban_tanggal` date NOT NULL,
   `ban_jenis` enum('Terencana','Tidak Terencana') NOT NULL,
   `jh_kode` int(3) NOT NULL,
@@ -70,22 +64,22 @@ CREATE TABLE IF NOT EXISTS `tbl_bansos` (
   `kd_dati2` char(4) NOT NULL,
   `kd_kecamatan` char(7) NOT NULL,
   `kd_kelurahan` char(10) NOT NULL,
-  `ban_kodepos` int(5) DEFAULT NULL,
-  `ban_tlp` varchar(14) DEFAULT NULL,
-  `ban_hp` varchar(14) DEFAULT NULL,
+  `ban_kodepos` int(5) default NULL,
+  `ban_tlp` varchar(14) default NULL,
+  `ban_hp` varchar(14) default NULL,
   `bank_kode` int(3) NOT NULL,
   `ban_norek` varchar(15) NOT NULL,
   `ban_ren_guna` varchar(100) NOT NULL,
   `ban_besaran_bansos` double NOT NULL,
   `opd_kode` int(3) NOT NULL,
-  `ban_eval_opd` enum('0','1') NOT NULL DEFAULT '0',
-  `ban_eval_tapd` enum('0','1') NOT NULL DEFAULT '0',
-  `ban_status` enum('Proses','Diterima','Ditolak','Cair') NOT NULL DEFAULT 'Proses',
-  `ban_cair` int(1) NOT NULL DEFAULT '0',
-  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `ban_eval_opd` enum('0','1') NOT NULL default '0',
+  `ban_eval_tapd` enum('0','1') NOT NULL default '0',
+  `ban_status` enum('Proses','Diterima','Ditolak','Cair') NOT NULL default 'Proses',
+  `ban_cair` int(1) NOT NULL default '0',
+  `ctime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `mtime` datetime NOT NULL default '0000-00-00 00:00:00',
   `user` char(35) NOT NULL,
-  PRIMARY KEY (`ban_kode`)
+  PRIMARY KEY  (`ban_kode`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
@@ -103,7 +97,7 @@ INSERT INTO `tbl_bansos` (`ban_kode`, `ban_tanggal`, `ban_jenis`, `jh_kode`, `ba
 
 DROP TABLE IF EXISTS `tbl_berita_acara`;
 CREATE TABLE IF NOT EXISTS `tbl_berita_acara` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL auto_increment,
   `ba_no` varchar(35) NOT NULL,
   `ba_tgl` date NOT NULL,
   `opd_kode` int(3) NOT NULL,
@@ -112,9 +106,9 @@ CREATE TABLE IF NOT EXISTS `tbl_berita_acara` (
   `sk_tgl` date NOT NULL,
   `sk_tentang` varchar(100) NOT NULL,
   `kode` varchar(50) NOT NULL,
-  `ctime` datetime DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
+  `ctime` datetime default '0000-00-00 00:00:00',
+  `mtime` datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `ba_no` (`ba_no`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -135,15 +129,15 @@ INSERT INTO `tbl_berita_acara` (`id`, `ba_no`, `ba_tgl`, `opd_kode`, `tipe`, `sk
 
 DROP TABLE IF EXISTS `tbl_berita_acara_detail`;
 CREATE TABLE IF NOT EXISTS `tbl_berita_acara_detail` (
-  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `id` mediumint(9) NOT NULL auto_increment,
   `kode` varchar(50) NOT NULL,
   `besaran_opd` double NOT NULL,
   `keterangan` text,
   `hib_kode` int(10) NOT NULL,
-  `status` int(1) NOT NULL DEFAULT '0',
-  `ctime` datetime DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`)
+  `status` int(1) NOT NULL default '0',
+  `ctime` datetime default '0000-00-00 00:00:00',
+  `mtime` datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
@@ -166,7 +160,7 @@ INSERT INTO `tbl_berita_acara_detail` (`id`, `kode`, `besaran_opd`, `keterangan`
 
 DROP TABLE IF EXISTS `tbl_cair_bansos`;
 CREATE TABLE IF NOT EXISTS `tbl_cair_bansos` (
-  `id_cair` mediumint(10) NOT NULL AUTO_INCREMENT,
+  `id_cair` mediumint(10) NOT NULL auto_increment,
   `tgl_cair` date NOT NULL,
   `sppbs_no` varchar(35) NOT NULL,
   `sppbs_tgl` date NOT NULL,
@@ -176,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `tbl_cair_bansos` (
   `ctime` datetime NOT NULL,
   `mtime` datetime NOT NULL,
   `user` char(50) NOT NULL,
-  PRIMARY KEY (`id_cair`)
+  PRIMARY KEY  (`id_cair`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
@@ -192,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `tbl_cair_bansos` (
 
 DROP TABLE IF EXISTS `tbl_cair_hibah`;
 CREATE TABLE IF NOT EXISTS `tbl_cair_hibah` (
-  `id_cair` mediumint(10) NOT NULL AUTO_INCREMENT,
+  `id_cair` mediumint(10) NOT NULL auto_increment,
   `tgl_cair` date NOT NULL,
   `spph_no` varchar(35) NOT NULL,
   `spph_tgl` date NOT NULL,
@@ -205,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `tbl_cair_hibah` (
   `ctime` datetime NOT NULL,
   `mtime` datetime NOT NULL,
   `user` char(50) NOT NULL,
-  PRIMARY KEY (`id_cair`)
+  PRIMARY KEY  (`id_cair`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
@@ -588,15 +582,15 @@ INSERT INTO `tbl_dati2` (`kd_dati2`, `nm_dati2`) VALUES
 
 DROP TABLE IF EXISTS `tbl_eval_tapd`;
 CREATE TABLE IF NOT EXISTS `tbl_eval_tapd` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL auto_increment,
   `ba_no` varchar(35) NOT NULL,
   `ba_tgl` date NOT NULL,
   `opd_kode` int(3) NOT NULL,
   `tipe` varchar(20) NOT NULL,
   `kode` varchar(50) NOT NULL,
-  `ctime` datetime DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
+  `ctime` datetime default '0000-00-00 00:00:00',
+  `mtime` datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `ba_no` (`ba_no`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -616,15 +610,15 @@ INSERT INTO `tbl_eval_tapd` (`id`, `ba_no`, `ba_tgl`, `opd_kode`, `tipe`, `kode`
 
 DROP TABLE IF EXISTS `tbl_eval_tapd_detail`;
 CREATE TABLE IF NOT EXISTS `tbl_eval_tapd_detail` (
-  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `id` mediumint(9) NOT NULL auto_increment,
   `kode` varchar(50) NOT NULL,
   `besaran_tapd` double NOT NULL,
   `keterangan` text,
   `hib_kode` int(10) NOT NULL,
-  `status` int(1) NOT NULL DEFAULT '0',
-  `ctime` datetime DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`)
+  `status` int(1) NOT NULL default '0',
+  `ctime` datetime default '0000-00-00 00:00:00',
+  `mtime` datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
@@ -645,14 +639,14 @@ INSERT INTO `tbl_eval_tapd_detail` (`id`, `kode`, `besaran_tapd`, `keterangan`, 
 
 DROP TABLE IF EXISTS `tbl_functionaccess`;
 CREATE TABLE IF NOT EXISTS `tbl_functionaccess` (
-  `name` varchar(255) DEFAULT NULL,
-  `read_priv` int(4) DEFAULT NULL,
-  `edit_priv` int(4) DEFAULT NULL,
-  `delete_priv` int(4) DEFAULT NULL,
-  `add_priv` int(4) DEFAULT NULL,
-  `url` varchar(255) DEFAULT NULL,
-  `id` int(4) DEFAULT NULL,
-  `menu_id` int(4) DEFAULT NULL,
+  `name` varchar(255) default NULL,
+  `read_priv` int(4) default NULL,
+  `edit_priv` int(4) default NULL,
+  `delete_priv` int(4) default NULL,
+  `add_priv` int(4) default NULL,
+  `url` varchar(255) default NULL,
+  `id` int(4) default NULL,
+  `menu_id` int(4) default NULL,
   KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -661,28 +655,28 @@ CREATE TABLE IF NOT EXISTS `tbl_functionaccess` (
 --
 
 INSERT INTO `tbl_functionaccess` (`name`, `read_priv`, `edit_priv`, `delete_priv`, `add_priv`, `url`, `id`, `menu_id`) VALUES
-('OPD', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6),
-('OPD', 1, 1, 1, 1, '/hibah.php?act=add', NULL, 9),
-('OPD', 1, 1, 1, 1, '/hibah.php', NULL, 10),
-('OPD', 1, 1, 1, 1, '', NULL, 8),
 ('BK', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6),
 ('TAPD', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6),
-('OPD', 1, 1, 1, 1, '', NULL, 7),
-('OPD', 1, 1, 1, 1, '', NULL, 11),
 ('TAPD', 1, 1, 1, 1, '', NULL, 11),
 ('TAPD', 1, 1, 1, 1, '/referensi/opd.php', NULL, 12),
-('OPD', 1, 1, 1, 1, '/referensi/administrasi.php', NULL, 13),
 ('TAPD', 1, 1, 1, 1, '', NULL, 7),
 ('BK', 1, 1, 1, 1, '/bansos.php?act=add', NULL, 16),
 ('TAPD', 1, 1, 1, 1, '/bansos.php?act=add', NULL, 16),
 ('BK', 1, 1, 1, 1, '', NULL, 7),
 ('BK', 1, 1, 1, 1, '', NULL, 15),
-('OPD', 1, 1, 1, 1, '', NULL, 15),
 ('TAPD', 1, 1, 1, 1, '', NULL, 15),
+('BPKAD', 1, 1, 1, 1, '', NULL, 7),
+('BPKAD', 1, 1, 1, 1, '', NULL, 8),
+('BPKAD', 1, 1, 1, 1, '/pencairan_hibah.php', NULL, 23),
+('BPKAD', 1, 1, 1, 1, '', NULL, 11),
+('BPKAD', 1, 1, 1, 1, '/referensi/opd.php', NULL, 12),
+('BPKAD', 1, 1, 1, 1, '/referensi/bank.php', NULL, 19),
+('BPKAD', 1, 1, 1, 1, '/referensi/rekening.php', NULL, 32),
+('BPKAD', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6),
 ('Administrator', 1, 1, 1, 1, '', NULL, 7),
 ('Administrator', 1, 1, 1, 1, '', NULL, 8),
-('Administrator', 1, 1, 1, 1, '/hibah.php?act=add', NULL, 9),
-('Administrator', 1, 1, 1, 1, '/hibah.php', NULL, 10),
+('Administrator', 1, 0, 0, 0, '/hibah.php?act=add', NULL, 9),
+('Administrator', 1, 0, 0, 0, '/hibah.php', NULL, 10),
 ('Administrator', 1, 1, 1, 1, '/evaluasi_hibah_opd.php', NULL, 18),
 ('Administrator', 1, 1, 1, 1, '/evaluasi_hibah_tapd.php', NULL, 20),
 ('Administrator', 1, 1, 1, 1, '/penerima_hibah.php', NULL, 22),
@@ -710,14 +704,17 @@ INSERT INTO `tbl_functionaccess` (`name`, `read_priv`, `edit_priv`, `delete_priv
 ('Administrator', 1, 1, 1, 1, '/admin/function_access.php', NULL, 5),
 ('Administrator', 1, 1, 1, 1, '/admin/inquiry_access.php', NULL, 4),
 ('Administrator', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6),
-('BPKAD', 1, 1, 1, 1, '', NULL, 7),
-('BPKAD', 1, 1, 1, 1, '', NULL, 8),
-('BPKAD', 1, 1, 1, 1, '/pencairan_hibah.php', NULL, 23),
-('BPKAD', 1, 1, 1, 1, '', NULL, 11),
-('BPKAD', 1, 1, 1, 1, '/referensi/opd.php', NULL, 12),
-('BPKAD', 1, 1, 1, 1, '/referensi/bank.php', NULL, 19),
-('BPKAD', 1, 1, 1, 1, '/referensi/rekening.php', NULL, 32),
-('BPKAD', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6);
+('OPD', 1, 1, 1, 1, '', NULL, 7),
+('OPD', 1, 1, 1, 1, '', NULL, 8),
+('OPD', 1, 1, 1, NULL, '/hibah.php', NULL, 10),
+('OPD', 1, 1, 1, 1, '/evaluasi_hibah_opd.php', NULL, 18),
+('OPD', 1, 1, 1, 1, '', NULL, 15),
+('OPD', 1, 1, 1, NULL, '/bansos.php', NULL, 17),
+('OPD', 1, 1, 1, 1, '/evaluasi_bansos_opd.php', NULL, 24),
+('OPD', 1, 1, 1, 1, '', NULL, 11),
+('OPD', 1, 1, 1, 1, '/referensi/opd.php', NULL, 12),
+('OPD', 1, 1, 1, 1, '/referensi/administrasi.php', NULL, 13),
+('OPD', 1, 1, 1, 1, '/index.php?act=logout', NULL, 6);
 
 -- --------------------------------------------------------
 
@@ -727,13 +724,13 @@ INSERT INTO `tbl_functionaccess` (`name`, `read_priv`, `edit_priv`, `delete_priv
 
 DROP TABLE IF EXISTS `tbl_hibah`;
 CREATE TABLE IF NOT EXISTS `tbl_hibah` (
-  `hib_kode` int(10) NOT NULL AUTO_INCREMENT,
+  `hib_kode` int(10) NOT NULL auto_increment,
   `hib_tanggal` date NOT NULL,
   `jh_kode` int(3) NOT NULL,
   `hib_judul_kegiatan` varchar(75) NOT NULL,
   `hib_lokasi_kegiatan` text NOT NULL,
-  `hib_nphd` varchar(20) DEFAULT NULL,
-  `hib_nphd_tgl` date DEFAULT NULL,
+  `hib_nphd` varchar(20) default NULL,
+  `hib_nphd_tgl` date default NULL,
   `id_jp` int(10) NOT NULL,
   `hib_nama` varchar(50) NOT NULL,
   `pimpinan` varchar(50) NOT NULL,
@@ -744,22 +741,22 @@ CREATE TABLE IF NOT EXISTS `tbl_hibah` (
   `kd_dati2` char(4) NOT NULL,
   `kd_kecamatan` char(7) NOT NULL,
   `kd_kelurahan` char(10) NOT NULL,
-  `hib_kodepos` int(5) DEFAULT NULL,
-  `hib_tlp` varchar(14) DEFAULT NULL,
-  `hib_hp` varchar(14) DEFAULT NULL,
+  `hib_kodepos` int(5) default NULL,
+  `hib_tlp` varchar(14) default NULL,
+  `hib_hp` varchar(14) default NULL,
   `bank_kode` int(3) NOT NULL,
   `hib_norek` varchar(15) NOT NULL,
   `hib_ren_guna` varchar(100) NOT NULL,
   `hib_besaran_hibah` double NOT NULL,
   `opd_kode` int(3) NOT NULL,
-  `hib_eval_opd` enum('0','1') NOT NULL DEFAULT '0',
-  `hib_eval_tapd` enum('0','1') NOT NULL DEFAULT '0',
-  `hib_status` enum('Proses','Diterima','Ditolak','Cair') NOT NULL DEFAULT 'Proses',
-  `hib_cair` int(1) NOT NULL DEFAULT '0',
-  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `hib_eval_opd` enum('0','1') NOT NULL default '0',
+  `hib_eval_tapd` enum('0','1') NOT NULL default '0',
+  `hib_status` enum('Proses','Diterima','Ditolak','Cair') NOT NULL default 'Proses',
+  `hib_cair` int(1) NOT NULL default '0',
+  `ctime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `mtime` datetime NOT NULL default '0000-00-00 00:00:00',
   `user` char(35) NOT NULL,
-  PRIMARY KEY (`hib_kode`)
+  PRIMARY KEY  (`hib_kode`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
@@ -767,7 +764,7 @@ CREATE TABLE IF NOT EXISTS `tbl_hibah` (
 --
 
 INSERT INTO `tbl_hibah` (`hib_kode`, `hib_tanggal`, `jh_kode`, `hib_judul_kegiatan`, `hib_lokasi_kegiatan`, `hib_nphd`, `hib_nphd_tgl`, `id_jp`, `hib_nama`, `pimpinan`, `hib_jalan`, `hib_rt`, `hib_rw`, `kd_propinsi`, `kd_dati2`, `kd_kecamatan`, `kd_kelurahan`, `hib_kodepos`, `hib_tlp`, `hib_hp`, `bank_kode`, `hib_norek`, `hib_ren_guna`, `hib_besaran_hibah`, `opd_kode`, `hib_eval_opd`, `hib_eval_tapd`, `hib_status`, `hib_cair`, `ctime`, `mtime`, `user`) VALUES
-(1, '2013-11-01', 1, 'Penambahan Ruang Kelas Baru', 'Bogor', NULL, NULL, 1, 'SMA Negeri 1 Bogor', 'Drs. Slamet Aji Pamungkas, M.Eng', 'Jl. Cibadak Raya No.9', '2', '3', '32', '3271', '3271010', '3271010004', 15416, '0251-3657789', '0819442432', 7, '33445566', 'Penambahan Ruang Kelas Baru', 50000000, 4, '1', '1', 'Proses', 0, '2014-01-06 14:14:05', '2014-01-09 07:48:54', 'Administrator'),
+(1, '2013-11-01', 1, 'Penambahan Ruang Kelas Baru', 'Bogor', NULL, NULL, 1, 'SMA Negeri 1 Bogor', 'Drs. Slamet Aji Pamungkas, M.Eng', 'Jl. Cibadak Raya No.9', '2', '3', '32', '3271', '3271010', '3271010004', 15416, '0251-3657789', '0819442432', 7, '33445566', 'Penambahan Ruang Kelas Baru', 50000000, 4, '1', '1', 'Proses', 0, '2014-01-06 14:14:05', '2014-01-12 14:05:20', 'Aditya Nursyahbani'),
 (2, '2013-11-02', 2, 'Pembelian Peralatan Lab IPA', 'Bogor', NULL, NULL, 1, 'SMA Negeri 3 Cibadak', 'Drs. Maman Suparman', 'Jl. Cijeruk No. 6', '5', '4', '32', '3271', '3271050', '3271050009', 15417, '0251-3667781', '08571600166', 1, '223221233', 'Pembelian Peralatan Lab IPA', 60000000, 4, '1', '1', 'Proses', 0, '2014-01-06 14:16:16', '2014-01-09 07:49:04', 'Administrator'),
 (3, '2013-12-04', 1, 'Relokasi Sekolah', 'Bogor', NULL, NULL, 1, 'SMA Negeri 7 Bogor', 'Drs. Saipul Jamil', 'Jl. Cijeruk 8', '5', '6', '32', '3271', '3271040', '3271040007', 15418, '0251-3671221', '', 5, '554123339', 'Relokasi Sekolah', 80000000, 4, '1', '1', 'Proses', 0, '2014-01-06 14:20:49', '2014-01-09 07:49:12', 'Administrator'),
 (4, '2014-01-01', 1, 'Biaya Sweeping', 'Jl. Cibadak No. 87', NULL, NULL, 5, 'FPI', 'Apoh', 'Jl. Cibadak No. 87', '2', '4', '32', '3271', '3271040', '3271040007', 15417, '0251-3667784', '08121002002', 8, '60032113', 'Pembiayaan Sweeping', 300000000, 2, '1', '1', 'Proses', 1, '2014-01-07 09:59:18', '2014-01-09 07:55:48', 'Administrator'),
@@ -782,12 +779,12 @@ INSERT INTO `tbl_hibah` (`hib_kode`, `hib_tanggal`, `jh_kode`, `hib_judul_kegiat
 
 DROP TABLE IF EXISTS `tbl_inquiry_access`;
 CREATE TABLE IF NOT EXISTS `tbl_inquiry_access` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `access_name` varchar(255) NOT NULL DEFAULT '',
-  `inquiry_name` varchar(255) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `access_name` varchar(255) NOT NULL default '',
+  `inquiry_name` varchar(255) NOT NULL default '',
   `inquiry_access` text NOT NULL,
-  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
+  `ctime` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`),
   KEY `ctime` (`ctime`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
@@ -812,9 +809,9 @@ INSERT INTO `tbl_inquiry_access` (`id`, `access_name`, `inquiry_name`, `inquiry_
 
 DROP TABLE IF EXISTS `tbl_jenis_hibah`;
 CREATE TABLE IF NOT EXISTS `tbl_jenis_hibah` (
-  `jh_kode` int(3) NOT NULL AUTO_INCREMENT,
+  `jh_kode` int(3) NOT NULL auto_increment,
   `jh_jenis` varchar(10) NOT NULL,
-  PRIMARY KEY (`jh_kode`),
+  PRIMARY KEY  (`jh_kode`),
   KEY `jh_jenis` (`jh_jenis`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Tabel Jenis Hibah' AUTO_INCREMENT=4 ;
 
@@ -835,9 +832,9 @@ INSERT INTO `tbl_jenis_hibah` (`jh_kode`, `jh_jenis`) VALUES
 
 DROP TABLE IF EXISTS `tbl_jenis_pemohon`;
 CREATE TABLE IF NOT EXISTS `tbl_jenis_pemohon` (
-  `id_jp` int(10) NOT NULL AUTO_INCREMENT,
+  `id_jp` int(10) NOT NULL auto_increment,
   `jenis_pemohon` varchar(35) NOT NULL,
-  PRIMARY KEY (`id_jp`)
+  PRIMARY KEY  (`id_jp`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
@@ -859,9 +856,9 @@ INSERT INTO `tbl_jenis_pemohon` (`id_jp`, `jenis_pemohon`) VALUES
 
 DROP TABLE IF EXISTS `tbl_karakteristik_kegiatan`;
 CREATE TABLE IF NOT EXISTS `tbl_karakteristik_kegiatan` (
-  `kk_id` int(3) NOT NULL AUTO_INCREMENT,
+  `kk_id` int(3) NOT NULL auto_increment,
   `kk_nama` varchar(50) NOT NULL,
-  PRIMARY KEY (`kk_id`),
+  PRIMARY KEY  (`kk_id`),
   KEY `kk_nama` (`kk_nama`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
@@ -56280,7 +56277,7 @@ DROP TABLE IF EXISTS `tbl_level`;
 CREATE TABLE IF NOT EXISTS `tbl_level` (
   `access_level` varchar(128) NOT NULL,
   `access_detail` varchar(255) NOT NULL,
-  PRIMARY KEY (`access_level`)
+  PRIMARY KEY  (`access_level`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -56302,14 +56299,14 @@ INSERT INTO `tbl_level` (`access_level`, `access_detail`) VALUES
 
 DROP TABLE IF EXISTS `tbl_log`;
 CREATE TABLE IF NOT EXISTS `tbl_log` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` int(5) unsigned NOT NULL DEFAULT '0',
-  `ctime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `user_id` int(5) unsigned NOT NULL default '0',
+  `ctime` datetime NOT NULL default '0000-00-00 00:00:00',
   `activity` text,
   `ip` varchar(100) NOT NULL,
   `detail` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=177 ;
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=399 ;
 
 --
 -- Dumping data for table `tbl_log`
@@ -56491,7 +56488,229 @@ INSERT INTO `tbl_log` (`id`, `user_id`, `ctime`, `activity`, `ip`, `detail`) VAL
 (173, 1, '2014-01-10 10:27:16', 'LOGIN admin', '127.0.0.1', ''),
 (174, 1, '2014-01-10 11:33:03', 'Logout', '127.0.0.1', ''),
 (175, 1, '2014-01-10 11:33:03', 'Logout', '127.0.0.1', ''),
-(176, 1, '2014-01-10 13:20:32', 'LOGIN admin', '127.0.0.1', '');
+(176, 1, '2014-01-10 13:20:32', 'LOGIN admin', '127.0.0.1', ''),
+(177, 1, '2014-01-10 16:58:43', 'LOGIN admin', '127.0.0.1', ''),
+(178, 1, '2014-01-10 17:04:08', 'Logout', '127.0.0.1', ''),
+(179, 1, '2014-01-10 17:49:43', 'LOGIN admin', '127.0.0.1', ''),
+(180, 1, '2014-01-10 17:54:06', 'Logout', '127.0.0.1', ''),
+(181, 1, '2014-01-10 18:00:23', 'LOGIN admin', '127.0.0.1', ''),
+(182, 1, '2014-01-10 18:10:22', 'Logout', '127.0.0.1', ''),
+(183, 1, '2014-01-10 18:10:25', 'LOGIN admin', '127.0.0.1', ''),
+(184, 1, '2014-01-10 18:10:49', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(185, 1, '2014-01-10 18:10:49', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(186, 1, '2014-01-10 18:10:49', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(187, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(188, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(189, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(190, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(191, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(192, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(193, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(194, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(195, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(196, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(197, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(198, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(199, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(200, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(201, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(202, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(203, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(204, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(205, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(206, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(207, 1, '2014-01-10 18:10:50', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(208, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(209, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(210, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(211, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(212, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(213, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(214, 1, '2014-01-10 18:10:51', 'INSERT FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(215, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(216, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(217, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(218, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(219, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(220, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(221, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(222, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(223, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(224, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(225, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(226, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(227, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(228, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(229, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(230, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(231, 1, '2014-01-10 18:10:51', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(232, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(233, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(234, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(235, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(236, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(237, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(238, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(239, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(240, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(241, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(242, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(243, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(244, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(245, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(246, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(247, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(248, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(249, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(250, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(251, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(252, 1, '2014-01-10 18:10:52', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(253, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(254, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(255, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(256, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(257, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(258, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(259, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(260, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(261, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(262, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(263, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(264, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(265, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(266, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(267, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(268, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(269, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(270, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(271, 1, '2014-01-10 18:10:53', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(272, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(273, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(274, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(275, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(276, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(277, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(278, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(279, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(280, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(281, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(282, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(283, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(284, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(285, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(286, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(287, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(288, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(289, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(290, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(291, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(292, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(293, 1, '2014-01-10 18:10:54', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(294, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(295, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(296, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(297, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(298, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(299, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(300, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(301, 1, '2014-01-10 18:10:55', 'UPDATE FUNCTION ACCESS: Administrator', '127.0.0.1', ''),
+(302, 1, '2014-01-10 18:11:18', 'Logout', '127.0.0.1', ''),
+(303, 1, '2014-01-10 18:11:22', 'LOGIN admin', '127.0.0.1', ''),
+(304, 1, '2014-01-11 01:03:10', 'LOGIN admin', '127.0.0.1', ''),
+(305, 1, '2014-01-11 01:06:42', 'Logout', '127.0.0.1', ''),
+(306, 1, '2014-01-11 01:06:46', 'LOGIN admin', '127.0.0.1', ''),
+(307, 1, '2014-01-11 01:22:12', 'Logout', '127.0.0.1', ''),
+(308, 1, '2014-01-11 06:39:28', 'LOGIN opd', '127.0.0.1', ''),
+(309, 1, '2014-01-11 06:39:40', 'Logout', '127.0.0.1', ''),
+(310, 1, '2014-01-11 06:39:43', 'LOGIN admin', '127.0.0.1', ''),
+(311, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(312, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(313, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(314, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(315, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(316, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(317, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(318, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(319, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(320, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(321, 1, '2014-01-11 06:41:52', 'INSERT FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(322, 1, '2014-01-11 06:41:52', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(323, 1, '2014-01-11 06:41:52', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(324, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(325, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(326, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(327, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(328, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(329, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(330, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(331, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(332, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(333, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(334, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(335, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(336, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(337, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(338, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(339, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(340, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(341, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(342, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(343, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(344, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(345, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(346, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(347, 1, '2014-01-11 06:41:53', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(348, 1, '2014-01-11 06:41:54', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(349, 1, '2014-01-11 06:41:54', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(350, 1, '2014-01-11 06:41:54', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(351, 1, '2014-01-11 06:41:54', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(352, 1, '2014-01-11 06:41:54', 'UPDATE FUNCTION ACCESS: OPD', '127.0.0.1', ''),
+(353, 1, '2014-01-11 06:41:55', 'Logout', '127.0.0.1', ''),
+(354, 1, '2014-01-11 06:41:59', 'LOGIN opd', '127.0.0.1', ''),
+(355, 1, '2014-01-11 06:55:30', 'Logout', '127.0.0.1', ''),
+(356, 1, '2014-01-11 06:55:34', 'LOGIN admin', '127.0.0.1', ''),
+(357, 1, '2014-01-11 07:11:36', 'ADD USER.USER: adit_gudhel', '127.0.0.1', ''),
+(358, 1, '2014-01-11 07:11:40', 'Logout', '127.0.0.1', ''),
+(359, 1, '2014-01-11 07:11:46', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(360, 1, '2014-01-11 07:17:19', 'Logout', '127.0.0.1', ''),
+(361, 1, '2014-01-11 07:17:22', 'LOGIN admin', '127.0.0.1', ''),
+(362, 1, '2014-01-11 07:18:43', 'UPDATE USER. USER_ID: 6, USER: adit_gudhel', '127.0.0.1', ''),
+(363, 1, '2014-01-11 07:18:49', 'Logout', '127.0.0.1', ''),
+(364, 1, '2014-01-11 07:19:00', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(365, 1, '2014-01-11 07:23:26', 'Logout', '127.0.0.1', ''),
+(366, 1, '2014-01-11 07:23:29', 'LOGIN admin', '127.0.0.1', ''),
+(367, 1, '2014-01-11 07:24:15', 'Logout', '127.0.0.1', ''),
+(368, 1, '2014-01-11 07:24:20', 'LOGIN admin', '127.0.0.1', ''),
+(369, 1, '2014-01-11 07:24:24', 'Logout', '127.0.0.1', ''),
+(370, 1, '2014-01-11 07:24:30', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(371, 1, '2014-01-11 07:24:32', 'Logout', '127.0.0.1', ''),
+(372, 1, '2014-01-11 07:24:37', 'LOGIN tapd', '127.0.0.1', ''),
+(373, 1, '2014-01-11 07:24:43', 'Logout', '127.0.0.1', ''),
+(374, 1, '2014-01-11 07:24:47', 'LOGIN admin', '127.0.0.1', ''),
+(375, 1, '2014-01-11 07:29:53', 'Logout', '127.0.0.1', ''),
+(376, 1, '2014-01-11 07:30:01', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(377, 1, '2014-01-11 07:36:06', 'Logout', '127.0.0.1', ''),
+(378, 1, '2014-01-11 07:36:12', 'LOGIN admin', '127.0.0.1', ''),
+(379, 1, '2014-01-11 07:36:53', 'Logout', '127.0.0.1', ''),
+(380, 1, '2014-01-11 07:36:57', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(381, 1, '2014-01-11 07:41:27', 'Logout', '127.0.0.1', ''),
+(382, 1, '2014-01-11 07:41:30', 'LOGIN admin', '127.0.0.1', ''),
+(383, 1, '2014-01-11 07:45:25', 'Logout', '127.0.0.1', ''),
+(384, 1, '2014-01-11 08:17:22', 'LOGIN admin', '127.0.0.1', ''),
+(385, 1, '2014-01-11 10:02:27', 'Logout', '127.0.0.1', ''),
+(386, 1, '2014-01-12 13:56:40', 'LOGIN admin', '127.0.0.1', ''),
+(387, 1, '2014-01-12 13:58:16', 'Logout', '127.0.0.1', ''),
+(388, 1, '2014-01-12 13:58:23', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(389, 1, '2014-01-12 14:04:28', 'Logout', '127.0.0.1', ''),
+(390, 1, '2014-01-12 14:04:32', 'LOGIN admin', '127.0.0.1', ''),
+(391, 1, '2014-01-12 14:04:55', 'Logout', '127.0.0.1', ''),
+(392, 1, '2014-01-12 14:05:05', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(393, 1, '2014-01-12 16:35:23', 'Logout', '127.0.0.1', ''),
+(394, 1, '2014-01-12 16:35:27', 'LOGIN admin', '127.0.0.1', ''),
+(395, 1, '2014-01-12 18:08:06', 'Logout', '127.0.0.1', ''),
+(396, 1, '2014-01-12 20:31:27', 'LOGIN adit_gudhel', '127.0.0.1', ''),
+(397, 1, '2014-01-12 20:35:27', 'Logout', '127.0.0.1', ''),
+(398, 1, '2014-01-12 20:35:31', 'LOGIN admin', '127.0.0.1', '');
 
 -- --------------------------------------------------------
 
@@ -56528,6 +56747,8 @@ CREATE TABLE IF NOT EXISTS `tbl_lpj_hibah` (
 -- Dumping data for table `tbl_lpj_hibah`
 --
 
+INSERT INTO `tbl_lpj_hibah` (`hib_kode`, `tgl_lpj`, `uraian`) VALUES
+(4, '2014-01-10', 'Test');
 
 -- --------------------------------------------------------
 
@@ -56537,21 +56758,21 @@ CREATE TABLE IF NOT EXISTS `tbl_lpj_hibah` (
 
 DROP TABLE IF EXISTS `tbl_menu`;
 CREATE TABLE IF NOT EXISTS `tbl_menu` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nomorurut` int(10) unsigned DEFAULT NULL,
-  `level` int(10) unsigned DEFAULT NULL,
-  `referensi` int(10) unsigned DEFAULT NULL,
-  `judul` varchar(255) DEFAULT NULL,
-  `url` varchar(50) DEFAULT NULL,
-  `keterangan` varchar(255) DEFAULT NULL,
-  `target` varchar(50) DEFAULT NULL,
-  `image` varchar(50) DEFAULT NULL,
-  `bobot` float DEFAULT NULL,
-  `ctime` date DEFAULT NULL,
-  `tampil` tinyint(1) DEFAULT NULL,
-  `hirarki` tinyint(1) DEFAULT NULL,
-  `basishirarki` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `nomorurut` int(10) unsigned default NULL,
+  `level` int(10) unsigned default NULL,
+  `referensi` int(10) unsigned default NULL,
+  `judul` varchar(255) default NULL,
+  `url` varchar(50) default NULL,
+  `keterangan` varchar(255) default NULL,
+  `target` varchar(50) default NULL,
+  `image` varchar(50) default NULL,
+  `bobot` float default NULL,
+  `ctime` date default NULL,
+  `tampil` tinyint(1) default NULL,
+  `hirarki` tinyint(1) default NULL,
+  `basishirarki` varchar(100) default NULL,
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `nomorurut` (`nomorurut`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
@@ -56642,12 +56863,12 @@ INSERT INTO `tbl_monev_hibah` (`hib_kode`, `tgl_monev`, `hasil`, `uraian`) VALUE
 
 DROP TABLE IF EXISTS `tbl_opd`;
 CREATE TABLE IF NOT EXISTS `tbl_opd` (
-  `opd_kode` int(3) NOT NULL AUTO_INCREMENT,
+  `opd_kode` int(3) NOT NULL auto_increment,
   `opd_nama` varchar(75) NOT NULL,
   `opd_bidang` varchar(100) NOT NULL,
-  `opd_kepala` varchar(50) DEFAULT NULL,
-  `opd_nip` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`opd_kode`),
+  `opd_kepala` varchar(50) default NULL,
+  `opd_nip` varchar(15) default NULL,
+  PRIMARY KEY  (`opd_kode`),
   KEY `opd_nama` (`opd_nama`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
@@ -56687,13 +56908,13 @@ INSERT INTO `tbl_opd` (`opd_kode`, `opd_nama`, `opd_bidang`, `opd_kepala`, `opd_
 
 DROP TABLE IF EXISTS `tbl_penandatanganan`;
 CREATE TABLE IF NOT EXISTS `tbl_penandatanganan` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL auto_increment,
   `jabatan` varchar(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
-  `nip` varchar(15) DEFAULT NULL,
-  `ctime` datetime DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
+  `nip` varchar(15) default NULL,
+  `ctime` datetime default '0000-00-00 00:00:00',
+  `mtime` datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`),
   KEY `jabatan` (`jabatan`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -56759,16 +56980,14 @@ DROP TABLE IF EXISTS `tbl_rekening`;
 CREATE TABLE IF NOT EXISTS `tbl_rekening` (
   `no_rek` varchar(30) NOT NULL,
   `uraian` varchar(75) NOT NULL,
-  `keterangan` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`no_rek`)
+  `keterangan` varchar(100) default NULL,
+  PRIMARY KEY  (`no_rek`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_rekening`
 --
 
-INSERT INTO `tbl_rekening` (`no_rek`, `uraian`, `keterangan`) VALUES
-('6.1.1.213', 'Test Nama Rekening', 'Test Nama Rekening');
 
 -- --------------------------------------------------------
 
@@ -56780,12 +56999,12 @@ DROP TABLE IF EXISTS `tbl_session`;
 CREATE TABLE IF NOT EXISTS `tbl_session` (
   `session_id` varchar(100) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `last_login` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `last_login` datetime NOT NULL default '0000-00-00 00:00:00',
   `last_access` int(10) unsigned NOT NULL,
   `status` tinyint(4) NOT NULL,
   `ip` varchar(32) NOT NULL,
   `ctime` datetime NOT NULL,
-  PRIMARY KEY (`session_id`)
+  PRIMARY KEY  (`session_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -56793,7 +57012,10 @@ CREATE TABLE IF NOT EXISTS `tbl_session` (
 --
 
 INSERT INTO `tbl_session` (`session_id`, `username`, `last_login`, `last_access`, `status`, `ip`, `ctime`) VALUES
-('8e749da2cf335c8573b294669bdec980', 'admin', '2014-01-10 13:20:32', 1389335104, 1, '127.0.0.1', '2014-01-10 13:20:32');
+('1a70bb2f77924a09449f84c17aa7a6ca', 'adit_gudhel', '2014-01-12 14:05:05', 1389533719, 0, '127.0.0.1', '2014-01-12 14:05:05'),
+('46d5bda536c6b23398830bece5a96167', 'admin', '2014-01-12 20:35:31', 1389533977, 1, '127.0.0.1', '2014-01-12 20:35:31'),
+('8e749da2cf335c8573b294669bdec980', 'admin', '2014-01-10 13:20:32', 1389533977, 0, '127.0.0.1', '2014-01-10 13:20:32'),
+('98ba00643a5e7a1eef335d5dcbb22199', 'admin', '2014-01-10 18:11:22', 1389533977, 0, '127.0.0.1', '2014-01-10 18:11:22');
 
 -- --------------------------------------------------------
 
@@ -56803,17 +57025,17 @@ INSERT INTO `tbl_session` (`session_id`, `username`, `last_login`, `last_access`
 
 DROP TABLE IF EXISTS `tbl_setting`;
 CREATE TABLE IF NOT EXISTS `tbl_setting` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL auto_increment,
   `kode` varchar(100) NOT NULL,
-  `header_color` varchar(16) DEFAULT NULL,
-  `tab_color` varchar(16) DEFAULT NULL,
-  `page_color` varchar(16) DEFAULT NULL,
-  `path` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `company_name` varchar(255) DEFAULT NULL,
+  `header_color` varchar(16) default NULL,
+  `tab_color` varchar(16) default NULL,
+  `page_color` varchar(16) default NULL,
+  `path` varchar(255) default NULL,
+  `title` varchar(255) default NULL,
+  `company_name` varchar(255) default NULL,
   `ctime` datetime NOT NULL,
   `mtime` datetime NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
@@ -56831,13 +57053,13 @@ INSERT INTO `tbl_setting` (`id`, `kode`, `header_color`, `tab_color`, `page_colo
 
 DROP TABLE IF EXISTS `tbl_tim_evaluasi`;
 CREATE TABLE IF NOT EXISTS `tbl_tim_evaluasi` (
-  `id` mediumint(10) NOT NULL AUTO_INCREMENT,
+  `id` mediumint(10) NOT NULL auto_increment,
   `nama` varchar(50) NOT NULL,
   `nip` varchar(15) NOT NULL,
   `kode` varchar(50) NOT NULL,
-  `ctime` datetime DEFAULT '0000-00-00 00:00:00',
-  `mtime` datetime DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`)
+  `ctime` datetime default '0000-00-00 00:00:00',
+  `mtime` datetime default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
@@ -56862,11 +57084,11 @@ INSERT INTO `tbl_tim_evaluasi` (`id`, `nama`, `nip`, `kode`, `ctime`, `mtime`) V
 
 DROP TABLE IF EXISTS `tbl_tujuan_bansos`;
 CREATE TABLE IF NOT EXISTS `tbl_tujuan_bansos` (
-  `id_tb` int(3) NOT NULL AUTO_INCREMENT,
+  `id_tb` int(3) NOT NULL auto_increment,
   `tb` varchar(35) NOT NULL,
   `ctime` datetime NOT NULL,
   `mtime` datetime NOT NULL,
-  PRIMARY KEY (`id_tb`)
+  PRIMARY KEY  (`id_tb`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
@@ -56889,94 +57111,27 @@ INSERT INTO `tbl_tujuan_bansos` (`id_tb`, `tb`, `ctime`, `mtime`) VALUES
 
 DROP TABLE IF EXISTS `tbl_user`;
 CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL auto_increment,
   `username` varchar(40) NOT NULL,
   `password` varchar(255) NOT NULL,
   `full_name` varchar(50) NOT NULL,
   `access_level` varchar(128) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL default '0',
   `last_login` datetime NOT NULL,
   `ip` varchar(32) NOT NULL,
   `inquiry_access` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+  `opd_kode` int(3) default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `username`, `password`, `full_name`, `access_level`, `status`, `last_login`, `ip`, `inquiry_access`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'Administrator', 0, '2014-01-10 13:20:32', '127.0.0.1', 'Administrator'),
-(2, 'bk', '7e7ec59d1f4b21021577ff562dc3d48b', 'Bagian Kemasyarakatan', 'BK', 0, '2013-12-01 11:10:36', '127.0.0.1', 'BK'),
-(3, 'opd', 'b9498a1fc311c88af062701a837859a5', 'Organisasi Perangkat Daerah', 'OPD', 0, '2013-06-03 16:27:14', '127.0.0.1', 'OPD'),
-(4, 'tapd', '5e17375c07ee0049d015948c11ad2112', 'Tim Anggaran Pemerintah Daerah', 'TAPD', 0, '2013-10-02 08:52:08', '127.0.0.1', 'TAPD'),
-(5, 'bpkad', '8a7b37ac7e5d37ff06b1268ac9afffe4', 'Badan Pengelolaan Keuangan dan Aset Daerah', 'BPKAD', 0, '2014-01-02 11:26:20', '127.0.0.1', 'BPKAD');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `v_dncpbh_opd`
---
-
-DROP TABLE IF EXISTS `v_dncpbh_opd`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bansos`.`v_dncpbh_opd` AS select `a`.`opd_nama` AS `opd`,`b`.`jh_jenis` AS `jenis`,`c`.`hib_nama` AS `nama`,`c`.`hib_kode` AS `hib_kode`,concat(`c`.`hib_jalan`,_utf8' RT.',`c`.`hib_rt`,_utf8' / RW.',`c`.`hib_rw`) AS `alamat`,`d`.`nm_kelurahan` AS `kelurahan`,`e`.`nm_kecamatan` AS `kecamatan`,`f`.`nm_dati2` AS `kota`,`g`.`nm_propinsi` AS `propinsi`,`c`.`hib_kodepos` AS `kodepos`,`c`.`hib_ren_guna` AS `rencana_penggunaan`,`c`.`hib_besaran_hibah` AS `permohonan`,`h`.`besaran_opd` AS `hasil_evaluasi_opd`,`h`.`keterangan` AS `keterangan`,`h`.`status` AS `status_opd`,`h`.`kode` AS `kode`,`i`.`tipe` AS `tipe`,`i`.`ba_no` AS `no_ba`,`i`.`ba_tgl` AS `tgl_ba` from ((((((((`bansos`.`tbl_opd` `a` join `bansos`.`tbl_jenis_hibah` `b`) join `bansos`.`tbl_hibah` `c`) join `bansos`.`tbl_kelurahan` `d`) join `bansos`.`tbl_kecamatan` `e`) join `bansos`.`tbl_dati2` `f`) join `bansos`.`tbl_propinsi` `g`) join `bansos`.`tbl_berita_acara_detail` `h`) join `bansos`.`tbl_berita_acara` `i`) where ((`c`.`opd_kode` = `a`.`opd_kode`) and (`c`.`jh_kode` = `b`.`jh_kode`) and (`c`.`kd_kelurahan` = convert(`d`.`kd_kelurahan` using utf8)) and (`c`.`kd_kecamatan` = convert(`e`.`kd_kecamatan` using utf8)) and (`c`.`kd_dati2` = convert(`f`.`kd_dati2` using utf8)) and (`c`.`kd_propinsi` = convert(`g`.`kd_propinsi` using utf8)) and (`c`.`hib_kode` = `h`.`hib_kode`) and (`h`.`kode` = `i`.`kode`) and (`i`.`tipe` = _utf8'HIBAH'));
-
---
--- Dumping data for table `v_dncpbh_opd`
---
-
-INSERT INTO `v_dncpbh_opd` (`opd`, `jenis`, `nama`, `hib_kode`, `alamat`, `kelurahan`, `kecamatan`, `kota`, `propinsi`, `kodepos`, `rencana_penggunaan`, `permohonan`, `hasil_evaluasi_opd`, `keterangan`, `status_opd`, `kode`, `tipe`, `no_ba`, `tgl_ba`) VALUES
-('Dinas Pendidikan', 'Uang', 'SMA Negeri 1 Bogor', 1, 'Jl. Cibadak Raya No.9 RT.2 / RW.3', 'CIPARIGI', 'BOGOR UTARA', 'KOTA BOGOR', 'JAWA BARAT', 15416, 'Penambahan Ruang Kelas Baru', 50000000, 40000000, '', 1, '1-HIBAH-QmBcfjC5bE', 'HIBAH', 'BA/HIBAH/I/001/Dindik Bogor', '2013-12-09'),
-('Kantor Kesatuan Bangsa dan Politik', 'Barang', 'BMB', 6, 'Jl. Cililitan Timur 2A RT.3 / RW.4', 'MARGA JAYA', 'BOGOR BARAT', 'KOTA BOGOR', 'JAWA BARAT', 14547, 'Pembelian Peralatan Perang', 45000000, 30000000, '', 1, '1-HIBAH-4MRMM8VJkP', 'HIBAH', 'BA/HIBAH/I/001/Kessbang', '2014-01-31'),
-('Dinas Pendidikan', 'Uang', 'SMA Negeri 7 Bogor', 3, 'Jl. Cijeruk 8 RT.5 / RW.6', 'SEMPLAK', 'BOGOR BARAT', 'KOTA BOGOR', 'JAWA BARAT', 15418, 'Relokasi Sekolah', 80000000, 70000000, '', 1, '1-HIBAH-QmBcfjC5bE', 'HIBAH', 'BA/HIBAH/I/001/Dindik Bogor', '2013-12-09'),
-('Kantor Kesatuan Bangsa dan Politik', 'Uang', 'FPI', 4, 'Jl. Cibadak No. 87 RT.2 / RW.4', 'SEMPLAK', 'BOGOR BARAT', 'KOTA BOGOR', 'JAWA BARAT', 15417, 'Pembiayaan Sweeping', 300000000, 200000000, '', 1, '1-HIBAH-4MRMM8VJkP', 'HIBAH', 'BA/HIBAH/I/001/Kessbang', '2014-01-31'),
-('Dinas Pendidikan', 'Barang', 'SMA Negeri 3 Cibadak', 2, 'Jl. Cijeruk No. 6 RT.5 / RW.4', 'KEBON KELAPA', 'BOGOR TENGAH', 'KOTA BOGOR', 'JAWA BARAT', 15417, 'Pembelian Peralatan Lab IPA', 60000000, 30000000, '', 1, '1-HIBAH-QmBcfjC5bE', 'HIBAH', 'BA/HIBAH/I/001/Dindik Bogor', '2013-12-09');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `v_dncpbh_tapd`
---
-
-DROP TABLE IF EXISTS `v_dncpbh_tapd`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bansos`.`v_dncpbh_tapd` AS select `a`.`opd_nama` AS `opd`,`b`.`jh_jenis` AS `jenis`,`c`.`hib_nama` AS `nama`,`c`.`hib_kode` AS `hib_kode`,concat(`c`.`hib_jalan`,_utf8' RT.',`c`.`hib_rt`,_utf8' / RW.',`c`.`hib_rw`) AS `alamat`,`d`.`nm_kelurahan` AS `kelurahan`,`e`.`nm_kecamatan` AS `kecamatan`,`f`.`nm_dati2` AS `kota`,`g`.`nm_propinsi` AS `propinsi`,`c`.`hib_kodepos` AS `kodepos`,`c`.`hib_ren_guna` AS `rencana_penggunaan`,`c`.`hib_besaran_hibah` AS `permohonan`,`h`.`besaran_opd` AS `hasil_evaluasi_opd`,`j`.`besaran_tapd` AS `hasil_evaluasi_tapd`,`j`.`keterangan` AS `keterangan`,`h`.`status` AS `status_opd`,`j`.`status` AS `status_tapd`,`j`.`kode` AS `kode`,`k`.`tipe` AS `tipe`,`k`.`ba_no` AS `no_ba`,`k`.`ba_tgl` AS `tgl_ba` from ((((((((((`bansos`.`tbl_opd` `a` join `bansos`.`tbl_jenis_hibah` `b`) join `bansos`.`tbl_hibah` `c`) join `bansos`.`tbl_kelurahan` `d`) join `bansos`.`tbl_kecamatan` `e`) join `bansos`.`tbl_dati2` `f`) join `bansos`.`tbl_propinsi` `g`) join `bansos`.`tbl_berita_acara_detail` `h`) join `bansos`.`tbl_berita_acara` `i`) join `bansos`.`tbl_eval_tapd_detail` `j`) join `bansos`.`tbl_eval_tapd` `k`) where ((`c`.`opd_kode` = `a`.`opd_kode`) and (`c`.`jh_kode` = `b`.`jh_kode`) and (`c`.`kd_kelurahan` = convert(`d`.`kd_kelurahan` using utf8)) and (`c`.`kd_kecamatan` = convert(`e`.`kd_kecamatan` using utf8)) and (`c`.`kd_dati2` = convert(`f`.`kd_dati2` using utf8)) and (`c`.`kd_propinsi` = convert(`g`.`kd_propinsi` using utf8)) and (`c`.`hib_kode` = `h`.`hib_kode`) and (`h`.`kode` = `i`.`kode`) and (`i`.`tipe` = _utf8'HIBAH') and (`c`.`hib_kode` = `j`.`hib_kode`) and (`j`.`kode` = `k`.`kode`) and (`k`.`tipe` = _utf8'HIBAH'));
-
---
--- Dumping data for table `v_dncpbh_tapd`
---
-
-INSERT INTO `v_dncpbh_tapd` (`opd`, `jenis`, `nama`, `hib_kode`, `alamat`, `kelurahan`, `kecamatan`, `kota`, `propinsi`, `kodepos`, `rencana_penggunaan`, `permohonan`, `hasil_evaluasi_opd`, `hasil_evaluasi_tapd`, `keterangan`, `status_opd`, `status_tapd`, `kode`, `tipe`, `no_ba`, `tgl_ba`) VALUES
-('Dinas Pendidikan', 'Uang', 'SMA Negeri 1 Bogor', 1, 'Jl. Cibadak Raya No.9 RT.2 / RW.3', 'CIPARIGI', 'BOGOR UTARA', 'KOTA BOGOR', 'JAWA BARAT', 15416, 'Penambahan Ruang Kelas Baru', 50000000, 40000000, 20000000, '', 1, 1, '1-HIBAH-k2O8FeYBLb', 'HIBAH', 'BA/HIBAH/I/001/TAPD', '2014-01-06'),
-('Dinas Pendidikan', 'Uang', 'SMA Negeri 7 Bogor', 3, 'Jl. Cijeruk 8 RT.5 / RW.6', 'SEMPLAK', 'BOGOR BARAT', 'KOTA BOGOR', 'JAWA BARAT', 15418, 'Relokasi Sekolah', 80000000, 70000000, 30000000, '', 1, 1, '1-HIBAH-k2O8FeYBLb', 'HIBAH', 'BA/HIBAH/I/001/TAPD', '2014-01-06'),
-('Kantor Kesatuan Bangsa dan Politik', 'Uang', 'FPI', 4, 'Jl. Cibadak No. 87 RT.2 / RW.4', 'SEMPLAK', 'BOGOR BARAT', 'KOTA BOGOR', 'JAWA BARAT', 15417, 'Pembiayaan Sweeping', 300000000, 200000000, 100000000, '', 1, 1, '1-HIBAH-Bd6e9Hfc2P', 'HIBAH', 'BA/HIBAH/I/002/TAPD', '2014-01-30'),
-('Dinas Pendidikan', 'Barang', 'SMA Negeri 3 Cibadak', 2, 'Jl. Cijeruk No. 6 RT.5 / RW.4', 'KEBON KELAPA', 'BOGOR TENGAH', 'KOTA BOGOR', 'JAWA BARAT', 15417, 'Pembelian Peralatan Lab IPA', 60000000, 30000000, 25000000, '', 1, 1, '1-HIBAH-k2O8FeYBLb', 'HIBAH', 'BA/HIBAH/I/001/TAPD', '2014-01-06');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `v_dncpbs_opd`
---
-
-DROP TABLE IF EXISTS `v_dncpbs_opd`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bansos`.`v_dncpbs_opd` AS select `a`.`opd_nama` AS `opd`,`b`.`jh_jenis` AS `jenis`,`c`.`ban_nama` AS `nama`,`c`.`ban_ktp` AS `ktp`,`c`.`ban_kode` AS `ban_kode`,concat(`c`.`ban_jalan`,' RT.',`c`.`ban_rt`,' / RW.',`c`.`ban_rw`) AS `alamat`,`d`.`nm_kelurahan` AS `kelurahan`,`e`.`nm_kecamatan` AS `kecamatan`,`f`.`nm_dati2` AS `kota`,`g`.`nm_propinsi` AS `propinsi`,`c`.`ban_kodepos` AS `kodepos`,`c`.`ban_ren_guna` AS `rencana_penggunaan`,`c`.`ban_besaran_bansos` AS `permohonan`,`h`.`besaran_opd` AS `hasil_evaluasi_opd`,`h`.`keterangan` AS `keterangan`,`h`.`status` AS `status_opd`,`h`.`kode` AS `kode`,`i`.`tipe` AS `tipe`,`i`.`ba_no` AS `no_ba`,`i`.`ba_tgl` AS `tgl_ba` from ((((((((`bansos`.`tbl_opd` `a` join `bansos`.`tbl_jenis_hibah` `b`) join `bansos`.`tbl_bansos` `c`) join `bansos`.`tbl_kelurahan` `d`) join `bansos`.`tbl_kecamatan` `e`) join `bansos`.`tbl_dati2` `f`) join `bansos`.`tbl_propinsi` `g`) join `bansos`.`tbl_berita_acara_detail` `h`) join `bansos`.`tbl_berita_acara` `i`) where ((`c`.`opd_kode` = `a`.`opd_kode`) and (`c`.`jh_kode` = `b`.`jh_kode`) and (`c`.`kd_kelurahan` = convert(`d`.`kd_kelurahan` using utf8)) and (`c`.`kd_kecamatan` = convert(`e`.`kd_kecamatan` using utf8)) and (`c`.`kd_dati2` = convert(`f`.`kd_dati2` using utf8)) and (`c`.`kd_propinsi` = convert(`g`.`kd_propinsi` using utf8)) and (`h`.`hib_kode` = `c`.`ban_kode`) and (`h`.`kode` = `i`.`kode`) and (`i`.`tipe` = 'BANSOS'));
-
---
--- Dumping data for table `v_dncpbs_opd`
---
-
-INSERT INTO `v_dncpbs_opd` (`opd`, `jenis`, `nama`, `ktp`, `ban_kode`, `alamat`, `kelurahan`, `kecamatan`, `kota`, `propinsi`, `kodepos`, `rencana_penggunaan`, `permohonan`, `hasil_evaluasi_opd`, `keterangan`, `status_opd`, `kode`, `tipe`, `no_ba`, `tgl_ba`) VALUES
-('Bagian Kemasyarakatan Sekretariat Daerah', 'Uang', 'Masjid Baiturrahman', '1234567890123456', 1, 'Jl. Cikalong No. 9 RT.1 / RW.2', 'CIPARIGI', 'BOGOR UTARA', 'KOTA BOGOR', 'JAWA BARAT', 12343, 'Khitanan Massal', 100000000, 75000000, '', 1, '1-BANSOS-VW789R02TC', 'BANSOS', 'BA/BANSOS/I/001/Kesmas', '2014-01-02');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `v_dncpbs_tapd`
---
-
-DROP TABLE IF EXISTS `v_dncpbs_tapd`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bansos`.`v_dncpbs_tapd` AS select `a`.`opd_nama` AS `opd`,`b`.`jh_jenis` AS `jenis`,`c`.`ban_nama` AS `nama`,`c`.`ban_ktp` AS `ktp`,`c`.`ban_kode` AS `ban_kode`,concat(`c`.`ban_jalan`,' RT.',`c`.`ban_rt`,' / RW.',`c`.`ban_rw`) AS `alamat`,`d`.`nm_kelurahan` AS `kelurahan`,`e`.`nm_kecamatan` AS `kecamatan`,`f`.`nm_dati2` AS `kota`,`g`.`nm_propinsi` AS `propinsi`,`c`.`ban_kodepos` AS `kodepos`,`c`.`ban_ren_guna` AS `rencana_penggunaan`,`c`.`ban_besaran_bansos` AS `permohonan`,`h`.`besaran_opd` AS `hasil_evaluasi_opd`,`j`.`besaran_tapd` AS `hasil_evaluasi_tapd`,`j`.`keterangan` AS `keterangan`,`h`.`status` AS `status_opd`,`j`.`status` AS `status_tapd`,`j`.`kode` AS `kode`,`k`.`tipe` AS `tipe`,`k`.`ba_no` AS `no_ba`,`k`.`ba_tgl` AS `tgl_ba` from ((((((((((`bansos`.`tbl_opd` `a` join `bansos`.`tbl_jenis_hibah` `b`) join `bansos`.`tbl_bansos` `c`) join `bansos`.`tbl_kelurahan` `d`) join `bansos`.`tbl_kecamatan` `e`) join `bansos`.`tbl_dati2` `f`) join `bansos`.`tbl_propinsi` `g`) join `bansos`.`tbl_berita_acara_detail` `h`) join `bansos`.`tbl_berita_acara` `i`) join `bansos`.`tbl_eval_tapd_detail` `j`) join `bansos`.`tbl_eval_tapd` `k`) where ((`c`.`opd_kode` = `a`.`opd_kode`) and (`c`.`jh_kode` = `b`.`jh_kode`) and (`c`.`kd_kelurahan` = convert(`d`.`kd_kelurahan` using utf8)) and (`c`.`kd_kecamatan` = convert(`e`.`kd_kecamatan` using utf8)) and (`c`.`kd_dati2` = convert(`f`.`kd_dati2` using utf8)) and (`c`.`kd_propinsi` = convert(`g`.`kd_propinsi` using utf8)) and (`c`.`ban_kode` = `h`.`hib_kode`) and (`h`.`kode` = `i`.`kode`) and (`i`.`tipe` = 'BANSOS') and (`c`.`ban_kode` = `j`.`hib_kode`) and (`j`.`kode` = `k`.`kode`) and (`k`.`tipe` = 'BANSOS'));
-
---
--- Dumping data for table `v_dncpbs_tapd`
---
-
+INSERT INTO `tbl_user` (`id`, `username`, `password`, `full_name`, `access_level`, `status`, `last_login`, `ip`, `inquiry_access`, `opd_kode`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'Administrator', 0, '2014-01-12 20:35:31', '127.0.0.1', 'Administrator', 0),
+(2, 'bk', '7e7ec59d1f4b21021577ff562dc3d48b', 'Bagian Kemasyarakatan', 'BK', 0, '2013-12-01 11:10:36', '127.0.0.1', 'BK', 0),
+(3, 'opd', 'b9498a1fc311c88af062701a837859a5', 'Organisasi Perangkat Daerah', 'OPD', 0, '2014-01-11 06:41:59', '127.0.0.1', 'OPD', 0),
+(4, 'tapd', '5e17375c07ee0049d015948c11ad2112', 'Tim Anggaran Pemerintah Daerah', 'TAPD', 0, '2014-01-11 07:24:37', '127.0.0.1', 'TAPD', 0),
+(5, 'bpkad', '8a7b37ac7e5d37ff06b1268ac9afffe4', 'Badan Pengelolaan Keuangan dan Aset Daerah', 'BPKAD', 0, '2014-01-02 11:26:20', '127.0.0.1', 'BPKAD', 0),
+(6, 'adit_gudhel', '6b154c646b830ac8a103e723c77e1c46', 'Aditya Nursyahbani', 'OPD', 0, '2014-01-12 20:31:27', '127.0.0.1', 'OPD', 4);
