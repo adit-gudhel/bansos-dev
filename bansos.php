@@ -61,7 +61,7 @@ if ($act == "add" || $act == "edit") {
       <input type="text" name="ban_nama" id="ban_nama" value="<?=$ban_nama?>" style="width:250px;" class="easyui-validatebox" required="true" />
     </td>
   </tr>
-  tr>
+  <tr>
     <td>No. KTP</td>
     <td>
       <input type="text" name="ban_ktp" id="ban_ktp" value="<?=$ban_ktp?>" style="width:250px;" class="easyui-validatebox" required="true" />
