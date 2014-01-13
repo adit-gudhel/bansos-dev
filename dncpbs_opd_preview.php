@@ -53,7 +53,7 @@ if(empty($row['kode'])){
 	$filename = "dncpbs-opd-".$id.".pdf";
 	$filepath = 'docs/'.$filename;
 		
-	$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'pdf');
+	$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'PDF');
 	$objWriter->writeAllSheets();
 	$objWriter->save($filepath);
 	
