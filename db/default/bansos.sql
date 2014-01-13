@@ -212,17 +212,7 @@ CREATE TABLE IF NOT EXISTS `tbl_eval_tapd` (
   `mtime` datetime default '0000-00-00 00:00:00',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `ba_no` (`ba_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `tbl_eval_tapd`
---
-
-INSERT INTO `tbl_eval_tapd` (`id`, `ba_no`, `ba_tgl`, `opd_kode`, `tipe`, `kode`, `ctime`, `mtime`) VALUES
-(1, 'BA/HIBAH/I/001/TAPD', '2014-01-06', 4, 'HIBAH', '1-HIBAH-k2O8FeYBLb', '2014-01-06 14:31:23', '2014-01-06 14:31:23'),
-(2, 'BA/HIBAH/I/002/TAPD', '2014-01-30', 2, 'HIBAH', '1-HIBAH-Bd6e9Hfc2P', '2014-01-07 10:13:31', '2014-01-07 10:13:31');
-
--- --------------------------------------------------------
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Table structure for table `tbl_eval_tapd_detail`
@@ -239,19 +229,7 @@ CREATE TABLE IF NOT EXISTS `tbl_eval_tapd_detail` (
   `ctime` datetime default '0000-00-00 00:00:00',
   `mtime` datetime default '0000-00-00 00:00:00',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
-
---
--- Dumping data for table `tbl_eval_tapd_detail`
---
-
-INSERT INTO `tbl_eval_tapd_detail` (`id`, `kode`, `besaran_tapd`, `keterangan`, `hib_kode`, `status`, `ctime`, `mtime`) VALUES
-(1, '1-HIBAH-k2O8FeYBLb', 20000000, '', 1, 1, '2014-01-06 14:31:23', '2014-01-06 14:31:23'),
-(2, '1-HIBAH-k2O8FeYBLb', 30000000, '', 3, 1, '2014-01-06 14:31:23', '2014-01-06 14:31:23'),
-(3, '1-HIBAH-k2O8FeYBLb', 25000000, '', 2, 1, '2014-01-06 14:31:23', '2014-01-06 14:31:23'),
-(4, '1-HIBAH-Bd6e9Hfc2P', 100000000, '', 4, 1, '2014-01-07 10:13:31', '2014-01-07 10:13:31');
-
--- --------------------------------------------------------
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Table structure for table `tbl_hibah`
