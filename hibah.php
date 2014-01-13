@@ -205,22 +205,25 @@ else if ($act == "do_add" || $act == "do_update") {
     echo"<a href=$PHP_SELF>Sukses Simpan Data</a> ";
 }
 else if ($act == "delete") {
-	
+	$f->checkaccess("delete");
 	$sql = "DELETE FROM tbl_hibah WHERE hib_kode=$id";
     $result=$db->Execute($sql);
     if(!$result){ print $db->ErrorMsg(); die(); }
 	
-	/*
-    $sql = "DELETE FROM tbl_hibah_opd WHERE hib_kode=$id";
+	$sql = "DELETE FROM tbl_monev_hibah WHERE hib_kode=$id";
     $result=$db->Execute($sql);
     if(!$result){ print $db->ErrorMsg(); die(); }
-	*/
+	
+	$sql = "DELETE FROM tbl_lpj_hibah WHERE hib_kode=$id";
+    $result=$db->Execute($sql);
+    if(!$result){ print $db->ErrorMsg(); die(); }
+
 	header("location: $PHP_SELF");
 }
 else {
 
     if(!$start) $start='1';
-    if(!$order)	$order='h.hib_nama';
+    if(!$order)	$order='h.hib_tanggal';
     if(!$sort) 	$sort='asc';
     if(!$page) 	$page='0';
     if(!$num)	$num='10';
@@ -228,8 +231,13 @@ else {
     if($start < 0) $start='0';
     $advance_search = 0;
 
-    $f->standard_buttons(array('noadd','norefresh'));
-    $f->search_box($query);
+	//cek akses
+	if($login_opd)
+		$f->standard_buttons('refresh');
+	else
+    	$f->standard_buttons();
+    
+	$f->search_box($query);
 
 $cond1 = " left join tbl_jenis_hibah jh on h.jh_kode=jh.jh_kode left join tbl_opd o on h.opd_kode=o.opd_kode ";
 
@@ -238,7 +246,7 @@ $query = urldecode($query);
 $query = strtolower(trim($query));
 
 $rel = !empty($cond)?"and":"where";
-$cond  .=" $rel (h.hib_kode = '$query' or h.hib_nama like '%$query%' or h.hib_jalan like '%$query%' or h.hib_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
+$cond  .=" $rel (h.hib_kode = '$query' or h.hib_nama like '%$query%' or h.hib_jalan like '%$query%' or h.hib_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query' or o.opd_nama like '%$query%')";
 }
 
 $rel = !empty($cond)?"and":"where";
@@ -249,6 +257,7 @@ if($login_access=='OPD'){
 $total = $f->count_total("tbl_hibah h","$cond1 $cond"); 
 
 $f->paging(array("link"=>$PHP_SELF."?query=$query&order=$order&sort=$sort&type=$type&act=","page"=>$page,"total"=>$total,"num"=>"$num","show_total"=>1));
+
 $sql="select h.*, jh.jh_jenis, o.opd_nama from tbl_hibah h $cond1 $cond order by $order $sort";
 $result=$db->SelectLimit("$sql","$num","$start");
 #echo $sql;
@@ -292,6 +301,10 @@ $_sort=($sort=='desc')?"asc":"desc";
             
         echo "
 			<td  valign=top ALIGN=left>";
+			
+			if($login_opd)
+				echo"&nbsp;";
+			else
 				echo"
 				<a href=$PHP_SELF?act=edit&id=$hib_kode><img src=../images/button_edit.gif border=0></a> 
 				<a href=$PHP_SELF?act=delete&id=$hib_kode onClick=\"javascript:return confirm('Anda Yakin Menghapus Data ini?');return false;\"><img src=../images/button_delete.gif border=0></a>";

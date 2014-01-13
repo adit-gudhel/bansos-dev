@@ -196,6 +196,9 @@ else if ($act == "do_add" || $act == "do_update") {
 	foreach ($_POST as $key=>$val) {	
     	$$key = $val;
     }
+	
+	if ($act == "do_update") $f->checkaccess("edit");
+	else if ($act == "do_add") $f->checkaccess("add");
      
     if ($act=='do_update') {	    
         $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', ban_jenis='$ban_jenis', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."', id_tb='$id_tb', ban_nama='$ban_nama', ban_ktp='$ban_ktp', pimpinan='$pimpinan', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_ren_guna='".trim($ban_ren_guna)."', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_bansos='$ban_besaran_bansos', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
@@ -214,22 +217,25 @@ else if ($act == "do_add" || $act == "do_update") {
     echo"<a href=$PHP_SELF>Sukses Simpan Data</a> ";
 }
 else if ($act == "delete") {
-	
+	$f->checkaccess("delete");
 	$sql = "DELETE FROM tbl_bansos WHERE ban_kode=$id";
     $result=$db->Execute($sql);
     if(!$result){ print $db->ErrorMsg(); die(); }
 	
-	/*
-    $sql = "DELETE FROM tbl_bansos_opd WHERE ban_kode=$id";
+	$sql = "DELETE FROM tbl_monev_bansos WHERE ban_kode=$id";
     $result=$db->Execute($sql);
     if(!$result){ print $db->ErrorMsg(); die(); }
-	*/
+	
+	$sql = "DELETE FROM tbl_lpj_bansos WHERE ban_kode=$id";
+    $result=$db->Execute($sql);
+    if(!$result){ print $db->ErrorMsg(); die(); }
+	
 	header("location: $PHP_SELF");
 }
 else {
 
     if(!$start) $start='1';
-    if(!$order)	$order='b.ban_nama';
+    if(!$order)	$order='b.ban_tanggal';
     if(!$sort) 	$sort='asc';
     if(!$page) 	$page='0';
     if(!$num)	$num='10';
@@ -237,7 +243,12 @@ else {
     if($start < 0) $start='0';
     $advance_search = 0;
 
-    $f->standard_buttons();
+    //cek akses
+	if($login_opd)
+		$f->standard_buttons('refresh');
+	else
+    	$f->standard_buttons();
+		
     $f->search_box($query);
 
 $cond1 = " left join tbl_jenis_hibah jh on b.jh_kode=jh.jh_kode left join tbl_opd o on b.opd_kode=o.opd_kode ";
@@ -247,7 +258,7 @@ $query = urldecode($query);
 $query = strtolower(trim($query));
 
 $rel = !empty($cond)?"and":"where";
-$cond  .=" $rel (b.ban_kode = '$query' or b.ban_nama like '%$query%' or b.ban_jalan like '%$query%' or b.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
+$cond  .=" $rel (b.ban_kode = '$query' or b.ban_nama like '%$query%' or b.ban_jalan like '%$query%' or b.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query' or o.opd_nama like '%$query%')";
 }
 
 $rel = !empty($cond)?"and":"where";
@@ -258,6 +269,7 @@ if($login_access=='OPD'){
 $total = $f->count_total("tbl_bansos b","$cond1 $cond"); 
 
 $f->paging(array("link"=>$PHP_SELF."?query=$query&order=$order&sort=$sort&type=$type&act=","page"=>$page,"total"=>$total,"num"=>"$num","show_total"=>1));
+
 $sql="select b.*, jh.jh_jenis, o.opd_nama from tbl_bansos b $cond1 $cond order by $order $sort";
 $result=$db->SelectLimit("$sql","$num","$start");
 #echo $sql;
@@ -301,6 +313,9 @@ $_sort=($sort=='desc')?"asc":"desc";
             
         echo "
 			<td  valign=top ALIGN=left>";
+			if($login_opd)
+				echo"&nbsp;";
+			else
 				echo"
 				<a href=$PHP_SELF?act=edit&id=$ban_kode><img src=../images/button_edit.gif border=0></a> 
 				<a href=$PHP_SELF?act=delete&id=$ban_kode onClick=\"javascript:return confirm('Anda Yakin Menghapus Data ini?');return false;\"><img src=../images/button_delete.gif border=0></a>";

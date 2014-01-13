@@ -234,7 +234,6 @@ if ($act == "add" || $act == "edit") {
   	<?php
   }
   ?>
-  
   <tr>
     <td colspan="2">&nbsp;</td>
   </tr>
@@ -442,16 +441,6 @@ $i++;
         $sql = "UPDATE tbl_berita_acara SET ba_no='$ba_no', ba_tgl='".$f->preparedate($ba_tgl)."', opd_kode='$opd_kode', sk_no='$sk_no', sk_tgl='".$f->preparedate($sk_tgl)."', sk_tentang='".trim($sk_tentang)."', mtime=NOW() WHERE id=$id";        
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
-		
-		/*
-		if(!empty($no_nphd) && !empty($tgl_nphd))
-			$sql = "UPDATE tbl_hibah SET hib_nphd='$no_nphd', hib_nphd_tgl='".$f->preparedate($tgl_nphd)."', hib_status='".$status_permohonan."' WHERE hib_kode=$reg_kode";
-		else
-			$sql = "UPDATE tbl_hibah SET hib_status='".$status_permohonan."' WHERE hib_kode=$reg_kode";
-			
-		$result=$db->Execute($sql);
-        if(!$result){ print $db->ErrorMsg(); die(); }
-		*/
 		
 		$sql2 = "SELECT hib_kode FROM tbl_berita_acara_detail WHERE kode='$kode'";
 		$result2=$db->Execute($sql2);

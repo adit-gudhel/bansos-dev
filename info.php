@@ -52,6 +52,8 @@ function checkQuickForm($judul) {
 	if (checkQuickForm('Pertimbangan Hibah TAPD')) echo "<a href=# onclick=\"window.parent.addTab('Pertimbangan Hibah TAPD','evaluasi_hibah_tapd.php?act=add')\"><div class=\"button\">Pertimbangan Hibah TAPD</div></a>";
 	if (checkQuickForm('Daftar Nama Penerima Hibah')) echo "<a href=# onclick=\"window.parent.addTab('Daftar Nama Penerima Hibah','penerima_hibah.php')\"><div class=\"button\">Daftar Penerima Hibah</div></a>";
 	if (checkQuickForm('Pencairan Hibah')) echo "<a href=# onclick=\"window.parent.addTab('Pencairan Hibah','pencairan_hibah.php?act=add')\"><div class=\"button\">Pencairan Hibah</div></a>";
+	if (checkQuickForm('Monitoring dan Evaluasi Hibah')) echo "<a href=# onclick=\"window.parent.addTab('Monitoring dan Evaluasi Hibah','monev_hibah.php?act=add')\"><div class=\"button\">Monitoring dan Evaluasi Hibah</div></a>";
+	if (checkQuickForm('LPJ Hibah')) echo "<a href=# onclick=\"window.parent.addTab('LPJ Hibah','lpj_hibah.php?act=add')\"><div class=\"button\">Laporan Pertanggungjawaban Hibah</div></a>";
     ?>
     
 </div>
@@ -65,9 +67,6 @@ function checkQuickForm($judul) {
     	<tr><td><b>Login Terakhir</b></td><td><? echo $f->convertdatetime(array("datetime"=>$last_login[0]))." ".$last_login[1]; ?></td></tr>
     	<tr><td><b>IP</b></td><td><?=$login_ip?></td></tr>
     	<tr><td><b>Username</b></td><td><?=$login_username?></td></tr>
-        <?php
-        	if($login_opd!=='0') echo "<tr><td><b>OPD</b></td><td>$login_opd_nama</td></tr>";
-		?>
     	<tr><td class="last"><b>Akses</b></td><td class="last"><?=$login_access_detail?></td></tr>
     </table>
 </div>
@@ -79,6 +78,8 @@ function checkQuickForm($judul) {
 	if (checkQuickForm('Pertimbangan Bantuan Sosial TAPD')) echo "<a href=# onclick=\"window.parent.addTab('Pertimbangan Bantuan Sosial TAPD','evaluasi_bansos_tapd.php?act=add')\"><div class=\"button\">Pertimbangan Bantuan Sosial TAPD</div></a>";
 	if (checkQuickForm('Daftar Nama Penerima Bantuan Sosial')) echo "<a href=# onclick=\"window.parent.addTab('Daftar Nama Penerima Bantuan Sosial','penerima_bansos.php')\"><div class=\"button\">Daftar Penerima Bantuan Sosial</div></a>";
 	if (checkQuickForm('Pencairan Bantuan Sosial')) echo "<a href=# onclick=\"window.parent.addTab('Pencairan Bantuan Sosial','pencairan_bansos.php?act=add')\"><div class=\"button\">Pencairan Bantuan Sosial</div></a>";
+	if (checkQuickForm('Monitoring dan Evaluasi Bantuan Sosial')) echo "<a href=# onclick=\"window.parent.addTab('Monitoring dan Evaluasi Bantuan Sosial','monev_bansos.php?act=add')\"><div class=\"button\">Monitoring dan Evaluasi Bantuan Sosial</div></a>";
+	if (checkQuickForm('LPJ Bansos')) echo "<a href=# onclick=\"window.parent.addTab('LPJ Bansos','lpj_bansos.php?act=add')\"><div class=\"button\">Laporan Pertanggungjawaban Bantuan Sosial</div></a>";
     ?>
 </div>
 
