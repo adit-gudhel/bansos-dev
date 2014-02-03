@@ -137,11 +137,13 @@ $AS->setCellValue('A'.$ttd_row.'', 'Ketua TAPD,');
 $AS->mergeCells('E'.$ttd_row.':G'.$ttd_row.'');
 $AS->setCellValue('E'.$ttd_row.'', 'Kepala '.$row['opd'].',');
 
+/*
 $AS->mergeCells('A'.$ttd_row2.':C'.$ttd_row2.'');
 $AS->setCellValue('A'.$ttd_row2.'', 'SEKRETARIS DAERAH KOTA BOGOR,');
 
 $AS->mergeCells('E'.$ttd_row2.':G'.$ttd_row2.'');
 $AS->setCellValue('E'.$ttd_row2.'', 'WALIKOTA BOGOR,');
+*/
 
 
 $sql2 = "SELECT nama, nip FROM tbl_penandatanganan WHERE jabatan='KETUA TAPD'";
@@ -158,7 +160,7 @@ $AS->setCellValue('A'.($ttd_row + 5).'', '( '.$row2['nama'].' / NIP. '.$row2['ni
 $AS->mergeCells('E'.($ttd_row + 5).':G'.($ttd_row + 5).'');
 $AS->setCellValue('E'.($ttd_row + 5).'', '( '.strtoupper($row3['opd_kepala']).' / NIP. '.$row3['opd_nip'].' )');
 
-
+/*
 $sql4 = "SELECT nama FROM tbl_penandatanganan WHERE jabatan='SEKRETARIS DAERAH KOTA BOGOR'";
 $result4=$db->Execute($sql4);
 $row4 = $result4->FetchRow();
@@ -172,6 +174,7 @@ $AS->setCellValue('A'.($ttd_row2 + 5).'', ''.$row4['nama'].'');
 
 $AS->mergeCells('E'.($ttd_row2 + 5).':G'.($ttd_row2 + 5).'');
 $AS->setCellValue('E'.($ttd_row2 + 5).'', ''.$row5['nama'].'');
+*/
 
 // Define Style
 $formatJudul = 
@@ -355,9 +358,10 @@ $AS->getStyle('E'.$tgl_row.'')->applyFromArray($formatIsiCenter);
 $AS->getStyle('A'.$ttd_row.':A'.($ttd_row + 5).'')->applyFromArray($formatIsiCenter);
 $AS->getStyle('E'.$ttd_row.':E'.($ttd_row + 5).'')->applyFromArray($formatIsiCenter);
 
+/*
 $AS->getStyle('A'.$ttd_row2.':A'.($ttd_row2 + 5).'')->applyFromArray($formatJudul);
 $AS->getStyle('E'.$ttd_row2.':E'.($ttd_row2 + 5).'')->applyFromArray($formatJudul);
-
+*/
 
 // Set column widths
 $AS->getColumnDimension('A')->setWidth(4);
@@ -480,11 +484,13 @@ $AS2->setCellValue('A'.$ttd_row.'', 'Ketua TAPD,');
 $AS2->mergeCells('E'.$ttd_row.':G'.$ttd_row.'');
 $AS2->setCellValue('E'.$ttd_row.'', 'Kepala '.$row['opd'].',');
 
+/*
 $AS2->mergeCells('A'.$ttd_row2.':C'.$ttd_row2.'');
 $AS2->setCellValue('A'.$ttd_row2.'', 'SEKRETARIS DAERAH KOTA BOGOR,');
 
 $AS2->mergeCells('E'.$ttd_row2.':G'.$ttd_row2.'');
 $AS2->setCellValue('E'.$ttd_row2.'', 'WALIKOTA BOGOR,');
+*/
 
 
 $sql2 = "SELECT nama, nip FROM tbl_penandatanganan WHERE jabatan='KETUA TAPD'";
@@ -501,7 +507,7 @@ $AS2->setCellValue('A'.($ttd_row + 5).'', '( '.$row2['nama'].' / NIP. '.$row2['n
 $AS2->mergeCells('E'.($ttd_row + 5).':G'.($ttd_row + 5).'');
 $AS2->setCellValue('E'.($ttd_row + 5).'', '( '.strtoupper($row3['opd_kepala']).' / NIP. '.$row3['opd_nip'].' )');
 
-
+/*
 $sql4 = "SELECT nama FROM tbl_penandatanganan WHERE jabatan='SEKRETARIS DAERAH KOTA BOGOR'";
 $result4=$db->Execute($sql4);
 $row4 = $result4->FetchRow();
@@ -515,7 +521,7 @@ $AS2->setCellValue('A'.($ttd_row2 + 5).'', ''.$row4['nama'].'');
 
 $AS2->mergeCells('E'.($ttd_row2 + 5).':G'.($ttd_row2 + 5).'');
 $AS2->setCellValue('E'.($ttd_row2 + 5).'', ''.$row5['nama'].'');
-
+*/
 
 
 
@@ -547,9 +553,10 @@ $AS2->getStyle('E'.$tgl_row.'')->applyFromArray($formatIsiCenter);
 $AS2->getStyle('A'.$ttd_row.':A'.($ttd_row + 5).'')->applyFromArray($formatIsiCenter);
 $AS2->getStyle('E'.$ttd_row.':E'.($ttd_row + 5).'')->applyFromArray($formatIsiCenter);
 
+/*
 $AS2->getStyle('A'.$ttd_row2.':A'.($ttd_row2 + 5).'')->applyFromArray($formatJudul);
 $AS2->getStyle('E'.$ttd_row2.':E'.($ttd_row2 + 5).'')->applyFromArray($formatJudul);
-
+*/
 
 // Set column widths
 $AS2->getColumnDimension('A')->setWidth(4);

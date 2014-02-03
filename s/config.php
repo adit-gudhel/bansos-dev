@@ -13,8 +13,11 @@ $dbname		= "bansos";
 
 //Define Variables
 $site_title		= "Sistem Informasi Bantuan Sosial Pemerintah Kota Bogor";
-$assoc_case		='lower';			// upper or lower
-$code_prefix	='WF';
+$assoc_case		= 'lower';			// upper or lower
+$code_prefix	= 'WF';
+//$upload_path	= 'docs/upload/';
+
+define('UPLOAD_PATH','docs/upload/');
 
 //Set DOCUMENT_ROOT untuk include
 $URL_ROOT		= "/workflow";

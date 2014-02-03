@@ -168,7 +168,7 @@ else {
     $f->standard_buttons();
     $f->search_box($query);
 
-$cond1 = " left join tbl_bansos h on c.ban_kode=h.ban_kode left join tbl_eval_tapd_detail e on c.ban_kode=e.hib_kode left join tbl_eval_tapd f on e.kode=f.kode WHERE f.tipe='BANSOS' ";
+$cond1 = " left join tbl_bansos h on c.ban_kode=h.ban_kode left join tbl_eval_tapd_detail e on c.ban_kode=e.hib_kode left join tbl_eval_tapd f on e.kode=f.kode ";
 
 if(!empty($query)){
 $query = urldecode($query);
@@ -177,6 +177,9 @@ $query = strtolower(trim($query));
 $rel = !empty($cond)?"and":"where";
 $cond  .=" $rel (c.id_cair = '$query' or h.ban_nama like '%$query%' or c.tgl_cair = '".$f->preparedate($query)."')";
 }
+
+$rel = !empty($cond)?"and":"where";
+$cond  .=" $rel f.tipe='BANSOS'";
 
 $total = $f->count_total("tbl_cair_bansos c","$cond1 $cond"); 
 

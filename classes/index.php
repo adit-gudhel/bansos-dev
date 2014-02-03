@@ -1,3 +1,3 @@
 <?
-header("location: /sat-evoucher/");
+header("location: /index.php");
 ?>

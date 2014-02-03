@@ -112,6 +112,14 @@ if($act=='delete'){
 		echo"
 		</td>
 	</tr>
+	<tr>	
+		<td >OPD</b></td>
+		<td >";
+		$cond="order by opd_nama asc";
+		echo $f->selectList("opd_kode","tbl_opd","opd_kode","opd_nama",$opd_kode,$script="",$cond,1,"0","--");
+		echo"
+		</td>
+	</tr>
 	";
 
 	echo"

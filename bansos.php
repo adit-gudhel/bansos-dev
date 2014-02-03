@@ -62,6 +62,12 @@ if ($act == "add" || $act == "edit") {
     </td>
   </tr>
   <tr>
+    <td>No. KTP</td>
+    <td>
+      <input type="text" name="ban_ktp" id="ban_ktp" value="<?=$ban_ktp?>" style="width:250px;" class="easyui-validatebox" required="true" />
+    </td>
+  </tr>
+  <tr>
     <td>Nama Pimpinan</td>
     <td>
       <input type="text" name="pimpinan" id="pimpinan" value="<?=$pimpinan?>" style="width:250px;" class="easyui-validatebox" required="true" />
@@ -107,7 +113,53 @@ if ($act == "add" || $act == "edit") {
     <td>Kodepos</td>
     <td>
       <input type="text" name="ban_kodepos" id="ban_kodepos" value="<?=$ban_kodepos?>" style="width:200px;" />
+      <input type="button" name="cek" id="cek" value="Cek" />
+      <div id="message" style="display:inline-block;"></div>
     </td>
+  </tr>
+  
+  <script>
+  $(function(){
+	$("#cek").click(function(){
+		//$("#message").html(" <img src='/images/ajax-loader.gif' /> Memeriksa...");
+		var nama = $("#ban_nama").val();
+		var pimpinan = $("#pimpinan").val();
+		var alamat = $("#ban_jalan").val();
+		var rt = $("#ban_rt").val();
+		var rw = $("#ban_rw").val();
+		//var prop = $("input[name='kd_propinsi']").val();
+		//var dati2 = $("input[name='kd_dati2']").val();
+		//var kec = $("input[name='kd_kecamatan']").val();
+		var kel = $("input[name='kd_kelurahan']").val();
+		var kodepos = $("#ban_kodepos").val();
+		//var data = "nama="+nama
+		
+		//console.log(nama +" "+ pimpinan +" "+ alamat +" RT."+ rt +" / RW."+ rw +", "+ kel +" "+ kodepos);
+		
+		$.ajax({
+                type: "POST",
+                url: "/check.php",
+                data: {tipe: "bansos", nama: $("#ban_nama").val(), pimpinan: $("#pimpinan").val(), alamat: $("#ban_jalan").val(), rt: $("#ban_rt").val(), rw: $("#ban_rw").val(), kel: $("input[name='kd_kelurahan']").val(), kodepos: $("#ban_kodepos").val(), ktp: $("#ban_ktp").val()},
+                beforeSend: function(html) { // this happens before actual call
+                    $("#message").append("<div class='loading'><img src='/images/ajax-loader.gif' /> Memeriksa... </div>");
+					$("#cek-result").html('');
+                    $("#cek-result").show("slow");
+               },
+               success: function(data){ // this happens after we get results
+			   		$('.loading').remove();
+					
+					$("#cek-result").fadeIn("slow");
+                    $("#cek-result").append(data).fadeIn("slow");
+              }
+            });    
+		
+		
+		
+	});
+});
+  </script>
+  <tr>
+    <td colspan="2"><div id="cek-result">&nbsp;</div></td>
   </tr>
   <tr>
     <td>No. Telp / HP</td>
@@ -152,6 +204,12 @@ if ($act == "add" || $act == "edit") {
     </td>
   </tr>
   <tr>
+  	<td>Rencana Penggunaan</td>
+  	<td>
+      <textarea name="ban_ren_guna" id="ban_ren_guna" cols="45" rows="5" class="easyui-validatebox" required="true" style="width:500px;" ><?=$ban_ren_guna?></textarea>
+    </td>
+  </tr>
+  <tr>
   	<td>Lokasi Kegiatan</td>
   	<td>
       <textarea name="ban_lokasi_kegiatan" id="ban_lokasi_kegiatan" cols="45" rows="5" class="easyui-validatebox" required="true" style="width:500px;" ><?=$ban_lokasi_kegiatan?></textarea>
@@ -184,16 +242,19 @@ else if ($act == "do_add" || $act == "do_update") {
 	foreach ($_POST as $key=>$val) {	
     	$$key = $val;
     }
+	
+	if ($act == "do_update") $f->checkaccess("edit");
+	else if ($act == "do_add") $f->checkaccess("add");
      
     if ($act=='do_update') {	    
-        $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', ban_jenis='$ban_jenis', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."', id_tb='$id_tb', ban_nama='$ban_nama', pimpinan='$pimpinan', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_bansos='$ban_besaran_bansos', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
+        $sql = "UPDATE tbl_bansos SET ban_tanggal='".$f->preparedate($ban_tanggal)."', ban_jenis='$ban_jenis', jh_kode='$jh_kode', ban_judul_kegiatan='$ban_judul_kegiatan', ban_lokasi_kegiatan='".trim($ban_lokasi_kegiatan)."', id_tb='$id_tb', ban_nama='$ban_nama', ban_ktp='$ban_ktp', pimpinan='$pimpinan', ban_jalan='$ban_jalan', ban_rt='$ban_rt', ban_rw='$ban_rw', kd_propinsi='$kd_propinsi', kd_dati2='$kd_dati2', kd_kecamatan='$kd_kecamatan', kd_kelurahan='$kd_kelurahan', ban_kodepos='$ban_kodepos', bank_kode='$bank_kode', ban_norek='$ban_norek', ban_ren_guna='".trim($ban_ren_guna)."', ban_tlp='$ban_tlp', ban_hp='$ban_hp', ban_besaran_bansos='$ban_besaran_bansos', opd_kode='$opd_kode', mtime=NOW(), user='".$login_full_name."' WHERE ban_kode=$id";
                 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
     }
     else {
-      $sql = "INSERT INTO tbl_bansos (ban_kode,ban_tanggal,ban_jenis,jh_kode,ban_judul_kegiatan,ban_lokasi_kegiatan,id_tb,ban_nama,pimpinan,ban_jalan,ban_rt,ban_rw,kd_propinsi,kd_dati2,kd_kecamatan,kd_kelurahan,ban_kodepos,ban_tlp,ban_hp,bank_kode,ban_norek,ban_besaran_bansos,opd_kode,ctime,mtime,user) VALUES
-('','".$f->preparedate($ban_tanggal)."','$ban_jenis','$jh_kode','$ban_judul_kegiatan','".trim($ban_lokasi_kegiatan)."','$id_tb','$ban_nama','$pimpinan','$ban_jalan','$ban_rt','$ban_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$ban_kodepos','$ban_tlp','$ban_hp','$bank_kode','$ban_norek','$ban_besaran_bansos','$opd_kode', NOW(), NOW(), '$login_full_name')";
+      $sql = "INSERT INTO tbl_bansos (ban_kode,ban_tanggal,ban_jenis,jh_kode,ban_judul_kegiatan,ban_lokasi_kegiatan,id_tb,ban_nama,ban_ktp,pimpinan,ban_jalan,ban_rt,ban_rw,kd_propinsi,kd_dati2,kd_kecamatan,kd_kelurahan,ban_kodepos,ban_tlp,ban_hp,bank_kode,ban_norek,ban_ren_guna,ban_besaran_bansos,opd_kode,ctime,mtime,user) VALUES
+('','".$f->preparedate($ban_tanggal)."','$ban_jenis','$jh_kode','$ban_judul_kegiatan','".trim($ban_lokasi_kegiatan)."','$id_tb','$ban_nama','$ban_ktp','$pimpinan','$ban_jalan','$ban_rt','$ban_rw','$kd_propinsi','$kd_dati2','$kd_kecamatan','$kd_kelurahan','$ban_kodepos','$ban_tlp','$ban_hp','$bank_kode','$ban_norek','".trim($ban_ren_guna)."','$ban_besaran_bansos','$opd_kode', NOW(), NOW(), '$login_full_name')";
 
         $result=$db->Execute($sql);
         if(!$result){ print $db->ErrorMsg(); die(); }
@@ -202,22 +263,17 @@ else if ($act == "do_add" || $act == "do_update") {
     echo"<a href=$PHP_SELF>Sukses Simpan Data</a> ";
 }
 else if ($act == "delete") {
-	
+	$f->checkaccess("delete");
 	$sql = "DELETE FROM tbl_bansos WHERE ban_kode=$id";
     $result=$db->Execute($sql);
     if(!$result){ print $db->ErrorMsg(); die(); }
 	
-	/*
-    $sql = "DELETE FROM tbl_bansos_opd WHERE ban_kode=$id";
-    $result=$db->Execute($sql);
-    if(!$result){ print $db->ErrorMsg(); die(); }
-	*/
 	header("location: $PHP_SELF");
 }
 else {
 
     if(!$start) $start='1';
-    if(!$order)	$order='b.ban_nama';
+    if(!$order)	$order='b.ban_tanggal';
     if(!$sort) 	$sort='asc';
     if(!$page) 	$page='0';
     if(!$num)	$num='10';
@@ -225,23 +281,34 @@ else {
     if($start < 0) $start='0';
     $advance_search = 0;
 
-    $f->standard_buttons();
+    //cek akses
+	if($login_opd)
+		$f->standard_buttons('refresh');
+	else
+    	$f->standard_buttons();
+		
     $f->search_box($query);
 
-$cond1 = " left join tbl_jenis_hibah jh on b.jh_kode=jh.jh_kode ";
+$cond1 = " left join tbl_jenis_hibah jh on b.jh_kode=jh.jh_kode left join tbl_opd o on b.opd_kode=o.opd_kode ";
 
 if(!empty($query)){
 $query = urldecode($query);
 $query = strtolower(trim($query));
 
 $rel = !empty($cond)?"and":"where";
-$cond  .=" $rel (b.ban_kode = '$query' or b.ban_nama like '%$query%' or b.ban_jalan like '%$query%' or b.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query')";
+$cond  .=" $rel (b.ban_kode = '$query' or b.ban_nama like '%$query%' or b.ban_jalan like '%$query%' or b.ban_tanggal = '".$f->preparedate($query)."' or jh.jh_jenis = '$query' or o.opd_nama like '%$query%')";
+}
+
+$rel = !empty($cond)?"and":"where";
+if($login_access=='OPD'){
+	$cond  .=" $rel b.opd_kode = $login_opd ";
 }
 
 $total = $f->count_total("tbl_bansos b","$cond1 $cond"); 
 
 $f->paging(array("link"=>$PHP_SELF."?query=$query&order=$order&sort=$sort&type=$type&act=","page"=>$page,"total"=>$total,"num"=>"$num","show_total"=>1));
-$sql="select b.*, jh.jh_jenis from tbl_bansos b $cond1 $cond order by $order $sort";
+
+$sql="select b.*, jh.jh_jenis, o.opd_nama from tbl_bansos b $cond1 $cond order by $order $sort";
 $result=$db->SelectLimit("$sql","$num","$start");
 #echo $sql;
 if(!$result) print $db->ErrorMsg();
@@ -252,11 +319,13 @@ $_sort=($sort=='desc')?"asc":"desc";
 	<tr class=bgTitleTr>
 
 		<th class=white width=5  valign=top><B>No</th>
-		<th class=white  valign=top>Tanggal</th>
-		<th class=white  valign=top>Nama Pemohon</th>
+		<th class=white  valign=top>Tanggal&nbsp;<a href='$PHP_SELF?order=ban_tanggal&sort=$_sort'><img src='/i/bg.gif' /></a></th>
+		<th class=white  valign=top>Nama Pemohon&nbsp;<a href='$PHP_SELF?order=ban_nama&sort=$_sort'><img src='/i/bg.gif' /></a></th>
 		<th class=white  valign=top>Alamat</th>
-		<th class=white  valign=top>Jenis Bantuan Sosial</th>
-		<th class=white  valign=top>Besaran Bantuan Sosial (Rp)</th>
+		<th class=white  valign=top>Jenis Hibah</th>
+		<th class=white  valign=top>Besaran Hibah (Rp)</th>
+		<th class=white  valign=top>OPD Evaluator&nbsp;<a href='$PHP_SELF?order=opd_nama&sort=$_sort'><img src='/i/bg.gif' /></a></th>
+		<th class=white  valign=top>Petugas</th>
 		<th class=white  valign=top>Function</th>
 	</tr>
 	";
@@ -278,10 +347,15 @@ $_sort=($sort=='desc')?"asc":"desc";
 			<td valign=top>$ban_jalan RT.".$ban_rt."/RW.".$ban_rw."</td>
 			<td valign=top>$jh_jenis</td>
 			<td valign=top>".number_format($ban_besaran_bansos,2,',','.')."</td>
+			<td valign=top>$opd_nama</td>
+			<td valign=top>$user</td>
 			";
             
         echo "
 			<td  valign=top ALIGN=left>";
+			if($login_opd)
+				echo"&nbsp;";
+			else
 				echo"
 				<a href=$PHP_SELF?act=edit&id=$ban_kode><img src=../images/button_edit.gif border=0></a> 
 				<a href=$PHP_SELF?act=delete&id=$ban_kode onClick=\"javascript:return confirm('Anda Yakin Menghapus Data ini?');return false;\"><img src=../images/button_delete.gif border=0></a>";

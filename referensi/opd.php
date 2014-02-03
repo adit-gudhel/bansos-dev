@@ -118,14 +118,15 @@ else {
     $result=$db->SelectLimit("$sql","$num","$start");
 
 	$_sort=($sort=='desc')?"asc":"desc";
+	//$_icon=($sort=='desc')?"/i/asc.gif":"/i/desc.gif";
 
 	echo"
 	<table class=index>
 	<tr class=bgTitleTr>
 
 		<th class=white width=5  valign=top><B>No</th>
-        <th class=white  valign=top><a href='$PHP_SELF?order=opd_nama&sort=$_sort'>Nama OPD</a></th>
-		<th class=white  valign=top>Bidang OPD</th>
+        <th class=white  valign=top>Nama OPD&nbsp;&nbsp;<a href='$PHP_SELF?order=opd_nama&sort=$_sort'><img src='/i/bg.gif' /></a></th>
+		<th class=white  valign=top>Bidang OPD&nbsp;&nbsp;<a href='$PHP_SELF?order=opd_bidang&sort=$_sort'><img src='/i/bg.gif' /></a></th>
 		<th class=white  valign=top>Function</th>
 	</tr>
 	";

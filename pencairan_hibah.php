@@ -84,9 +84,15 @@ if ($act == "add" || $act == "edit") {
     <td colspan="2"><strong>Naskah Perjanjian Hibah Daerah (NPHD)</strong></td>
   </tr>
   <tr>
-    <td>No. NPHD</td>
+    <td>No. NPHD Pemberi</td>
     <td>
-      <input type="text" name="nphd_no" id="nphd_no" value="<?=$nphd_no?>" style="width:250px;" class="easyui-validatebox" required="true" />
+      <input type="text" name="nphd_no_pemberi" id="nphd_no_pemberi" value="<?=$nphd_no_pemberi?>" style="width:500px;" class="easyui-validatebox" required="true" />
+    </td>
+  </tr>
+  <tr>
+    <td>No. NPHD Penerima</td>
+    <td>
+      <input type="text" name="nphd_no_penerima" id="nphd_no_penerima" value="<?=$nphd_no_penerima?>" style="width:500px;" class="easyui-validatebox" required="true" />
     </td>
   </tr>
   <tr>
@@ -135,7 +141,7 @@ else if ($act == "do_add" || $act == "do_update") {
     }
      
     if ($act=='do_update') {	    
-        $sql = "UPDATE tbl_cair_hibah SET tgl_cair='".$f->preparedate($tgl_cair)."',spph_no='$spph_no',spph_tgl='".$f->preparedate($spph_tgl)."',nphd_no='$nphd_no',
+        $sql = "UPDATE tbl_cair_hibah SET tgl_cair='".$f->preparedate($tgl_cair)."',spph_no='$spph_no',spph_tgl='".$f->preparedate($spph_tgl)."',nphd_no_pemberi='$nphd_no_pemberi',nphd_no_penerima='$nphd_no_penerima',
 		nphd_tgl='".$f->preparedate($nphd_tgl)."',nphd_tentang='".trim($nphd_tentang)."',
 		sp2d_no='$sp2d_no',sp2d_tgl='".$f->preparedate($sp2d_tgl)."',hib_kode='$hib_kode',mtime=NOW(),user='$login_full_name' WHERE id_cair=$id";
                 
@@ -143,8 +149,8 @@ else if ($act == "do_add" || $act == "do_update") {
         if(!$result){ print $db->ErrorMsg(); die(); }
     }
     else {
-      $sql = "INSERT INTO tbl_cair_hibah (id_cair, tgl_cair, spph_no, spph_tgl, nphd_no, nphd_tgl, nphd_tentang, sp2d_no, sp2d_tgl, hib_kode, ctime, mtime, user) VALUES
-('','".$f->preparedate($tgl_cair)."','$spph_no','".$f->preparedate($spph_tgl)."','$nphd_no','".$f->preparedate($nphd_tgl)."','".trim($nphd_tentang)."','$sp2d_no','".$f->preparedate($sp2d_tgl)."','$hib_kode', NOW(), NOW(), '$login_full_name')";
+      $sql = "INSERT INTO tbl_cair_hibah (id_cair, tgl_cair, spph_no, spph_tgl, nphd_no_pemberi, nphd_no_penerima, nphd_tgl, nphd_tentang, sp2d_no, sp2d_tgl, hib_kode, ctime, mtime, user) VALUES
+('','".$f->preparedate($tgl_cair)."','$spph_no','".$f->preparedate($spph_tgl)."','$nphd_no_pemberi','$nphd_no_penerima','".$f->preparedate($nphd_tgl)."','".trim($nphd_tentang)."','$sp2d_no','".$f->preparedate($sp2d_tgl)."','$hib_kode', NOW(), NOW(), '$login_full_name')";
 
       $result=$db->Execute($sql);
       if(!$result){ print $db->ErrorMsg(); die(); }
@@ -195,7 +201,7 @@ else {
     $f->standard_buttons();
     $f->search_box($query);
 
-$cond1 = " left join tbl_hibah h on c.hib_kode=h.hib_kode left join tbl_eval_tapd_detail e on c.hib_kode=e.hib_kode left join tbl_eval_tapd f on e.kode=f.kode WHERE f.tipe='HIBAH' ";
+$cond1 = " left join tbl_hibah h on c.hib_kode=h.hib_kode left join tbl_eval_tapd_detail e on c.hib_kode=e.hib_kode left join tbl_eval_tapd f on e.kode=f.kode ";
 
 if(!empty($query)){
 $query = urldecode($query);
@@ -205,13 +211,16 @@ $rel = !empty($cond)?"and":"where";
 $cond  .=" $rel (c.id_cair = '$query' or h.hib_nama like '%$query%' or c.tgl_cair = '".$f->preparedate($query)."')";
 }
 
+$rel = !empty($cond)?"and":"where";
+$cond  .=" $rel f.tipe='HIBAH'";
+
 $total = $f->count_total("tbl_cair_hibah c","$cond1 $cond"); 
 
 $f->paging(array("link"=>$PHP_SELF."?query=$query&order=$order&sort=$sort&type=$type&act=","page"=>$page,"total"=>$total,"num"=>"$num","show_total"=>1));
 
 $sql="select c.*, h.hib_nama, e.besaran_tapd FROM tbl_cair_hibah c $cond1 $cond order by $order $sort";
 $result=$db->SelectLimit("$sql","$num","$start");
-#echo $sql;
+# echo $sql;
 if(!$result) print $db->ErrorMsg();
 $_sort=($sort=='desc')?"asc":"desc"; 
 
@@ -224,7 +233,8 @@ $_sort=($sort=='desc')?"asc":"desc";
 		<th class=white  valign=top>Nama Pemohon</th>
 		<th class=white  valign=top>Jumlah (Rp)</th>
 		<th class=white  valign=top>No. SPPH</th>
-		<th class=white  valign=top>No. NPHD</th>
+		<th class=white  valign=top>No. NPHD Pemberi</th>
+		<th class=white  valign=top>No. NPHD Penerima</th>
 		<th class=white  valign=top>No. SP2D</th>
 		<th class=white  valign=top>Function</th>
 	</tr>
@@ -246,7 +256,8 @@ $_sort=($sort=='desc')?"asc":"desc";
 			<td valign=top>$hib_nama</td>
 			<td valign=top>".number_format($besaran_tapd,2,',','.')."</td>
 			<td valign=top>$spph_no</td>
-			<td valign=top>$nphd_no</td>
+			<td valign=top>$nphd_no_pemberi</td>
+			<td valign=top>$nphd_no_penerima</td>
 			<td valign=top>$sp2d_no</td>
 			";
             

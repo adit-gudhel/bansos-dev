@@ -58,9 +58,9 @@ if ($generate && $thn!=='0'){
 		$filename = "daftar-hibah-".$thn.".xls";
 			
 		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-		$objWriter->save('docs/'.$filename);
+		$objWriter->save(UPLOAD_PATH . $filename);
 		
-		echo "<p><a href=docs/$filename>Download</a></p>";	
+		echo "<p><a href=".UPLOAD_PATH . $filename.">Download</a></p>";	
 			
 	}
 }

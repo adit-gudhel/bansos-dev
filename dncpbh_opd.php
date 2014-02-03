@@ -35,9 +35,10 @@ if(empty($row['kode'])){
 	$filename = "dncpbh-opd-".$id.".xls";
 		
 	$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-	$objWriter->save('docs/'.$filename);
+	$objWriter->save(UPLOAD_PATH . $filename);
 	
-	echo "<a href=docs/$filename>Download</a>";	
+	echo "<a href=".UPLOAD_PATH . $filename.">Download</a>";
+	
 		
 }
 		

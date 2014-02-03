@@ -49,6 +49,7 @@ class template{
         <script type=\"text/javascript\" src=\"/jquery.easyui.min.js\"></script>
         <script type=\"text/javascript\" src=\"/js/jquery-ui-1.9.1.custom.js\"></script>
         <script type=\"text/javascript\" src=\"/jquery.ui.timepicker.js\"></script>
+		<script type=\"text/javascript\" src=\"/jquery.validate.js\"></script>
 
         <link type=\"text/css\" rel=\"stylesheet\" href=\"/prototipe.css\" >
         <link type=\"text/css\" rel=\"stylesheet\" href=\"/themes/gray/easyui.css\">

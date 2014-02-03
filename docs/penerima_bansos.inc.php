@@ -65,7 +65,7 @@ $AS->setCellValue('B5', '2');
 $AS->setCellValue('C5', '3');
 $AS->setCellValue('D5', '4');
 
-$sql = "SELECT nama, alamat, kelurahan, kecamatan, kota, propinsi, hasil_evaluasi_tapd as jumlah_uang FROM v_dncpbs_tapd WHERE YEAR(tgl_ba)='$thn' AND (status_opd = 1 AND status_tapd = 1) AND  ORDER BY nama ASC";
+$sql = "SELECT nama, alamat, kelurahan, kecamatan, kota, propinsi, hasil_evaluasi_tapd as jumlah_uang FROM v_dncpbs_tapd WHERE YEAR(tgl_ba)='$thn' AND (status_opd = 1 AND status_tapd = 1) ORDER BY nama ASC";
 $result=$db->Execute($sql);
 
 $total_rows = $result->NumRows();

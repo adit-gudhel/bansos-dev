@@ -301,7 +301,6 @@ $AS->getColumnDimension('C')->setWidth(35);
 $AS->getColumnDimension('D')->setWidth(25);
 
 
-
 // Set page orientation and size
 $AS->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_PORTRAIT);
 $AS->getPageSetup()->setPaperSize(PHPExcel_Worksheet_PageSetup::PAPERSIZE_A4);
@@ -312,5 +311,107 @@ $AS->getPageMargins()->setLeft(0.5);
 $AS->getPageMargins()->setRight(0.5);
 
 $AS->setTitle('Daftar Penerima Hibah');
+
+//-----------------------------------------------------------------------------------------------------------------
+
+$objPHPExcel->createSheet();
+$objPHPExcel->setActiveSheetIndex(1);
+$AS2 = $objPHPExcel->getActiveSheet();
+
+// Header
+$AS2->mergeCells('A1:D1');
+$AS2->setCellValue('A1', 'DAFTAR NAMA PENERIMA, ALAMAT DAN BESARAN');
+$AS2->mergeCells('A2:D2');
+$AS2->setCellValue('A2', 'ALOKASI BANTUAN HIBAH YANG DITERIMA');
+
+$sql = "SELECT no_rek, uraian FROM tbl_rekening ORDER BY no_rek ASC";
+$result=$db->Execute($sql);
+
+$total_rows = $result->NumRows();
+$start_row=4;
+
+$i=0;
+while($row=$result->Fetchrow()){
+	foreach($row as $key => $val){
+		$$key=$val;
+	}
+    $i++;
+	
+	$AS2->mergeCells('A'.$start_row.':B'.$start_row.'');
+	$AS2->mergeCells('C'.$start_row.':D'.$start_row.'');
+	
+	$AS2->setCellValue('A'.$start_row.'', 'Kode Rekening Anggaran');
+	$AS2->setCellValue('C'.$start_row.'', $no_rek);
+	
+	$start_row++;
+	
+	$AS2->mergeCells('A'.$start_row.':B'.$start_row.'');
+	$AS2->mergeCells('C'.$start_row.':D'.$start_row.'');
+	
+	$AS2->setCellValue('A'.$start_row.'', 'Nama Rekening Anggaran');
+	$AS2->setCellValue('C'.$start_row.'', $uraian);
+	
+	$start_row++;
+	
+	$AS2->mergeCells('A'.$start_row.':B'.$start_row.'');
+	$AS2->mergeCells('C'.$start_row.':D'.$start_row.'');
+	
+	$AS2->setCellValue('A'.$start_row.'', 'Pagu Anggaran');
+	$AS2->setCellValue('C'.$start_row.'', '');
+	
+	$start_row++;
+	
+	$list = $start_row + 2;
+	
+	$sql2 = "SELECT v.nama, v.alamat, v.kelurahan, v.kecamatan, v.kota, v.propinsi, v.hasil_evaluasi_tapd as jumlah_uang, h.rek_anggaran FROM v_dncpbh_tapd v LEFT JOIN tbl_hibah h ON v.hib_kode=h.hib_kode WHERE YEAR(v.tgl_ba)='$thn' AND (v.status_opd = 1 AND v.status_tapd = 1) AND h.rek_anggaran = '".$no_rek."' ORDER BY v.nama ASC";
+	$result2=$db->Execute($sql2);
+	$i=1;
+	while($row2=$result2->Fetchrow()){
+		$AS2->setCellValue('A'.$start_row.'', $i);
+		$AS2->setCellValue('B'.$start_row.'', $row2['nama']);
+		$AS2->setCellValue('C'.$start_row.'', ''.$row2['alamat'].' Kel. '.ucwords(strtolower($row2['kelurahan'])).' Kec. '.ucwords(strtolower($row2['kecamatan'])).' '.ucwords(strtolower($row2['kota'])).', '.ucwords(strtolower($row2['propinsi'])).'');
+		$AS2->setCellValue('D'.$start_row.'', $row2['jumlah_uang']);
+		$start_row++;
+	}
+	
+	/*
+	$AS->setCellValue('A'.$start_row.'', $i);
+	$AS->setCellValue('B'.$start_row.'', $nama);
+	$AS->setCellValue('C'.$start_row.'', ''.$alamat.' Kel. '.ucwords(strtolower($kelurahan)).' Kec. '.ucwords(strtolower($kecamatan)).' '.ucwords(strtolower($kota)).', '.ucwords(strtolower($propinsi)).'');
+	$AS->setCellValue('D'.$start_row.'', $jumlah_uang);
+	*/
+	$start_row++;
+	
+}
+
+//$sql = "SELECT nama, alamat, kelurahan, kecamatan, kota, propinsi, hasil_evaluasi_tapd as jumlah_uang FROM v_dncpbh_tapd WHERE YEAR(tgl_ba)='$thn' AND (status_opd = 1 AND status_tapd = 1) ORDER BY nama ASC";
+
+//$AS2->getStyle('A1:A2')->applyFromArray($formatJudul);
+//$AS2->getStyle('A4:D4')->applyFromArray($formatTableCenterB);
+//$AS2->getStyle('A5:D5')->applyFromArray($formatTableCenterI);
+
+
+//$AS2->getStyle('A4:A'.($start_row).'')->applyFromArray($formatTableCenterT);
+//$AS2->getStyle('B4:C'.($start_row).'')->applyFromArray($formatTableLeft);
+//$AS2->getStyle('D4:D'.($start_row).'')->applyFromArray($formatTableRight);
+
+$AS2->getStyle('B4:B'.($start_row).'')->getAlignment()->setWrapText(true);
+$AS2->getStyle('C4:C'.($start_row).'')->getAlignment()->setWrapText(true);
+
+$AS2->getStyle('D4:D'.($start_row).'')->getNumberFormat()->applyFromArray(
+	array(
+		'code' => PHPExcel_Style_NumberFormat::FORMAT_NUMBER_COMMA_SEPARATED1	
+	)
+);
+
+// Set column widths
+$AS2->getColumnDimension('A')->setWidth(4);
+$AS2->getColumnDimension('B')->setWidth(20);
+$AS2->getColumnDimension('C')->setWidth(35);
+$AS2->getColumnDimension('D')->setWidth(25);
+
+$AS2->setTitle('Kode Rekening');
+
+$objPHPExcel->setActiveSheetIndex(0);
 
 ?>
